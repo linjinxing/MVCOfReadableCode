@@ -29,6 +29,11 @@
 		68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9521E0EAE5300091B50 /* UIButtonAdditions.m */; };
 		68FAC9571E0EAE9000091B50 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9561E0EAE9000091B50 /* UIView+Layout.m */; };
 		68FAC95C1E0EB2AB00091B50 /* PGFeedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC95B1E0EB2AB00091B50 /* PGFeedTableView.m */; };
+		68FAC95F1E0EB67F00091B50 /* PGFeedPublishTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC95E1E0EB67F00091B50 /* PGFeedPublishTableHeaderView.m */; };
+		68FAC9621E0EB6C000091B50 /* PGFeedPublishUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9611E0EB6C000091B50 /* PGFeedPublishUserInfoView.m */; };
+		68FAC9651E0EB6D200091B50 /* PGFeedPublishLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9641E0EB6D200091B50 /* PGFeedPublishLikesView.m */; };
+		68FAC9681E0EB6ED00091B50 /* PGFeedPublishImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9671E0EB6ED00091B50 /* PGFeedPublishImagesView.m */; };
+		68FAC96B1E0EB81F00091B50 /* PGFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC96A1E0EB81F00091B50 /* PGFeedTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +99,16 @@
 		68FAC9581E0EAF3A00091B50 /* MVCOfReadableCode.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCOfReadableCode.pch; sourceTree = "<group>"; };
 		68FAC95A1E0EB2AB00091B50 /* PGFeedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedTableView.h; sourceTree = "<group>"; };
 		68FAC95B1E0EB2AB00091B50 /* PGFeedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedTableView.m; sourceTree = "<group>"; };
+		68FAC95D1E0EB67F00091B50 /* PGFeedPublishTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedPublishTableHeaderView.h; sourceTree = "<group>"; };
+		68FAC95E1E0EB67F00091B50 /* PGFeedPublishTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedPublishTableHeaderView.m; sourceTree = "<group>"; };
+		68FAC9601E0EB6C000091B50 /* PGFeedPublishUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedPublishUserInfoView.h; sourceTree = "<group>"; };
+		68FAC9611E0EB6C000091B50 /* PGFeedPublishUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedPublishUserInfoView.m; sourceTree = "<group>"; };
+		68FAC9631E0EB6D200091B50 /* PGFeedPublishLikesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedPublishLikesView.h; sourceTree = "<group>"; };
+		68FAC9641E0EB6D200091B50 /* PGFeedPublishLikesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedPublishLikesView.m; sourceTree = "<group>"; };
+		68FAC9661E0EB6ED00091B50 /* PGFeedPublishImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedPublishImagesView.h; sourceTree = "<group>"; };
+		68FAC9671E0EB6ED00091B50 /* PGFeedPublishImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedPublishImagesView.m; sourceTree = "<group>"; };
+		68FAC9691E0EB81F00091B50 /* PGFeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedTableViewCell.h; sourceTree = "<group>"; };
+		68FAC96A1E0EB81F00091B50 /* PGFeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +274,8 @@
 		68FAC92A1E0E6BF900091B50 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				68FAC9691E0EB81F00091B50 /* PGFeedTableViewCell.h */,
+				68FAC96A1E0EB81F00091B50 /* PGFeedTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -277,6 +294,8 @@
 		68FAC92C1E0E6BF900091B50 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				68FAC9661E0EB6ED00091B50 /* PGFeedPublishImagesView.h */,
+				68FAC9671E0EB6ED00091B50 /* PGFeedPublishImagesView.m */,
 			);
 			path = "图片";
 			sourceTree = "<group>";
@@ -284,6 +303,8 @@
 		68FAC92D1E0E6BF900091B50 /* 根视图 */ = {
 			isa = PBXGroup;
 			children = (
+				68FAC95D1E0EB67F00091B50 /* PGFeedPublishTableHeaderView.h */,
+				68FAC95E1E0EB67F00091B50 /* PGFeedPublishTableHeaderView.m */,
 			);
 			path = "根视图";
 			sourceTree = "<group>";
@@ -291,6 +312,8 @@
 		68FAC92E1E0E6BF900091B50 /* 点赞 */ = {
 			isa = PBXGroup;
 			children = (
+				68FAC9631E0EB6D200091B50 /* PGFeedPublishLikesView.h */,
+				68FAC9641E0EB6D200091B50 /* PGFeedPublishLikesView.m */,
 			);
 			path = "点赞";
 			sourceTree = "<group>";
@@ -298,6 +321,8 @@
 		68FAC92F1E0E6BF900091B50 /* 用户信息 */ = {
 			isa = PBXGroup;
 			children = (
+				68FAC9601E0EB6C000091B50 /* PGFeedPublishUserInfoView.h */,
+				68FAC9611E0EB6C000091B50 /* PGFeedPublishUserInfoView.m */,
 			);
 			path = "用户信息";
 			sourceTree = "<group>";
@@ -333,9 +358,9 @@
 		68FAC9371E0E6BF900091B50 /* 表情键盘 */ = {
 			isa = PBXGroup;
 			children = (
+				68FAC93E1E0E6BF900091B50 /* 根视图 */,
 				68FAC9381E0E6BF900091B50 /* 下载表情 */,
 				68FAC93B1E0E6BF900091B50 /* 工具栏 */,
-				68FAC93E1E0E6BF900091B50 /* 根视图 */,
 				68FAC9411E0E6BF900091B50 /* 表情 */,
 			);
 			path = "表情键盘";
@@ -570,11 +595,16 @@
 				68FAC8B11E0E120100091B50 /* ViewController.m in Sources */,
 				68FAC9481E0E6BF900091B50 /* PGFeedInputView.m in Sources */,
 				68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */,
+				68FAC96B1E0EB81F00091B50 /* PGFeedTableViewCell.m in Sources */,
 				68FAC94C1E0E6BF900091B50 /* PGFeedInputEmojiPanelView.m in Sources */,
 				68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */,
+				68FAC9681E0EB6ED00091B50 /* PGFeedPublishImagesView.m in Sources */,
 				68FAC8AB1E0E120100091B50 /* main.m in Sources */,
+				68FAC95F1E0EB67F00091B50 /* PGFeedPublishTableHeaderView.m in Sources */,
 				68FAC9491E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.m in Sources */,
 				68FAC94D1E0E6BF900091B50 /* PGFeedInputTextBarView.m in Sources */,
+				68FAC9651E0EB6D200091B50 /* PGFeedPublishLikesView.m in Sources */,
+				68FAC9621E0EB6C000091B50 /* PGFeedPublishUserInfoView.m in Sources */,
 				68FAC8EB1E0E14AA00091B50 /* PGFeedModel.m in Sources */,
 				68FAC95C1E0EB2AB00091B50 /* PGFeedTableView.m in Sources */,
 				68FAC9571E0EAE9000091B50 /* UIView+Layout.m in Sources */,

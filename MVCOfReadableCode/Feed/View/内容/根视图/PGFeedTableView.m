@@ -18,8 +18,7 @@
     return self;
 }
 
-- (void)createPublishView{
-    
-}
+
+
 
 @end

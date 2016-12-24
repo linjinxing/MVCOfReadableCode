@@ -9,6 +9,7 @@
 #ifndef MVCOfReadableCode_pch
 #define MVCOfReadableCode_pch
 
+#import "TXFoundationDefines.h"
 #import "UIView+Layout.h"
 #import "UIButtonAdditions.h"
 // Include any system framework and library headers here that should be included in all compilation units.

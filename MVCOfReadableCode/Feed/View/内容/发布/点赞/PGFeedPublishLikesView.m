@@ -8,14 +8,12 @@
 
 #import "PGFeedPublishLikesView.h"
 
-@implementation PGFeedPublishLikesView
+@interface PGFeedPublishLikesView()
+@property(weak) UIButton* btnLike;
+@property(weak) UICollectionView* cvlikeAvatars;
+@property(weak) UIButton* btnShare;
+@end
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+@implementation PGFeedPublishLikesView
 
 @end

@@ -109,6 +109,7 @@
 		68FAC9671E0EB6ED00091B50 /* PGFeedPublishImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedPublishImagesView.m; sourceTree = "<group>"; };
 		68FAC9691E0EB81F00091B50 /* PGFeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedTableViewCell.h; sourceTree = "<group>"; };
 		68FAC96A1E0EB81F00091B50 /* PGFeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedTableViewCell.m; sourceTree = "<group>"; };
+		68FAC96C1E0EC1AE00091B50 /* TXFoundationDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXFoundationDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +415,7 @@
 		68FAC94E1E0EAE5300091B50 /* TXFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				68FAC96C1E0EC1AE00091B50 /* TXFoundationDefines.h */,
 			);
 			name = TXFoundation;
 			path = MVCOfReadableCode/TXFoundation;

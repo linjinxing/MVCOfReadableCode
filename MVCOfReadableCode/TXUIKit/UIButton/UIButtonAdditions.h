@@ -70,3 +70,14 @@
 
 //- (void)setButtonAttributtionWithBundleItem:(NSString*)bundleItem;
 @end
+
+
+@interface UIButton(Block)
+- (void) addTouchUpInsideActionWithBlock:(TXSenderBlock)action;
+
+- (void) handleControlEvent:(UIControlEvents)controlEvent withBlock:(TXSenderBlock)action;
+
+
+@end
+
+

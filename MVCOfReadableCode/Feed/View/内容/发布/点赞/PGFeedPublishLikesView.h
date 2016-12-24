@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PGFeedPublishLikesView : UIView
-
+@property(readonly, weak) UIButton* btnLike;
+@property(readonly, weak) UICollectionView* cvlikeAvatars;
+@property(readonly, weak) UIButton* btnShare;
 @end

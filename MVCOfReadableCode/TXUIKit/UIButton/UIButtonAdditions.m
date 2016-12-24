@@ -6,6 +6,7 @@
 //  Copyright 2010 mythlink. All rights reserved.
 //
 
+#import <objc/runtime.h>
 #import "UIButtonAdditions.h"
 #import "UIView+Layout.h"
 //#import "ConstString.h"
@@ -22,7 +23,7 @@
 
 +(UIButton*)buttonWithTitle:(NSString*)title 
 {
-    UIButton* btn = [[self class] buttonWithType:UIButtonTypeCustom];
+    UIButton* btn = [[self class] buttonWithType:UIButtonTypeSystem];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn sizeToFit];
     return btn;
@@ -346,3 +347,28 @@
 
 
 @end
+
+
+static char overviewKey;
+
+
+@implementation UIButton(Block)
+
+- (void)handleControlEvent:(UIControlEvents)event withBlock:(TXSenderBlock)block {
+    objc_setAssociatedObject(self, &overviewKey, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    [self addTarget:self action:@selector(callActionBlock:) forControlEvents:event];
+}
+
+- (void)callActionBlock:(id)sender {
+    TXSenderBlock block = (TXSenderBlock)objc_getAssociatedObject(self, &overviewKey);
+    if (block) {
+        block(self);
+    }
+}
+
+- (void) addTouchUpInsideActionWithBlock:(TXSenderBlock)action{
+    [self handleControlEvent:UIControlEventTouchUpInside withBlock:action];
+}
+
+@end
+

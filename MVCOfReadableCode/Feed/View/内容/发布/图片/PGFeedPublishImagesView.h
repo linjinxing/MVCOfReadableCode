@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGFeedPublishImagesView : UIView
+@interface PGFeedPublishImagesView : UICollectionView
 
 @end

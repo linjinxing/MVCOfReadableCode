@@ -16,10 +16,19 @@
 		68FAC8C41E0E120100091B50 /* MVCOfReadableCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8C31E0E120100091B50 /* MVCOfReadableCodeTests.m */; };
 		68FAC8CF1E0E120100091B50 /* MVCOfReadableCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8CE1E0E120100091B50 /* MVCOfReadableCodeUITests.m */; };
 		68FAC8E21E0E12C100091B50 /* PGFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8E11E0E12C100091B50 /* PGFeedViewController.m */; };
-		68FAC8E81E0E148800091B50 /* PGFeedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8E71E0E148800091B50 /* PGFeedTableView.m */; };
 		68FAC8EB1E0E14AA00091B50 /* PGFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8EA1E0E14AA00091B50 /* PGFeedModel.m */; };
 		68FAC8FF1E0E206100091B50 /* PGViewEventsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8FC1E0E206100091B50 /* PGViewEventsHandler.m */; };
 		68FAC9001E0E206100091B50 /* PGViewEventsParamPON.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8FE1E0E206100091B50 /* PGViewEventsParamPON.m */; };
+		68FAC9471E0E6BF900091B50 /* PGFeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9321E0E6BF900091B50 /* PGFeedView.m */; };
+		68FAC9481E0E6BF900091B50 /* PGFeedInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9361E0E6BF900091B50 /* PGFeedInputView.m */; };
+		68FAC9491E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC93A1E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.m */; };
+		68FAC94A1E0E6BF900091B50 /* PGFeedInputEmojiToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC93D1E0E6BF900091B50 /* PGFeedInputEmojiToolbarView.m */; };
+		68FAC94B1E0E6BF900091B50 /* PGFeedInputEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9401E0E6BF900091B50 /* PGFeedInputEmojiView.m */; };
+		68FAC94C1E0E6BF900091B50 /* PGFeedInputEmojiPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9431E0E6BF900091B50 /* PGFeedInputEmojiPanelView.m */; };
+		68FAC94D1E0E6BF900091B50 /* PGFeedInputTextBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9461E0E6BF900091B50 /* PGFeedInputTextBarView.m */; };
+		68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9521E0EAE5300091B50 /* UIButtonAdditions.m */; };
+		68FAC9571E0EAE9000091B50 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9561E0EAE9000091B50 /* UIView+Layout.m */; };
+		68FAC95C1E0EB2AB00091B50 /* PGFeedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC95B1E0EB2AB00091B50 /* PGFeedTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +67,33 @@
 		68FAC8D01E0E120100091B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68FAC8E01E0E12C100091B50 /* PGFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedViewController.h; sourceTree = "<group>"; };
 		68FAC8E11E0E12C100091B50 /* PGFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedViewController.m; sourceTree = "<group>"; };
-		68FAC8E61E0E148800091B50 /* PGFeedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedTableView.h; sourceTree = "<group>"; };
-		68FAC8E71E0E148800091B50 /* PGFeedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedTableView.m; sourceTree = "<group>"; };
 		68FAC8E91E0E14AA00091B50 /* PGFeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedModel.h; sourceTree = "<group>"; };
 		68FAC8EA1E0E14AA00091B50 /* PGFeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedModel.m; sourceTree = "<group>"; };
 		68FAC8FB1E0E206100091B50 /* PGViewEventsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewEventsHandler.h; sourceTree = "<group>"; };
 		68FAC8FC1E0E206100091B50 /* PGViewEventsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewEventsHandler.m; sourceTree = "<group>"; };
 		68FAC8FD1E0E206100091B50 /* PGViewEventsParamPON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewEventsParamPON.h; sourceTree = "<group>"; };
 		68FAC8FE1E0E206100091B50 /* PGViewEventsParamPON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewEventsParamPON.m; sourceTree = "<group>"; };
+		68FAC9311E0E6BF900091B50 /* PGFeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedView.h; sourceTree = "<group>"; };
+		68FAC9321E0E6BF900091B50 /* PGFeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedView.m; sourceTree = "<group>"; };
+		68FAC9351E0E6BF900091B50 /* PGFeedInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedInputView.h; sourceTree = "<group>"; };
+		68FAC9361E0E6BF900091B50 /* PGFeedInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedInputView.m; sourceTree = "<group>"; };
+		68FAC9391E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedInputDownloadEmojiView.h; sourceTree = "<group>"; };
+		68FAC93A1E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedInputDownloadEmojiView.m; sourceTree = "<group>"; };
+		68FAC93C1E0E6BF900091B50 /* PGFeedInputEmojiToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedInputEmojiToolbarView.h; sourceTree = "<group>"; };
+		68FAC93D1E0E6BF900091B50 /* PGFeedInputEmojiToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedInputEmojiToolbarView.m; sourceTree = "<group>"; };
+		68FAC93F1E0E6BF900091B50 /* PGFeedInputEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedInputEmojiView.h; sourceTree = "<group>"; };
+		68FAC9401E0E6BF900091B50 /* PGFeedInputEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedInputEmojiView.m; sourceTree = "<group>"; };
+		68FAC9421E0E6BF900091B50 /* PGFeedInputEmojiPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedInputEmojiPanelView.h; sourceTree = "<group>"; };
+		68FAC9431E0E6BF900091B50 /* PGFeedInputEmojiPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedInputEmojiPanelView.m; sourceTree = "<group>"; };
+		68FAC9451E0E6BF900091B50 /* PGFeedInputTextBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedInputTextBarView.h; sourceTree = "<group>"; };
+		68FAC9461E0E6BF900091B50 /* PGFeedInputTextBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedInputTextBarView.m; sourceTree = "<group>"; };
+		68FAC9511E0EAE5300091B50 /* UIButtonAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonAdditions.h; sourceTree = "<group>"; };
+		68FAC9521E0EAE5300091B50 /* UIButtonAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonAdditions.m; sourceTree = "<group>"; };
+		68FAC9551E0EAE9000091B50 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		68FAC9561E0EAE9000091B50 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		68FAC9581E0EAF3A00091B50 /* MVCOfReadableCode.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCOfReadableCode.pch; sourceTree = "<group>"; };
+		68FAC95A1E0EB2AB00091B50 /* PGFeedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedTableView.h; sourceTree = "<group>"; };
+		68FAC95B1E0EB2AB00091B50 /* PGFeedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +124,8 @@
 		68FAC89D1E0E120100091B50 = {
 			isa = PBXGroup;
 			children = (
+				68FAC94E1E0EAE5300091B50 /* TXFoundation */,
+				68FAC94F1E0EAE5300091B50 /* TXUIKit */,
 				68FAC8DC1E0E12A800091B50 /* Feed */,
 				68FAC8A81E0E120100091B50 /* MVCOfReadableCode */,
 				68FAC8C21E0E120100091B50 /* MVCOfReadableCodeTests */,
@@ -121,6 +151,7 @@
 				68FAC8AD1E0E120100091B50 /* AppDelegate.m */,
 				68FAC8AF1E0E120100091B50 /* ViewController.h */,
 				68FAC8B01E0E120100091B50 /* ViewController.m */,
+				68FAC9581E0EAF3A00091B50 /* MVCOfReadableCode.pch */,
 				68FAC8B21E0E120100091B50 /* Main.storyboard */,
 				68FAC8B51E0E120100091B50 /* Assets.xcassets */,
 				68FAC8B71E0E120100091B50 /* LaunchScreen.storyboard */,
@@ -161,8 +192,8 @@
 			children = (
 				68FAC8FA1E0E206100091B50 /* Protocol */,
 				68FAC8DD1E0E12A800091B50 /* Controller */,
+				68FAC9271E0E6BF900091B50 /* View */,
 				68FAC8DE1E0E12A800091B50 /* Model */,
-				68FAC8DF1E0E12A800091B50 /* View */,
 			);
 			name = Feed;
 			path = MVCOfReadableCode/Feed;
@@ -186,95 +217,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		68FAC8DF1E0E12A800091B50 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC8E31E0E13AA00091B50 /* 输入 */,
-				68FAC8E41E0E13AA00091B50 /* FeedCell */,
-				68FAC8E51E0E13AA00091B50 /* Root */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		68FAC8E31E0E13AA00091B50 /* 输入 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC8F31E0E1FC400091B50 /* 表情键盘 */,
-				68FAC8F61E0E1FC400091B50 /* 输入框 */,
-				68FAC8F91E0E1FC400091B50 /* Root */,
-			);
-			path = "输入";
-			sourceTree = "<group>";
-		};
-		68FAC8E41E0E13AA00091B50 /* FeedCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FeedCell;
-			sourceTree = "<group>";
-		};
-		68FAC8E51E0E13AA00091B50 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC8E61E0E148800091B50 /* PGFeedTableView.h */,
-				68FAC8E71E0E148800091B50 /* PGFeedTableView.m */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
-		68FAC8F31E0E1FC400091B50 /* 表情键盘 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC8F41E0E1FC400091B50 /* 下载表情 */,
-				68FAC8F51E0E1FC400091B50 /* 表情 */,
-			);
-			path = "表情键盘";
-			sourceTree = "<group>";
-		};
-		68FAC8F41E0E1FC400091B50 /* 下载表情 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "下载表情";
-			sourceTree = "<group>";
-		};
-		68FAC8F51E0E1FC400091B50 /* 表情 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "表情";
-			sourceTree = "<group>";
-		};
-		68FAC8F61E0E1FC400091B50 /* 输入框 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC8F71E0E1FC400091B50 /* Root */,
-				68FAC8F81E0E1FC400091B50 /* TextView */,
-			);
-			path = "输入框";
-			sourceTree = "<group>";
-		};
-		68FAC8F71E0E1FC400091B50 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
-		68FAC8F81E0E1FC400091B50 /* TextView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TextView;
-			sourceTree = "<group>";
-		};
-		68FAC8F91E0E1FC400091B50 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
 		68FAC8FA1E0E206100091B50 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +226,209 @@
 				68FAC8FE1E0E206100091B50 /* PGViewEventsParamPON.m */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		68FAC9271E0E6BF900091B50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9301E0E6BF900091B50 /* 根视图 */,
+				68FAC9281E0E6BF900091B50 /* 内容 */,
+				68FAC9331E0E6BF900091B50 /* 输入 */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68FAC9281E0E6BF900091B50 /* 内容 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9591E0EB28C00091B50 /* 根视图 */,
+				68FAC9291E0E6BF900091B50 /* Feed */,
+				68FAC92B1E0E6BF900091B50 /* 发布 */,
+			);
+			path = "内容";
+			sourceTree = "<group>";
+		};
+		68FAC9291E0E6BF900091B50 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC92A1E0E6BF900091B50 /* Cell */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		68FAC92A1E0E6BF900091B50 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		68FAC92B1E0E6BF900091B50 /* 发布 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC92D1E0E6BF900091B50 /* 根视图 */,
+				68FAC92C1E0E6BF900091B50 /* 图片 */,
+				68FAC92E1E0E6BF900091B50 /* 点赞 */,
+				68FAC92F1E0E6BF900091B50 /* 用户信息 */,
+			);
+			path = "发布";
+			sourceTree = "<group>";
+		};
+		68FAC92C1E0E6BF900091B50 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "图片";
+			sourceTree = "<group>";
+		};
+		68FAC92D1E0E6BF900091B50 /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "根视图";
+			sourceTree = "<group>";
+		};
+		68FAC92E1E0E6BF900091B50 /* 点赞 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "点赞";
+			sourceTree = "<group>";
+		};
+		68FAC92F1E0E6BF900091B50 /* 用户信息 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "用户信息";
+			sourceTree = "<group>";
+		};
+		68FAC9301E0E6BF900091B50 /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9311E0E6BF900091B50 /* PGFeedView.h */,
+				68FAC9321E0E6BF900091B50 /* PGFeedView.m */,
+			);
+			path = "根视图";
+			sourceTree = "<group>";
+		};
+		68FAC9331E0E6BF900091B50 /* 输入 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9341E0E6BF900091B50 /* 根视图 */,
+				68FAC9371E0E6BF900091B50 /* 表情键盘 */,
+				68FAC9441E0E6BF900091B50 /* 输入框 */,
+			);
+			path = "输入";
+			sourceTree = "<group>";
+		};
+		68FAC9341E0E6BF900091B50 /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9351E0E6BF900091B50 /* PGFeedInputView.h */,
+				68FAC9361E0E6BF900091B50 /* PGFeedInputView.m */,
+			);
+			path = "根视图";
+			sourceTree = "<group>";
+		};
+		68FAC9371E0E6BF900091B50 /* 表情键盘 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9381E0E6BF900091B50 /* 下载表情 */,
+				68FAC93B1E0E6BF900091B50 /* 工具栏 */,
+				68FAC93E1E0E6BF900091B50 /* 根视图 */,
+				68FAC9411E0E6BF900091B50 /* 表情 */,
+			);
+			path = "表情键盘";
+			sourceTree = "<group>";
+		};
+		68FAC9381E0E6BF900091B50 /* 下载表情 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9391E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.h */,
+				68FAC93A1E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.m */,
+			);
+			path = "下载表情";
+			sourceTree = "<group>";
+		};
+		68FAC93B1E0E6BF900091B50 /* 工具栏 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC93C1E0E6BF900091B50 /* PGFeedInputEmojiToolbarView.h */,
+				68FAC93D1E0E6BF900091B50 /* PGFeedInputEmojiToolbarView.m */,
+			);
+			path = "工具栏";
+			sourceTree = "<group>";
+		};
+		68FAC93E1E0E6BF900091B50 /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC93F1E0E6BF900091B50 /* PGFeedInputEmojiView.h */,
+				68FAC9401E0E6BF900091B50 /* PGFeedInputEmojiView.m */,
+			);
+			path = "根视图";
+			sourceTree = "<group>";
+		};
+		68FAC9411E0E6BF900091B50 /* 表情 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9421E0E6BF900091B50 /* PGFeedInputEmojiPanelView.h */,
+				68FAC9431E0E6BF900091B50 /* PGFeedInputEmojiPanelView.m */,
+			);
+			path = "表情";
+			sourceTree = "<group>";
+		};
+		68FAC9441E0E6BF900091B50 /* 输入框 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9451E0E6BF900091B50 /* PGFeedInputTextBarView.h */,
+				68FAC9461E0E6BF900091B50 /* PGFeedInputTextBarView.m */,
+			);
+			path = "输入框";
+			sourceTree = "<group>";
+		};
+		68FAC94E1E0EAE5300091B50 /* TXFoundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TXFoundation;
+			path = MVCOfReadableCode/TXFoundation;
+			sourceTree = "<group>";
+		};
+		68FAC94F1E0EAE5300091B50 /* TXUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9541E0EAE9000091B50 /* UIView */,
+				68FAC9501E0EAE5300091B50 /* UIButton */,
+			);
+			name = TXUIKit;
+			path = MVCOfReadableCode/TXUIKit;
+			sourceTree = "<group>";
+		};
+		68FAC9501E0EAE5300091B50 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9511E0EAE5300091B50 /* UIButtonAdditions.h */,
+				68FAC9521E0EAE5300091B50 /* UIButtonAdditions.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		68FAC9541E0EAE9000091B50 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC9551E0EAE9000091B50 /* UIView+Layout.h */,
+				68FAC9561E0EAE9000091B50 /* UIView+Layout.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		68FAC9591E0EB28C00091B50 /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+				68FAC95A1E0EB2AB00091B50 /* PGFeedTableView.h */,
+				68FAC95B1E0EB2AB00091B50 /* PGFeedTableView.m */,
+			);
+			path = "根视图";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,13 +565,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				68FAC8FF1E0E206100091B50 /* PGViewEventsHandler.m in Sources */,
-				68FAC8E81E0E148800091B50 /* PGFeedTableView.m in Sources */,
 				68FAC9001E0E206100091B50 /* PGViewEventsParamPON.m in Sources */,
+				68FAC9471E0E6BF900091B50 /* PGFeedView.m in Sources */,
 				68FAC8B11E0E120100091B50 /* ViewController.m in Sources */,
+				68FAC9481E0E6BF900091B50 /* PGFeedInputView.m in Sources */,
+				68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */,
+				68FAC94C1E0E6BF900091B50 /* PGFeedInputEmojiPanelView.m in Sources */,
 				68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */,
 				68FAC8AB1E0E120100091B50 /* main.m in Sources */,
+				68FAC9491E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.m in Sources */,
+				68FAC94D1E0E6BF900091B50 /* PGFeedInputTextBarView.m in Sources */,
 				68FAC8EB1E0E14AA00091B50 /* PGFeedModel.m in Sources */,
+				68FAC95C1E0EB2AB00091B50 /* PGFeedTableView.m in Sources */,
+				68FAC9571E0EAE9000091B50 /* UIView+Layout.m in Sources */,
+				68FAC94A1E0E6BF900091B50 /* PGFeedInputEmojiToolbarView.m in Sources */,
 				68FAC8E21E0E12C100091B50 /* PGFeedViewController.m in Sources */,
+				68FAC94B1E0E6BF900091B50 /* PGFeedInputEmojiView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +729,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = MVCOfReadableCode/MVCOfReadableCode.pch;
 				INFOPLIST_FILE = MVCOfReadableCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linjinxing.MVCOfReadableCode;
@@ -586,6 +742,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = MVCOfReadableCode/MVCOfReadableCode.pch;
 				INFOPLIST_FILE = MVCOfReadableCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linjinxing.MVCOfReadableCode;
@@ -658,6 +816,7 @@
 				68FAC8D51E0E120100091B50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68FAC8D61E0E120100091B50 /* Build configuration list for PBXNativeTarget "MVCOfReadableCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +825,7 @@
 				68FAC8D81E0E120100091B50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68FAC8D91E0E120100091B50 /* Build configuration list for PBXNativeTarget "MVCOfReadableCodeUITests" */ = {
 			isa = XCConfigurationList;
@@ -674,6 +834,7 @@
 				68FAC8DB1E0E120100091B50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

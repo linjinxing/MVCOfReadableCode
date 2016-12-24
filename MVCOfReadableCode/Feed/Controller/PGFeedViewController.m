@@ -7,24 +7,25 @@
 //
 
 #import "PGFeedViewController.h"
-#import "PGFeedTableView.h"
+#import "PGFeedView.h"
 
-@interface PGFeedTableViewController ()<PGViewEventHandlerViewController>
-@property (nonatomic, strong, null_resettable) PGFeedTableView *tableView;
+@interface PGFeedViewController ()<PGViewEventHandlerViewController>
+@property (nonatomic, strong, null_resettable) PGFeedView *view;
 @end
 
-@implementation PGFeedTableViewController
-@dynamic tableView;
+@implementation PGFeedViewController
+@dynamic view;
+
 #pragma mark - 生命周期管理
 
-- (PGFeedTableView *)tableView{
-    return (PGFeedTableView*)[self view];
+- (PGFeedView *)view{
+    return (PGFeedView*)[self view];
 }
 
 - (void)loadView{
-    PGFeedTableView* tv = [[PGFeedTableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    tv.eventHandler = [self viewEventHandler];
-    self.view = tv;
+    PGFeedView* view = [[PGFeedView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    view.eventHandler = [self viewEventHandler];
+    self.view = view;
 }
 
 - (void)viewDidLoad {
@@ -63,13 +64,13 @@
 
 - (PGViewEventHandler)likeViewEventHandler{
     return ^(id<PGViewEventsParam> param){
-        
+        NSLog(@"处理点赞事件");
     };
 }
 
 - (PGViewEventHandler)inputEmotionViewEventHandler{
     return ^(id<PGViewEventsParam> param){
-        
+        NSLog(@"处理表情输入");
     };
 }
 

@@ -1,5 +1,5 @@
 //
-//  PGFeedViewController.h
+//  PGFeedInputEmojiPanelView.h
 //  MVCOfReadableCode
 //
 //  Created by linjinxing on 16/12/24.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGFeedViewController : UIViewController
+@interface PGFeedInputEmojiPanelView : UIView
 
 @end

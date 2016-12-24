@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "PGViewEventsHandler.h"
+#import "PGFeedTableView.h"
+#import "PGFeedInputView.h"
 
 typedef NS_ENUM(NSInteger, PGFeedTableViewTag) {
     PGFeedTableViewTagLikeView = 1 << 0,
     PGFeedTableViewTagInputEmotionView = 2
 };
 
-@interface PGFeedTableView : UITableView<PGViewEventHandler>
-
+@interface PGFeedView : UIView<PGViewEventHandler>
+@property(readonly, weak)PGFeedTableView* tableView;
+@property(readonly, weak)PGFeedInputView* inputView;
 @end
 
 

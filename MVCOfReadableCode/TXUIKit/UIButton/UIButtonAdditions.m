@@ -9,8 +9,7 @@
 #import <objc/runtime.h>
 #import "UIButtonAdditions.h"
 #import "UIView+Layout.h"
-//#import "ConstString.h"
-//#import "LJXUIStyle.h"
+
 
 @implementation UIButton(category)
 
@@ -119,103 +118,6 @@
     //    btn.frame = CGRectMake(aPoint.x, aPoint.y, , );
     return btn;
 }
-
-//- (void)setButtonAttributtionWithBundleItem:(NSString*)bundleItem
-//{
-//    UIButton* btn =  self;
-//    NSString* title = [LJXBundle titleForItem:bundleItem];
-//    if ([title length]) [btn setTitle:title forState:UIControlStateNormal];
-//    
-//    UIImage *normalImage = [LJXBundle imageForItem:bundleItem type:LJXBUNDLE_ITEM_IMAGE_NORMAL_STATE cache:YES];
-//    UIImage *highlightImage = [LJXBundle imageForItem:bundleItem type:LJXBUNDLE_ITEM_IMAGE_HIGHLIGHTED_STATE cache:YES];
-//    if (normalImage) [btn setImage:normalImage forState:UIControlStateNormal];    
-//    if (highlightImage) [btn setImage:highlightImage forState:UIControlStateHighlighted];
-//
-//    UIImage* bg = [LJXBundle imageForItem:bundleItem type:LJXBUNDLE_ITEM_IMAGE_BACKGROUD cache:YES];
-//    UIImage* bgH = [LJXBundle imageForItem:bundleItem type:LJXBUNDLE_ITEM_IMAGE_BACKGROUD_H cache:YES];
-//    if (bg) [btn setBackgroundImage:bg forState:UIControlStateNormal];
-//    if (bgH) [btn setBackgroundImage:bgH forState:UIControlStateHighlighted];
-//    [btn sizeToFit];
-////    LJXLogObject(btn);
-////    LJXUILog("btn.highlighted:%d, state:%d", btn.highlighted, btn.state);
-//}
-////
-//
-//-(id)initWithTitle:(NSString*)title
-//{
-//    self = [super init];
-//    [self setTitle:title forState:UIControlStateNormal];
-//    [self sizeToFit];
-//    return self;
-//}
-//
-//-(id)initWithImageName:(NSString*)imageName
-//{
-//     self = [super init];
-//    UIImage*image = [UIImage imageNamed:imageName];
-//    [self setImage:image forState:UIControlStateNormal];
-//    self.frame = CGRectMake(0, 0, image.size.width, image.size.height);
-//    return self;
-//}
-//
-//-(id)initWithImage:(UIImage*)image
-//{
-//    [self setImage:image forState:UIControlStateNormal];
-//    self.frame = CGRectMake(0, 0, image.size.width, image.size.height);
-//    //    [self sizeToFit];
-//    return self;
-//}
-//
-//-(id)initWithImage:(UIImage*)image nomalBgImage:(UIImage*)aNImage highlightedBgImage:(UIImage*)aHImage
-//{
-//    self = [super init];
-//    [self setImage:image forState:UIControlStateNormal];
-//    [self setBackgroundImage:aNImage forState:UIControlStateNormal];
-//    [self setBackgroundImage:aHImage forState:UIControlStateHighlighted];
-//    self.frame = CGRectMake(0, 0, aNImage.size.width, aNImage.size.height);
-//    //    [self sizeToFit];
-//    return self;
-//}
-//
-//-(id)initWithTitle:(NSString*)title tag:(NSInteger)tag
-//{
-//    self = [self initWithTitle:title];
-//    self.tag = tag;
-//    return self;
-//}
-//
-//-(id)initWithNomalImage:(UIImage*)aNImage highlightedImage:(UIImage*)aHImage
-//{
-//    if (aNImage) [self setImage:aNImage forState:UIControlStateNormal];
-//    if (aHImage) [self setImage:aHImage forState:UIControlStateHighlighted];
-//    [self sizeToFit];
-//    return self;
-//}
-//
-//-(id)initWithTitle:(NSString*)title normaleImage:(UIImage*)normalImage
-//           highlightedImage:(UIImage*)highlightedImage;
-//{
-//    UIButton* self = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self setTitle:title forState:UIControlStateNormal];
-//    [self setBackgroundImage:normalImage forState:UIControlStateNormal];
-//    [self setBackgroundImage:highlightedImage forState:UIControlStateHighlighted];
-//    [self sizeToFit];
-//    return self;
-//}
-//-(id)initWithTitle:(NSString*)title image:(UIImage*)image
-//{
-//    return [self buttonWithTitle:title normaleImage:image highlightedImage:nil];
-//}
-//
-//-(id)initWithNormalImage:(UIImage*)aNImage selectedImage:(UIImage*)aSImage
-//{
-//    UIButton *self = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self setImage:aNImage forState:UIControlStateNormal];
-//    [self setImage:aSImage forState:UIControlStateSelected];
-//    [self sizeToFit];
-//    
-//    return self;
-//}
 
 - (void)centerImageAndTitle:(float)spacing
 {
@@ -343,8 +245,6 @@
     const int DEFAULT_SPACING = 6.0f;
     [self horizontalCenterTitleAndImageRight:DEFAULT_SPACING];
 }
-
-
 
 @end
 

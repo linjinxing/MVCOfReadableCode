@@ -55,20 +55,6 @@
 - (void)horizontalCenterTitleAndImageRight:(CGFloat)spacing;
 - (void)horizontalCenterTitleAndImageRight; //默认6.0
 
-//-(id)initWithTitle:(NSString*)title ;
-//-(id)initWithImageName:(NSString*)imageName;
-//-(id)initWithImage:(UIImage*)image;
-//-(id)initWithImage:(UIImage*)image nomalBgImage:(UIImage*)aNImage highlightedBgImage:(UIImage*)aHImage;
-//-(id)initWithTitle:(NSString*)title tag:(NSInteger)tag;
-//-(id)initWithNomalImage:(UIImage*)aNImage highlightedImage:(UIImage*)aHImage;
-//-(id)initWithTitle:(NSString*)title image:(UIImage*)image;
-//-(id)initWithTitle:(NSString*)title normaleImage:(UIImage*)normalImage
-//           highlightedImage:(UIImage*)highlightedImage;
-//
-//-(id)initWithNormalImage:(UIImage*)aNImage selectedImage:(UIImage*)aSImage;
-
-
-//- (void)setButtonAttributtionWithBundleItem:(NSString*)bundleItem;
 @end
 
 

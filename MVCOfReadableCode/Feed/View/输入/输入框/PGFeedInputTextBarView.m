@@ -19,9 +19,29 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.btnPickImages = [UIButton buttonWithType:UIButtonTypeSystem];
+        UIButton* btn = [UIButton buttonWithTitle:@"图片"];
+        [self addSubview:btn];
+        self.btnPickImages = btn;
+        
+        btn = [UIButton buttonWithTitle:@"表情"];
+        [self addSubview:btn];
+        self.btnSwitchKeyboard = btn;
+        
+        UITextView* tv = [[UITextView alloc] init];
+        tv.backgroundColor = [UIColor lightGrayColor];
+        [self addSubview:tv];
+        self.textView = tv;
     }
     return self;
+}
+
+- (void)layoutSubviews{
+    const CGFloat space = 2;
+    const CGFloat buttonWidth = 48;
+    self.btnPickImages.frame = CGRectMake(space, space, buttonWidth, self.height - space * 2);
+    self.btnSwitchKeyboard.frame = CGRectMake(self.width - space * 2 - buttonWidth, space, buttonWidth, self.height - space * 2);
+    
+    self.textView.frame = CGRectMake(self.btnPickImages.right + space, space, self.width -  buttonWidth * 2 - space * 4, self.height - space * 2);
 }
 
 @end

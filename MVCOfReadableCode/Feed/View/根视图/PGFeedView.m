@@ -17,23 +17,38 @@
 @synthesize eventHandler;
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
-    if (self) {
-        PGFeedTableView* tv = [[PGFeedTableView alloc] init];
-        [self addSubview:tv];
-        self.tableView = tv;
-        
-        PGFeedInputView* iv = [[PGFeedInputView alloc] init];
-        [self addSubview:iv];
-        self.inputView = iv;
-    }
+    if (!self) return nil;
+
+    self.tableView = [self createTableView];
+    self.inputView = [self createInputView];
     return self;
 }
 
 
-//- (PGFeedTableView*) createTableView{
-//    PGFeedTableView* tv =
-//    return tv;
-//}
-//@property(weak)PGFeedInputView* inputView;
+- (PGFeedTableView*) createTableView{
+    PGFeedTableView* tv = [[PGFeedTableView alloc] init];
+    [self addSubview:tv];
+    tv.backgroundColor = [UIColor brownColor];
+    [tv mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_top);
+        make.left.equalTo(self.mas_left);
+        make.right.equalTo(self.mas_right);
+        make.height.equalTo(self.mas_height).with.offset([PGFeedInputTextBarView height]);
+    }];
+    return tv;
+}
+
+- (PGFeedInputView*) createInputView{
+    PGFeedInputView* iv = [[PGFeedInputView alloc] init];
+    [self addSubview:iv];
+    iv.backgroundColor = [UIColor orangeColor];
+    [iv mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(68);
+        make.left.equalTo(self.mas_left);
+        make.right.equalTo(self.mas_right);
+        make.bottom.equalTo(self.mas_bottom);
+    }];
+    return iv;
+}
 
 @end

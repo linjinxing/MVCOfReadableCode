@@ -10,22 +10,19 @@
 #import "PGFeedView.h"
 
 @interface PGFeedViewController ()<PGViewEventHandlerViewController>
-@property (nonatomic, strong, null_resettable) PGFeedView *view;
+@property (nonatomic, weak) PGFeedView *feedView;
 @end
 
 @implementation PGFeedViewController
-@dynamic view;
 
 #pragma mark - 生命周期管理
 
-- (PGFeedView *)view{
-    return (PGFeedView*)[self view];
-}
 
 - (void)loadView{
     PGFeedView* view = [[PGFeedView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     view.eventHandler = [self viewEventHandler];
     self.view = view;
+    self.feedView = view;
 }
 
 - (void)viewDidLoad {
@@ -53,7 +50,7 @@
 #pragma mark - 视图（View）交互
 - (PGViewEventHandler)viewEventHandler{
     NSDictionary<NSNumber *, PGViewEventHandler>* handleTable = @{
-                                                   @(PGFeedTableViewTagLikeView):[self likeViewEventHandler],
+                                                   @(PGFeedTableViewTagLikeButton):[self likeViewEventHandler],
                                                    @(PGFeedTableViewTagInputEmotionView):[self inputEmotionViewEventHandler]
                                                    };
     return ^(id<PGViewEventsParam> param){

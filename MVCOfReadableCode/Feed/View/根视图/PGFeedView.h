@@ -12,8 +12,9 @@
 #import "PGFeedInputView.h"
 
 typedef NS_ENUM(NSInteger, PGFeedTableViewTag) {
-    PGFeedTableViewTagLikeView = 1 << 0,
-    PGFeedTableViewTagInputEmotionView = 2
+    PGFeedTableViewTagLikeButton = 1 ,
+    PGFeedTableViewTagInputEmotionView,
+    PGFeedTableViewTagShareButton,
 };
 
 @interface PGFeedView : UIView<PGViewEventHandler>

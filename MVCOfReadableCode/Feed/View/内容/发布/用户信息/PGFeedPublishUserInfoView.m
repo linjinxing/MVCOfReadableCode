@@ -8,6 +8,12 @@
 
 #import "PGFeedPublishUserInfoView.h"
 
+@interface PGFeedPublishUserInfoView()
+@property(weak) UIImageView* ivAvatar;
+@property(weak) UILabel* lbNickname;
+@property(weak) UIButton* btnFollow;
+@end
+
 @implementation PGFeedPublishUserInfoView
 
 

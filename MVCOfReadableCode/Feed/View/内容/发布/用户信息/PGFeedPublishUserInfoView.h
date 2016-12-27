@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PGFeedPublishUserInfoView : UIView
-
+@property(readonly, weak) UIImageView* ivAvatar;
+@property(readonly, weak) UILabel* lbNickname;
+@property(readonly, weak) UIButton* btnFollow;
 @end

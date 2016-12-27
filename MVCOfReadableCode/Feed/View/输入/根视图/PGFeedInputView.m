@@ -38,7 +38,7 @@
 
 - (void)layoutSubviews{
     self.textBarView.top = 0;
-    self.textBarView.height = 36;
+    self.textBarView.height = [PGFeedInputTextBarView height];
     self.emojiView.top = self.textBarView.bottom;
     self.emojiView.height = self.height - self.textBarView.height;
 }

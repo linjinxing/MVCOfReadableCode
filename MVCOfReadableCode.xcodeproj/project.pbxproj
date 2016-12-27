@@ -18,7 +18,7 @@
 		68FAC8E21E0E12C100091B50 /* PGFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8E11E0E12C100091B50 /* PGFeedViewController.m */; };
 		68FAC8EB1E0E14AA00091B50 /* PGFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8EA1E0E14AA00091B50 /* PGFeedModel.m */; };
 		68FAC8FF1E0E206100091B50 /* PGViewEventsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8FC1E0E206100091B50 /* PGViewEventsHandler.m */; };
-		68FAC9001E0E206100091B50 /* PGViewEventsParamPON.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8FE1E0E206100091B50 /* PGViewEventsParamPON.m */; };
+		68FAC9001E0E206100091B50 /* PGViewEventsParamPOO.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8FE1E0E206100091B50 /* PGViewEventsParamPOO.m */; };
 		68FAC9471E0E6BF900091B50 /* PGFeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9321E0E6BF900091B50 /* PGFeedView.m */; };
 		68FAC9481E0E6BF900091B50 /* PGFeedInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9361E0E6BF900091B50 /* PGFeedInputView.m */; };
 		68FAC9491E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC93A1E0E6BF900091B50 /* PGFeedInputDownloadEmojiView.m */; };
@@ -34,6 +34,7 @@
 		68FAC9651E0EB6D200091B50 /* PGFeedPublishLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9641E0EB6D200091B50 /* PGFeedPublishLikesView.m */; };
 		68FAC9681E0EB6ED00091B50 /* PGFeedPublishImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9671E0EB6ED00091B50 /* PGFeedPublishImagesView.m */; };
 		68FAC96B1E0EB81F00091B50 /* PGFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC96A1E0EB81F00091B50 /* PGFeedTableViewCell.m */; };
+		9EBF533FA3F65F06A91DBCFD /* libPods-MVCOfReadableCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305657525076312D1FC3F2F /* libPods-MVCOfReadableCode.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5305657525076312D1FC3F2F /* libPods-MVCOfReadableCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVCOfReadableCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C8163F4B337690EC14E1971 /* Pods-MVCOfReadableCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCOfReadableCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVCOfReadableCode/Pods-MVCOfReadableCode.debug.xcconfig"; sourceTree = "<group>"; };
 		68FAC8A61E0E120100091B50 /* MVCOfReadableCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCOfReadableCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FAC8AA1E0E120100091B50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68FAC8AC1E0E120100091B50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,8 +79,8 @@
 		68FAC8EA1E0E14AA00091B50 /* PGFeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedModel.m; sourceTree = "<group>"; };
 		68FAC8FB1E0E206100091B50 /* PGViewEventsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewEventsHandler.h; sourceTree = "<group>"; };
 		68FAC8FC1E0E206100091B50 /* PGViewEventsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewEventsHandler.m; sourceTree = "<group>"; };
-		68FAC8FD1E0E206100091B50 /* PGViewEventsParamPON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewEventsParamPON.h; sourceTree = "<group>"; };
-		68FAC8FE1E0E206100091B50 /* PGViewEventsParamPON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewEventsParamPON.m; sourceTree = "<group>"; };
+		68FAC8FD1E0E206100091B50 /* PGViewEventsParamPOO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewEventsParamPOO.h; sourceTree = "<group>"; };
+		68FAC8FE1E0E206100091B50 /* PGViewEventsParamPOO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewEventsParamPOO.m; sourceTree = "<group>"; };
 		68FAC9311E0E6BF900091B50 /* PGFeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedView.h; sourceTree = "<group>"; };
 		68FAC9321E0E6BF900091B50 /* PGFeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedView.m; sourceTree = "<group>"; };
 		68FAC9351E0E6BF900091B50 /* PGFeedInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedInputView.h; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		68FAC9691E0EB81F00091B50 /* PGFeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFeedTableViewCell.h; sourceTree = "<group>"; };
 		68FAC96A1E0EB81F00091B50 /* PGFeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFeedTableViewCell.m; sourceTree = "<group>"; };
 		68FAC96C1E0EC1AE00091B50 /* TXFoundationDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXFoundationDefines.h; sourceTree = "<group>"; };
+		7B6B05E738C60799A930CE34 /* Pods-MVCOfReadableCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCOfReadableCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVCOfReadableCode/Pods-MVCOfReadableCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EBF533FA3F65F06A91DBCFD /* libPods-MVCOfReadableCode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +142,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62D678526010FADA8660E6E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C8163F4B337690EC14E1971 /* Pods-MVCOfReadableCode.debug.xcconfig */,
+				7B6B05E738C60799A930CE34 /* Pods-MVCOfReadableCode.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		68FAC89D1E0E120100091B50 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +161,8 @@
 				68FAC8C21E0E120100091B50 /* MVCOfReadableCodeTests */,
 				68FAC8CD1E0E120100091B50 /* MVCOfReadableCodeUITests */,
 				68FAC8A71E0E120100091B50 /* Products */,
+				62D678526010FADA8660E6E5 /* Pods */,
+				BA4E63ABB37AC9E9ADAC4DAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,8 +254,8 @@
 			children = (
 				68FAC8FB1E0E206100091B50 /* PGViewEventsHandler.h */,
 				68FAC8FC1E0E206100091B50 /* PGViewEventsHandler.m */,
-				68FAC8FD1E0E206100091B50 /* PGViewEventsParamPON.h */,
-				68FAC8FE1E0E206100091B50 /* PGViewEventsParamPON.m */,
+				68FAC8FD1E0E206100091B50 /* PGViewEventsParamPOO.h */,
+				68FAC8FE1E0E206100091B50 /* PGViewEventsParamPOO.m */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -458,6 +474,14 @@
 			path = "根视图";
 			sourceTree = "<group>";
 		};
+		BA4E63ABB37AC9E9ADAC4DAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5305657525076312D1FC3F2F /* libPods-MVCOfReadableCode.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -465,9 +489,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68FAC8D31E0E120100091B50 /* Build configuration list for PBXNativeTarget "MVCOfReadableCode" */;
 			buildPhases = (
+				7C3F64A739BDDF649B5FB249 /* [CP] Check Pods Manifest.lock */,
 				68FAC8A21E0E120100091B50 /* Sources */,
 				68FAC8A31E0E120100091B50 /* Frameworks */,
 				68FAC8A41E0E120100091B50 /* Resources */,
+				11037F2A78D5B3FEF1A1D345 /* [CP] Embed Pods Frameworks */,
+				9E7B7C7CFABE2FEE5598AC5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -586,13 +613,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11037F2A78D5B3FEF1A1D345 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVCOfReadableCode/Pods-MVCOfReadableCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C3F64A739BDDF649B5FB249 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E7B7C7CFABE2FEE5598AC5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVCOfReadableCode/Pods-MVCOfReadableCode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68FAC8A21E0E120100091B50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				68FAC8FF1E0E206100091B50 /* PGViewEventsHandler.m in Sources */,
-				68FAC9001E0E206100091B50 /* PGViewEventsParamPON.m in Sources */,
+				68FAC9001E0E206100091B50 /* PGViewEventsParamPOO.m in Sources */,
 				68FAC9471E0E6BF900091B50 /* PGFeedView.m in Sources */,
 				68FAC8B11E0E120100091B50 /* ViewController.m in Sources */,
 				68FAC9481E0E6BF900091B50 /* PGFeedInputView.m in Sources */,
@@ -759,6 +834,7 @@
 		};
 		68FAC8D41E0E120100091B50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8163F4B337690EC14E1971 /* Pods-MVCOfReadableCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -772,6 +848,7 @@
 		};
 		68FAC8D51E0E120100091B50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B6B05E738C60799A930CE34 /* Pods-MVCOfReadableCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;

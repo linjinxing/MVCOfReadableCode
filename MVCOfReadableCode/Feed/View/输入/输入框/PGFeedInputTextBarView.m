@@ -8,6 +8,8 @@
 
 #import "PGFeedInputTextBarView.h"
 
+static const CGFloat InputViewTextBarHeight = 36.0f;
+
 @interface PGFeedInputTextBarView()
 @property(weak) UIButton* btnPickImages;
 @property(weak) UIButton* btnSwitchKeyboard;
@@ -44,4 +46,7 @@
     self.textView.frame = CGRectMake(self.btnPickImages.right + space, space, self.width -  buttonWidth * 2 - space * 4, self.height - space * 2);
 }
 
++ (CGFloat)height{
+    return InputViewTextBarHeight;
+}
 @end

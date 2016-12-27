@@ -12,4 +12,6 @@
 @property(readonly, weak) UIButton* btnPickImages;
 @property(readonly, weak) UIButton* btnSwitchKeyboard;
 @property(readonly, weak) UITextView* textView;
+
++ (CGFloat)height;
 @end

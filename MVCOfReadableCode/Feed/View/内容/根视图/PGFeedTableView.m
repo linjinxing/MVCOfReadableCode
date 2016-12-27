@@ -10,13 +10,14 @@
 #import "PGFeedPublishTableHeaderView.h"
 
 @interface PGFeedTableView()
-@property(readonly, weak) PGFeedPublishTableHeaderView* tableHeaderView;
+@property(readonly, weak) PGFeedPublishTableHeaderView* publishTableHeaderView;
 @end
 
 @implementation PGFeedTableView
 
-- (PGFeedPublishTableHeaderView*) tableHeaderView{
-    return self.tableHeaderView;
+- (PGFeedPublishTableHeaderView*) publishTableHeaderView{
+    if ([self.tableHeaderView isKindOfClass:[PGFeedPublishTableHeaderView class]])  return (PGFeedPublishTableHeaderView*)self.tableHeaderView;
+    return nil;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{

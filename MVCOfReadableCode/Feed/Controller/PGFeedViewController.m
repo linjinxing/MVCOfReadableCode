@@ -56,6 +56,7 @@
     return ^(id<PGViewEventsParam> param){
         PGViewEventHandler handler = handleTable[@([param.sender tag])];
         if (handler) handler(param);
+        else PGDebugWarn(@"not matched handler for %@", @([param.sender tag]));
     };
 }
 

@@ -8,6 +8,7 @@
 
 #import "PGFeedViewController.h"
 #import "PGFeedView.h"
+#import "PGFeedModel.h"
 
 @interface PGFeedViewController ()<PGViewEventHandlerViewController>
 @property (nonatomic, weak) PGFeedView *feedView;
@@ -37,11 +38,6 @@
 
 #pragma mark - 转场
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
 
 - (void)showSignInViewController{
     NSLog(@"显示登录界面");
@@ -72,7 +68,16 @@
     };
 }
 
-#pragma mark - 数据模型（Model）交互
+#pragma mark - 数据模型（Model）和V的交互
+
+#pragma mark collection view delegate
+
+
+#pragma mark collection view dataSource
+
+
+
+
 
 @end
 

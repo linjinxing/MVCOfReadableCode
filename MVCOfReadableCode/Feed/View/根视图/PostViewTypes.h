@@ -13,6 +13,9 @@ typedef NS_ENUM(NSInteger, PostViewTag) {
     PostViewTagLikeButton = 1 ,
     PostViewTagInputEmotionView,
     PostViewTagShareButton,
+    PostViewTagUserInfoProfile,
+    PostViewTagUserInfoFollow,
+    PostViewTagUserInfoNickname,
 };
 
 #endif /* PostViewTypes_h */

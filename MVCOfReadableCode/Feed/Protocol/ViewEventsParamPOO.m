@@ -9,24 +9,33 @@
 #import "ViewEventsParamPOO.h"
 
 @interface ViewEventsParamPOO()
-@property(assign) ViewEvents events;
+@property(assign) UIControlEvents events;
 @property(weak) id sender;
 @property(strong) id data;
+@property(assign) NSUInteger tag;
 @end
 
 @implementation ViewEventsParamPOO
 + (instancetype)paramWithSender:(id)sender
-                         events:(ViewEvents)events
-                           data:(id)data{
+                         events:(NSUInteger)events
+                           data:(id)data
+                            tag:(NSUInteger)tag{
     ViewEventsParamPOO* param = [[self alloc] init];
     param.events = events;
     param.sender = sender;
     param.data = data;
+    param.tag = tag;
     return param;
 }
 
 + (instancetype)paramWithSender:(id)sender
-                         events:(ViewEvents)events{
-    return [self paramWithSender:sender events:events data:nil];
+                         events:(NSUInteger)events
+                            tag:(NSUInteger)tag{
+    return [self paramWithSender:sender events:events data:nil tag:tag];
+}
+
++ (instancetype)paramWithSender:(id)sender
+                            tag:(NSUInteger)tag{
+    return [self paramWithSender:sender events:UIControlEventSystemReserved data:nil tag:tag];
 }
 @end

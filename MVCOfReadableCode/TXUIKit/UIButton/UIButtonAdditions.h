@@ -11,6 +11,8 @@
 
 @interface UIButton(create)
 
++(id)systemTypeButtonWithTag:(NSInteger)tag;
+
 +(id)buttonWithType:(UIButtonType)type  tag:(NSInteger)tag;
 
 +(id)buttonWithTitle:(NSString*)title ;

@@ -11,40 +11,57 @@
 #import "PostViewTypes.h"
 
 @interface PostUserInfoView()
-@property(weak) UIButton* btnAvatar;
-@property(weak) UILabel* lbNickname;
-@property(weak) UIButton* btnFollow;
+//@property(weak) UIButton* btnAvatar;
+//@property(weak) UILabel* lbNickname;
+//@property(weak) UIButton* btnFollow;
 @end
 
 @implementation PostUserInfoView
 @synthesize eventHandler;
 
+#pragma mark - 动态属性
+
+DynamicProperyForView(btnAvatar, PostViewTagUserInfoProfile)
+DynamicProperyForView(btnFollow, PostViewTagUserInfoFollow)
+DynamicProperyForView(lbNickname, PostViewTagUserInfoNickname)
+
+
+#pragma mark - 创建子视图并初始化自己
+
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        @WS
-        [self.btnAvatar addTouchUpInsideActionWithBlock:^(id sender) {
-            @SS
-            self.eventHandler([ViewEventsParamPOO paramWithSender:sender
-                                                           events:UIControlEventTouchUpInside]);
-        }];
+        [self creatSubviews];
     }
     return self;
 }
 
-#pragma mark - 处理用户事件及传递
+- (void)creatSubviews{
+    UIButton* btnAvatar = [UIButton systemTypeButtonWithTag:PostViewTagUserInfoProfile];
+    [btnAvatar addViewEventsHandler:self.eventHandler];
+    
+    UIButton* btnFollow = [UIButton systemTypeButtonWithTag:PostViewTagUserInfoFollow];
+    [btnFollow addViewEventsHandler:self.eventHandler];
+    
+    UILabel* lbNickname = [UILabel labelWithTag:PostViewTagUserInfoNickname];
+    
+    [self addSubviews:btnAvatar, btnFollow, lbNickname, nil];
+}
 
- - (void)buttonActions:(id)sender{
- 
- }
+#pragma mark - 处理用户事件及传递
+//
+// - (void)buttonActions:(id)sender{
+// 
+// }
 
 
 #pragma mark - 坐标计算及变换
-/*
- - (void)layoutSubviews{
- 
- }
- */
+
+- (void)layoutSubviews{
+    CGFloat space = 8;
+//    self.btnAvatar.frame = CGRectMake(space, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+}
+
 
 #pragma mark - 坐标计算及变换
 

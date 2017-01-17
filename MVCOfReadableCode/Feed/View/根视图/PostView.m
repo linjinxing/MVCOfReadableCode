@@ -36,8 +36,7 @@
                                  make.right.equalTo(self.mas_right);
                                  make.height.equalTo(self.mas_height).with.offset([PostInputTextBarView height]);
                              }];
-    [view.detailView.userInfoView.btnAvatar addTouchUpInsideTarget:self
-                                                            action:@selector(buttonAction:)];
+    view.detailView.userInfoView.eventHandler = self.eventHandler;
     return view;
 }
 

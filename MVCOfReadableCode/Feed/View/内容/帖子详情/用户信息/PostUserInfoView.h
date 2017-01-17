@@ -14,3 +14,6 @@
 @property(readonly, weak) UILabel* lbNickname;
 @property(readonly, weak) UIButton* btnFollow;
 @end
+
+
+

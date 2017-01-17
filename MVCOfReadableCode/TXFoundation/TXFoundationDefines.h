@@ -11,6 +11,13 @@
 
 typedef void(^TXSenderBlock)(id sender);
 
+
+#define DynamicProperyForView(property,tag) \
+- (UIView*)property{ \
+    return [self viewWithTag:tag]; \
+}
+
+
 #ifndef    weakify
 #if __has_feature(objc_arc)
 
@@ -51,8 +58,8 @@ _Pragma("clang diagnostic pop")
 #endif
 #endif
 
-#define WS weakify(self)
-#define SS strongify(self)
+#define WS @weakify(self)
+#define SS @strongify(self)
 
 
 #endif /* TXFoundationDefines_h */

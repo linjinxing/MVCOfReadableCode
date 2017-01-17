@@ -10,16 +10,17 @@
 #import <UIKit/UIKit.h>
 //#import "PGViewEventParam.h"
 
-typedef NS_ENUM(NSInteger, ViewEvents) {
-    PGViewEventTouchDown = UIControlEventTouchDown,
-    PGViewEventValueChange = UIControlEventValueChanged,
-    PGViewEventReloadAllData = 1 << 21
-};
+//typedef NS_ENUM(NSInteger, ViewEvents) {
+//    PGViewEventTouchDown = UIControlEventTouchDown,
+//    PGViewEventValueChange = UIControlEventValueChanged,
+//    PGViewEventReloadAllData = 1 << 21
+//};
 
 @protocol ViewEventsParam<NSObject>
 @property(readonly, weak) id sender;
-@property(readonly) ViewEvents events;
-@property(readonly) id data;
+@property(readonly, strong) id data;
+@property(readonly, assign) UIControlEvents events;
+@property(readonly, assign) NSUInteger tag;
 @end
 
 typedef void (^ViewEventsHandler)(id<ViewEventsParam> param);
@@ -36,6 +37,15 @@ typedef void (^ViewEventsHandler)(id<ViewEventsParam> param);
 @protocol ViewEventHandlerViewController <NSObject>
 - (ViewEventsHandler)viewEventHandler;
 @end
+
+
+@interface UIButton(ViewEventsHandler)
+- (void)addViewEventsHandlerWithTag:(NSUInteger)tag
+                       eventHandler:(ViewEventsHandler)eventHandler;
+- (void)addViewEventsHandler:(ViewEventsHandler)eventHandler;
+@end
+
+
 
 
 

@@ -20,6 +20,10 @@
     return btn;
 }
 
++(id)systemTypeButtonWithTag:(NSInteger)tag{
+    return [self buttonWithType:UIButtonTypeSystem tag:tag];
+}
+
 +(UIButton*)buttonWithTitle:(NSString*)title 
 {
     UIButton* btn = [[self class] buttonWithType:UIButtonTypeSystem];

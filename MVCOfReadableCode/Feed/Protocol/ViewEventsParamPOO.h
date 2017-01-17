@@ -11,9 +11,14 @@
 
 @interface ViewEventsParamPOO : NSObject<ViewEventsParam>
 + (instancetype)paramWithSender:(id)sender
-                         events:(ViewEvents)events
-                           data:(id)data;
+                         events:(NSUInteger)events
+                           data:(id)data
+                            tag:(NSUInteger)tag;
 
 + (instancetype)paramWithSender:(id)sender
-                         events:(ViewEvents)events;
+                         events:(NSUInteger)events
+                            tag:(NSUInteger)tag;
+
++ (instancetype)paramWithSender:(id)sender
+                         tag:(NSUInteger)tag;
 @end

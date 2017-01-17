@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (CreateSubviews)
+@interface UIView (Subviews)
 /**
  创建cls视图，并添加到self视图
 
@@ -20,4 +20,6 @@
 - (UIView*)createAndAddToSelfWithClass:(Class)cls
                        backgroundColor:(UIColor*)backgroundColor
                        makeConstraints:(void(^)(MASConstraintMaker *))block;
+
+- (void)addSubviews:(UIView*)firstView, ... NS_REQUIRES_NIL_TERMINATION;
 @end

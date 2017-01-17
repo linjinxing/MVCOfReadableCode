@@ -11,6 +11,6 @@
 #import "PostInputTextBarView.h"
 
 @interface PostCommonInputView : UIView
-@property(readonly, weak) PGPostInputTextBarView* textBarView;
-@property(readonly, weak) PGPostInputEmojiView* emojiView;
+@property(readonly, weak) PostInputTextBarView* textBarView;
+@property(readonly, weak) PostInputEmojiView* emojiView;
 @end

@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PGViewEventsHandler.h"
+#import "ViewEventsHandler.h"
 
-@interface PGViewEventsParamPOO : NSObject<PGViewEventsParam>
+@interface ViewEventsParamPOO : NSObject<ViewEventsParam>
 + (instancetype)paramWithSender:(id)sender
-                                 events:(PGViewEvents)events
-                                   data:(id)data;
+                         events:(ViewEvents)events
+                           data:(id)data;
 @end

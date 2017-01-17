@@ -1,5 +1,5 @@
 //
-//  PGPostInputEmojiPanelView.h
+//  PGPostInputDownloadEmojiView.h
 //  MVCOfReadableCode
 //
 //  Created by linjinxing on 16/12/24.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGPostInputEmojiPanelView : UIView
+@interface PostInputDownloadEmojiView : UIView
 
 @end

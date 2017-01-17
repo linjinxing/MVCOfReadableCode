@@ -1,20 +1,15 @@
 //
-//  PGPostPublishLikesView.m
+//  PGPostInputEmojiPanelView.m
 //  MVCOfReadableCode
 //
 //  Created by linjinxing on 16/12/24.
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostPublishLikesView.h"
+#import "PostInputEmojiPanelView.h"
 
-@interface PGPostPublishLikesView()
-@property(weak) UIButton* btnLike;
-@property(weak) UICollectionView* cvlikeAvatars;
-@property(weak) UIButton* btnShare;
-@end
+@implementation PostInputEmojiPanelView
 
-@implementation PGPostPublishLikesView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -23,5 +18,6 @@
     }
     return self;
 }
+
 
 @end

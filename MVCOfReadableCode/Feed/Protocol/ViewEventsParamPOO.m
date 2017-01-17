@@ -6,19 +6,19 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGViewEventsParamPOO.h"
+#import "ViewEventsParamPOO.h"
 
-@interface PGViewEventsParamPOO()
-@property(assign) PGViewEvents events;
+@interface ViewEventsParamPOO()
+@property(assign) ViewEvents events;
 @property(weak) id sender;
 @property(strong) id data;
 @end
 
-@implementation PGViewEventsParamPOO
+@implementation ViewEventsParamPOO
 + (instancetype)paramWithSender:(id)sender
-                                 events:(PGViewEvents)events
-                                   data:(id)data{
-    PGViewEventsParamPOO* param = [[self alloc] init];
+                         events:(ViewEvents)events
+                           data:(id)data{
+    ViewEventsParamPOO* param = [[self alloc] init];
     param.events = events;
     param.sender = sender;
     param.data = data;

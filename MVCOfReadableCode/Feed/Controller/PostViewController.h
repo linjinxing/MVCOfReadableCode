@@ -1,5 +1,5 @@
 //
-//  PGPostPublishImagesView.h
+//  PGPostViewController.h
 //  MVCOfReadableCode
 //
 //  Created by linjinxing on 16/12/24.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGPostPublishImagesView : UICollectionView
+@interface PostViewController : UIViewController
 
 @end

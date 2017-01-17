@@ -9,8 +9,8 @@
 #import "PostCommonInputView.h"
 
 @interface PostCommonInputView()
-@property(weak) PGPostInputTextBarView* textBarView;
-@property(weak) PGPostInputEmojiView* emojiView;
+@property(weak) PostInputTextBarView* textBarView;
+@property(weak) PostInputEmojiView* emojiView;
 @end
 
 @implementation PostCommonInputView
@@ -25,20 +25,20 @@
 }
 
 - (void)initTextBarViewWithFrame:(CGRect)frame{
-    PGPostInputTextBarView* tbv = [[PGPostInputTextBarView alloc] initWithFrame:frame];
+    PostInputTextBarView* tbv = [[PostInputTextBarView alloc] initWithFrame:frame];
     [self addSubview:tbv];
     self.textBarView = tbv;
 }
 
 - (void)initEmojiViewWithFrame:(CGRect)frame{
-    PGPostInputEmojiView* emojiv = [[PGPostInputEmojiView alloc] initWithFrame:frame];
+    PostInputEmojiView* emojiv = [[PostInputEmojiView alloc] initWithFrame:frame];
     [self addSubview:emojiv];
     self.emojiView = emojiv;
 }
 
 - (void)layoutSubviews{
     self.textBarView.top = 0;
-    self.textBarView.height = [PGPostInputTextBarView height];
+    self.textBarView.height = [PostInputTextBarView height];
     self.emojiView.top = self.textBarView.bottom;
     self.emojiView.height = self.height - self.textBarView.height;
 }

@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, PGPostTableViewTag) {
     PGPostTableViewTagShareButton,
 };
 
-@interface PostView : UIView<PGViewEventHandler>
+@interface PostView : UIView<ViewEventHandler>
 @property(readonly, weak)PostContentView* contentView;
 @property(readonly, weak)PostCommonInputView* commentInputView;
 @end

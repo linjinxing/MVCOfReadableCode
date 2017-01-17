@@ -6,21 +6,23 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostViewController.h"
-#import "PGPostView.h"
+#import "PostViewController.h"
+#import "PostView.h"
 #import "PGPostModel.h"
 
-@interface PGPostViewController ()<PGViewEventHandlerViewController>
-@property (nonatomic, weak) PGPostView *feedView;
+@interface PostViewController ()<ViewEventHandlerViewController>
+@property (nonatomic, weak) PostView *feedView;
 @end
 
-@implementation PGPostViewController
+@implementation PostViewController
+
+#pragma mark - 动态属性及重写属性
 
 #pragma mark - 生命周期管理
 
 
 - (void)loadView{
-    PGPostView* view = [[PGPostView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    PostView* view = [[PostView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     view.eventHandler = [self viewEventHandler];
     self.view = view;
     self.feedView = view;
@@ -44,26 +46,26 @@
 }
 
 #pragma mark - 视图（View）交互
-- (PGViewEventHandler)viewEventHandler{
-    NSDictionary<NSNumber *, PGViewEventHandler>* handleTable = @{
+- (ViewEventHandler)viewEventHandler{
+    NSDictionary<NSNumber *, ViewEventHandler>* handleTable = @{
                                                    @(PGPostTableViewTagLikeButton):[self likeViewEventHandler],
                                                    @(PGPostTableViewTagInputEmotionView):[self inputEmotionViewEventHandler]
                                                    };
-    return ^(id<PGViewEventsParam> param){
-        PGViewEventHandler handler = handleTable[@([param.sender tag])];
+    return ^(id<ViewEventsParam> param){
+        ViewEventHandler handler = handleTable[@([param.sender tag])];
         if (handler) handler(param);
         else PGDebugWarn(@"not matched handler for %@", @([param.sender tag]));
     };
 }
 
-- (PGViewEventHandler)likeViewEventHandler{
-    return ^(id<PGViewEventsParam> param){
+- (ViewEventHandler)likeViewEventHandler{
+    return ^(id<ViewEventsParam> param){
         NSLog(@"处理点赞事件");
     };
 }
 
-- (PGViewEventHandler)inputEmotionViewEventHandler{
-    return ^(id<PGViewEventsParam> param){
+- (ViewEventHandler)inputEmotionViewEventHandler{
+    return ^(id<ViewEventsParam> param){
         NSLog(@"处理表情输入");
     };
 }

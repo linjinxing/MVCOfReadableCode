@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGPostPublishLikesView : UIView
+@interface PostUserLikesView : UIView
 @property(readonly, weak) UIButton* btnLike;
 @property(readonly, weak) UICollectionView* cvlikeAvatars;
 @property(readonly, weak) UIButton* btnShare;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGPostPublishUserInfoView : UIView
+@interface PostUserInfoView : UIView
 @property(readonly, weak) UIImageView* ivAvatar;
 @property(readonly, weak) UILabel* lbNickname;
 @property(readonly, weak) UIButton* btnFollow;

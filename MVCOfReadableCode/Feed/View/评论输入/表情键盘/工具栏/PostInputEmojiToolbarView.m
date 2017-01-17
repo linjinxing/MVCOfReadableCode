@@ -6,9 +6,9 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostInputEmojiToolbarView.h"
+#import "PostInputEmojiToolbarView.h"
 
-@implementation PGPostInputEmojiToolbarView
+@implementation PostInputEmojiToolbarView
 
 
 - (instancetype)initWithFrame:(CGRect)frame{

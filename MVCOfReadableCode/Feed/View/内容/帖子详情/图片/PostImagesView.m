@@ -1,14 +1,14 @@
 //
-//  PGPostInputDownloadEmojiView.m
+//  PGPostPublishImagesView.m
 //  MVCOfReadableCode
 //
 //  Created by linjinxing on 16/12/24.
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostInputDownloadEmojiView.h"
+#import "PostImagesView.h"
 
-@implementation PGPostInputDownloadEmojiView
+@implementation PostImagesView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -17,6 +17,5 @@
     }
     return self;
 }
-
 
 @end

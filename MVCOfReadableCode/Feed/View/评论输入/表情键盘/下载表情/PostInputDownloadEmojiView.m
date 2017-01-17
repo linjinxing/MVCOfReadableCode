@@ -1,21 +1,14 @@
 //
-//  PGPostPublishUserInfoView.m
+//  PGPostInputDownloadEmojiView.m
 //  MVCOfReadableCode
 //
 //  Created by linjinxing on 16/12/24.
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostPublishUserInfoView.h"
+#import "PostInputDownloadEmojiView.h"
 
-@interface PGPostPublishUserInfoView()
-@property(weak) UIImageView* ivAvatar;
-@property(weak) UILabel* lbNickname;
-@property(weak) UIButton* btnFollow;
-@end
-
-@implementation PGPostPublishUserInfoView
-
+@implementation PostInputDownloadEmojiView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

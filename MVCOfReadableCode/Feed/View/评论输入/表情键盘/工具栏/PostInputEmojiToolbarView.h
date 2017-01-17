@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGPostInputEmojiToolbarView : UIView
+@interface PostInputEmojiToolbarView : UIView
 
 @end

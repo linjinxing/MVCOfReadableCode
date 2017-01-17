@@ -9,12 +9,14 @@
 #import "PostView.h"
 
 @interface PostView()
-@property(weak)PGPostTableView* contentView;
-@property(weak)PGPostInputView* commentInputView;
+@property(weak)PostContentView* contentView;
+@property(weak)PostCommonInputView* commentInputView;
 @end
 
 @implementation PostView
 @synthesize eventHandler;
+
+#pragma mark - 创建子视图并初始化自己
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (!self) return nil;
@@ -25,21 +27,21 @@
 }
 
 
-- (PGPostTableView*) createTableView{
-    PGPostTableView* tv = [[PGPostTableView alloc] init];
+- (PostContentView*) createTableView{
+    PostContentView* tv = [[PostContentView alloc] init];
     [self addSubview:tv];
     tv.backgroundColor = [UIColor brownColor];
     [tv mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top);
         make.left.equalTo(self.mas_left);
         make.right.equalTo(self.mas_right);
-        make.height.equalTo(self.mas_height).with.offset([PGPostInputTextBarView height]);
+        make.height.equalTo(self.mas_height).with.offset([PostInputTextBarView height]);
     }];
     return tv;
 }
 
-- (PGPostInputView*) createInputView{
-    PGPostInputView* iv = [[PGPostInputView alloc] init];
+- (PostCommonInputView*) createInputView{
+    PostCommonInputView* iv = [[PostCommonInputView alloc] init];
     [self addSubview:iv];
     iv.backgroundColor = [UIColor orangeColor];
     [iv mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,4 +53,29 @@
     return iv;
 }
 
+#pragma mark - 处理用户事件及传递
+/*
+ - (void)buttonAction:(id)sender{
+ 
+ }
+ */
+
+#pragma mark - 坐标计算及变换
+/*
+- (void)layoutSubviews{
+    
+}
+ */
+
+#pragma mark - 坐标计算及变换
+
+#pragma mark - 动画，隐藏
+
+#pragma mark - 画图
+
 @end
+
+
+
+
+

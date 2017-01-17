@@ -7,24 +7,25 @@
 //
 
 #import "PostContentView.h"
-#import "PGPostPublishTableHeaderView.h"
+
 
 @interface PostContentView()
-@property(readonly, weak) PGPostPublishTableHeaderView* publishTableHeaderView;
+@property(weak) PostDetailView* detailView;
 @end
 
 @implementation PostContentView
 
-- (PGPostPublishTableHeaderView*) publishTableHeaderView{
-    if ([self.tableHeaderView isKindOfClass:[PGPostPublishTableHeaderView class]])  return (PGPostPublishTableHeaderView*)self.tableHeaderView;
-    return nil;
-}
+//- (PostDetailView*) detailView{
+//    if ([self.tableHeaderView isKindOfClass:[PGPostPublishTableHeaderView class]])  return (PGPostPublishTableHeaderView*)self.tableHeaderView;
+//    return nil;
+//}
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        PGPostPublishTableHeaderView* hv = [[PGPostPublishTableHeaderView alloc] init];
-        self.tableHeaderView = hv;
+        PostDetailView* dv = [[PostDetailView alloc] init];
+        self.tableHeaderView = dv;
+        self.detailView = dv;
     }
     return self;
 }

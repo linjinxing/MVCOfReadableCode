@@ -7,7 +7,10 @@
 //  显示用户发布的图片和用户对它的feed
 
 #import <UIKit/UIKit.h>
+#import "PostDetailView.h"
 
 @interface PostContentView : UITableView
-
+@property(nonatomic, weak, readonly) PostDetailView* detailView;
 @end
+
+

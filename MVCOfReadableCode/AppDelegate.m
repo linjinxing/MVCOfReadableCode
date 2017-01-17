@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "PGPostViewController.h"
+#import "PostViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[PGPostViewController alloc] init]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[PostViewController alloc] init]];
     return YES;
 }
 

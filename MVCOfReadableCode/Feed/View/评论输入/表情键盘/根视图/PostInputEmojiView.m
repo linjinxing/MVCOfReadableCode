@@ -6,15 +6,15 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostInputEmojiView.h"
+#import "PostInputEmojiView.h"
 
-@interface PGPostInputEmojiView()
-@property(weak) PGPostInputDownloadEmojiView* downloadView;
-@property(weak) PGPostInputEmojiToolbarView* toolbarView;
-@property(weak) PGPostInputEmojiPanelView* emojiPanelView;
+@interface PostInputEmojiView()
+@property(weak) PostInputDownloadEmojiView* downloadView;
+@property(weak) PostInputEmojiToolbarView* toolbarView;
+@property(weak) PostInputEmojiPanelView* emojiPanelView;
 @end
 
-@implementation PGPostInputEmojiView
+@implementation PostInputEmojiView
 
 
 - (instancetype)initWithFrame:(CGRect)frame{

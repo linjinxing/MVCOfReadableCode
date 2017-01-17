@@ -38,9 +38,12 @@ DynamicProperyForView(btnMore, PostActionViewMore)
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [@[@(PostActionViewLike), @(PostActionViewAddComment), @(PostActionViewMore)]
+        [@[@{TXUIDictionaryKeyTag:@(PostActionViewLike),TXUIDictionaryKeyTitle:@"赞"},
+           @{TXUIDictionaryKeyTag:@(PostActionViewAddComment),TXUIDictionaryKeyTitle:@"评论"},
+           @{TXUIDictionaryKeyTag:@(PostActionViewMore),TXUIDictionaryKeyTitle:@"..."},]
          enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            UIButton* btn = [UIButton systemTypeButtonWithTag:[obj integerValue]];
+             UIButton* btn = [UIButton buttonWithTitle:obj[TXUIDictionaryKeyTitle]
+                                                   tag:[obj integerValue]];
             [btn addViewEventsHandler:self.eventHandler];
             [self addSubview:btn];
         }];

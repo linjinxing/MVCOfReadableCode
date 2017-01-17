@@ -28,6 +28,7 @@
 		6883EA3F1E2DE5FD004ADB8A /* PostUserLikesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA3E1E2DE5FD004ADB8A /* PostUserLikesTableViewCell.m */; };
 		6883EA421E2DE617004ADB8A /* PostCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA411E2DE617004ADB8A /* PostCommentTableViewCell.m */; };
 		6883EA451E2DE9E8004ADB8A /* UIView+Subviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA441E2DE9E8004ADB8A /* UIView+Subviews.m */; };
+		68BAC1AE1E2EC55100F4B980 /* TXUINSDictionaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC1AD1E2EC55100F4B980 /* TXUINSDictionaryKey.m */; };
 		68FAC8AB1E0E120100091B50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8AA1E0E120100091B50 /* main.m */; };
 		68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8AD1E0E120100091B50 /* AppDelegate.m */; };
 		68FAC8B11E0E120100091B50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8B01E0E120100091B50 /* ViewController.m */; };
@@ -110,6 +111,10 @@
 		6883EA431E2DE9E8004ADB8A /* UIView+Subviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Subviews.h"; sourceTree = "<group>"; };
 		6883EA441E2DE9E8004ADB8A /* UIView+Subviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Subviews.m"; sourceTree = "<group>"; };
 		6883EA461E2E0BBD004ADB8A /* PostViewTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostViewTypes.h; sourceTree = "<group>"; };
+		68BAC1AC1E2EC55100F4B980 /* TXUINSDictionaryKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXUINSDictionaryKey.h; sourceTree = "<group>"; };
+		68BAC1AD1E2EC55100F4B980 /* TXUINSDictionaryKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXUINSDictionaryKey.m; sourceTree = "<group>"; };
+		68BAC1B01E2EC69000F4B980 /* TXUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXUIKit.h; sourceTree = "<group>"; };
+		68BAC1B21E2EC72D00F4B980 /* TXFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXFoundation.h; sourceTree = "<group>"; };
 		68FAC8A61E0E120100091B50 /* MVCOfReadableCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCOfReadableCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FAC8AA1E0E120100091B50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68FAC8AC1E0E120100091B50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -409,6 +414,31 @@
 			path = "操作";
 			sourceTree = "<group>";
 		};
+		68BAC1AB1E2EC53900F4B980 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				68BAC1AC1E2EC55100F4B980 /* TXUINSDictionaryKey.h */,
+				68BAC1AD1E2EC55100F4B980 /* TXUINSDictionaryKey.m */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		68BAC1AF1E2EC68400F4B980 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				68BAC1B01E2EC69000F4B980 /* TXUIKit.h */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		68BAC1B11E2EC72100F4B980 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				68BAC1B21E2EC72D00F4B980 /* TXFoundation.h */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
 		68FAC89D1E0E120100091B50 = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +574,7 @@
 		68FAC94E1E0EAE5300091B50 /* TXFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				68BAC1B11E2EC72100F4B980 /* Export */,
 				6802D5A61E2E148400407EE1 /* TXFoundationDefines.h */,
 			);
 			name = TXFoundation;
@@ -553,6 +584,8 @@
 		68FAC94F1E0EAE5300091B50 /* TXUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				68BAC1AF1E2EC68400F4B980 /* Export */,
+				68BAC1AB1E2EC53900F4B980 /* Const */,
 				6802D5B61E2EB6A000407EE1 /* UICollectionView */,
 				6802D5B21E2EB48D00407EE1 /* Layout */,
 				6802D5AE1E2EB19700407EE1 /* ImageView */,
@@ -789,6 +822,7 @@
 				6883EA281E2D7609004ADB8A /* PostImagesView.m in Sources */,
 				6883EA3F1E2DE5FD004ADB8A /* PostUserLikesTableViewCell.m in Sources */,
 				68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */,
+				68BAC1AE1E2EC55100F4B980 /* TXUINSDictionaryKey.m in Sources */,
 				6883EA361E2DB01B004ADB8A /* PostActionView.m in Sources */,
 				6883EA2E1E2D7609004ADB8A /* PostDownloadEmojiView.m in Sources */,
 				6883EA301E2D7609004ADB8A /* PostInputEmojiView.m in Sources */,

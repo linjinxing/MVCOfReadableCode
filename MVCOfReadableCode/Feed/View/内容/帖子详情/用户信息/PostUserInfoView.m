@@ -40,7 +40,8 @@ DynamicProperyForView(lbNickname, PostViewTagUserInfoNickname)
     UIButton* btnAvatar = [UIButton systemTypeButtonWithTag:PostViewTagUserInfoProfile];
     [btnAvatar addViewEventsHandler:self.eventHandler];
     
-    UIButton* btnFollow = [UIButton systemTypeButtonWithTag:PostViewTagUserInfoFollow];
+    UIButton* btnFollow = [UIButton buttonWithTitle:@"关注"
+                                                tag:PostViewTagUserInfoFollow];
     [btnFollow addViewEventsHandler:self.eventHandler];
     
     UILabel* lbNickname = [UILabel labelWithTag:PostViewTagUserInfoNickname];

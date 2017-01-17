@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PostUserLikesView : UIView
-@property(readonly, weak) UIButton* btnLike;
+@property(readonly, weak) UIImageView* ivLike;
 @property(readonly, weak) UICollectionView* cvlikeAvatars;
-@property(readonly, weak) UIButton* btnShare;
+@property(readonly, weak) UILabel* lbNumOfLikes;
 @end
+
+

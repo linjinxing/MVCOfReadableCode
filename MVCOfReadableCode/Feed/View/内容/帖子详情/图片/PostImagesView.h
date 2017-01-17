@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewEventsHandler.h"
+#import "TXImageView.h"
 
 @interface PostImagesView : UIView<ViewEventsHandler>
-
+@property(nonatomic, weak) id<TXImageViewDelegate> delegate;
+@property(nonatomic, weak) id<TXImageViewDataSource> dataSource;
 @end

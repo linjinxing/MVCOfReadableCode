@@ -58,12 +58,18 @@ DynamicProperyForView(lbNickname, PostViewTagUserInfoNickname)
 #pragma mark - 坐标计算及变换
 
 - (void)layoutSubviews{
-    CGFloat space = 8;
-//    self.btnAvatar.frame = CGRectMake(space, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+    CGFloat space = TXUILayoutDefaultSpace();
+    
+    CGFloat width = self.height - space * 2;
+    self.btnAvatar.frame = CGRectMake(space, space, width, width);
+    
+    [self.lbNickname sizeToFit];
+    self.lbNickname.centerY = self.centerY;
+    self.lbNickname.left = self.btnAvatar.right + space;
+    
+    [self.btnFollow sizeToFit];
+    self.btnFollow.frame = CGRectMake(self.width - space, space, 80, width);
 }
-
-
-#pragma mark - 坐标计算及变换
 
 #pragma mark - 动画，隐藏
 

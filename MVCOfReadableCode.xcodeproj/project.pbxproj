@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6802D5AD1E2E217400407EE1 /* UILabel+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6802D5AC1E2E217400407EE1 /* UILabel+Create.m */; };
+		6802D5B11E2EB1AB00407EE1 /* TXImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6802D5B01E2EB1AB00407EE1 /* TXImageView.m */; };
+		6802D5B51E2EB49D00407EE1 /* TXUILayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6802D5B41E2EB49D00407EE1 /* TXUILayout.m */; };
+		6802D5BA1E2EB6C400407EE1 /* TXCollectionViewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6802D5B91E2EB6C400407EE1 /* TXCollectionViewImageCell.m */; };
 		6883EA281E2D7609004ADB8A /* PostImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA051E2D7609004ADB8A /* PostImagesView.m */; };
 		6883EA291E2D7609004ADB8A /* PostDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA091E2D7609004ADB8A /* PostDetailView.m */; };
 		6883EA2A1E2D7609004ADB8A /* PostUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA0C1E2D7609004ADB8A /* PostUserInfoView.m */; };
@@ -66,6 +69,12 @@
 		6802D5A61E2E148400407EE1 /* TXFoundationDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXFoundationDefines.h; sourceTree = "<group>"; };
 		6802D5AB1E2E217400407EE1 /* UILabel+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Create.h"; sourceTree = "<group>"; };
 		6802D5AC1E2E217400407EE1 /* UILabel+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Create.m"; sourceTree = "<group>"; };
+		6802D5AF1E2EB1AB00407EE1 /* TXImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXImageView.h; sourceTree = "<group>"; };
+		6802D5B01E2EB1AB00407EE1 /* TXImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXImageView.m; sourceTree = "<group>"; };
+		6802D5B31E2EB49D00407EE1 /* TXUILayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXUILayout.h; sourceTree = "<group>"; };
+		6802D5B41E2EB49D00407EE1 /* TXUILayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXUILayout.m; sourceTree = "<group>"; };
+		6802D5B81E2EB6C400407EE1 /* TXCollectionViewImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXCollectionViewImageCell.h; sourceTree = "<group>"; };
+		6802D5B91E2EB6C400407EE1 /* TXCollectionViewImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXCollectionViewImageCell.m; sourceTree = "<group>"; };
 		6883EA041E2D7609004ADB8A /* PostImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostImagesView.h; sourceTree = "<group>"; };
 		6883EA051E2D7609004ADB8A /* PostImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostImagesView.m; sourceTree = "<group>"; };
 		6883EA081E2D7609004ADB8A /* PostDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailView.h; sourceTree = "<group>"; };
@@ -168,6 +177,41 @@
 				7B6B05E738C60799A930CE34 /* Pods-MVCOfReadableCode.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6802D5AE1E2EB19700407EE1 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				6802D5AF1E2EB1AB00407EE1 /* TXImageView.h */,
+				6802D5B01E2EB1AB00407EE1 /* TXImageView.m */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		6802D5B21E2EB48D00407EE1 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				6802D5B31E2EB49D00407EE1 /* TXUILayout.h */,
+				6802D5B41E2EB49D00407EE1 /* TXUILayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		6802D5B61E2EB6A000407EE1 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				6802D5B71E2EB6A000407EE1 /* Cell */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		6802D5B71E2EB6A000407EE1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6802D5B81E2EB6C400407EE1 /* TXCollectionViewImageCell.h */,
+				6802D5B91E2EB6C400407EE1 /* TXCollectionViewImageCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		6883E9FE1E2D7077004ADB8A /* Comment */ = {
@@ -509,6 +553,9 @@
 		68FAC94F1E0EAE5300091B50 /* TXUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				6802D5B61E2EB6A000407EE1 /* UICollectionView */,
+				6802D5B21E2EB48D00407EE1 /* Layout */,
+				6802D5AE1E2EB19700407EE1 /* ImageView */,
 				68FAC9541E0EAE9000091B50 /* UIView */,
 				68FAC9501E0EAE5300091B50 /* UIButton */,
 			);
@@ -747,6 +794,7 @@
 				6883EA301E2D7609004ADB8A /* PostInputEmojiView.m in Sources */,
 				68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */,
 				68FAC8AB1E0E120100091B50 /* main.m in Sources */,
+				6802D5B11E2EB1AB00407EE1 /* TXImageView.m in Sources */,
 				6883EA421E2DE617004ADB8A /* PostCommentTableViewCell.m in Sources */,
 				6883EA311E2D7609004ADB8A /* PostInputEmojiPanelView.m in Sources */,
 				6883EA2F1E2D7609004ADB8A /* PostInputEmojiToolbarView.m in Sources */,
@@ -756,8 +804,10 @@
 				6883EA3C1E2DE5C6004ADB8A /* PostActionTableViewCell.m in Sources */,
 				6883EA2D1E2D7609004ADB8A /* PostCommonInputView.m in Sources */,
 				6883EA291E2D7609004ADB8A /* PostDetailView.m in Sources */,
+				6802D5BA1E2EB6C400407EE1 /* TXCollectionViewImageCell.m in Sources */,
 				68FAC9571E0EAE9000091B50 /* UIView+Layout.m in Sources */,
 				68FAC8E21E0E12C100091B50 /* PostViewController.m in Sources */,
+				6802D5B51E2EB49D00407EE1 /* TXUILayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

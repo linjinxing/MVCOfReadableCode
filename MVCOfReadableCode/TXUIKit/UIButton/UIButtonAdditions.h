@@ -54,7 +54,7 @@
 //文字居中，图片在右边
 - (void)horizontalCenterTitleAndImageRight:(CGFloat)spacing;
 - (void)horizontalCenterTitleAndImageRight; //默认6.0
-
+- (void)addTouchUpInsideTarget:(id)target action:(SEL)selector;
 @end
 
 

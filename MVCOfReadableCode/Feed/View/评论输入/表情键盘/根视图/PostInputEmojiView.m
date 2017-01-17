@@ -9,8 +9,8 @@
 #import "PostInputEmojiView.h"
 
 @interface PostInputEmojiView()
-@property(weak) PostInputDownloadEmojiView* downloadView;
-@property(weak) PostInputEmojiToolbarView* toolbarView;
+@property(weak) PostDownloadEmojiView* downloadView;
+@property(weak) PostSwitchEmojiView* toolbarView;
 @property(weak) PostInputEmojiPanelView* emojiPanelView;
 @end
 

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PostInputDownloadEmojiView : UIView
+@interface PostDownloadEmojiView : UIView
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PostInputDownloadEmojiView.h"
+#import "PostDownloadEmojiView.h"
 
-@implementation PostInputDownloadEmojiView
+@implementation PostDownloadEmojiView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

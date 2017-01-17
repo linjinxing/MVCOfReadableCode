@@ -13,4 +13,7 @@
 + (instancetype)paramWithSender:(id)sender
                          events:(ViewEvents)events
                            data:(id)data;
+
++ (instancetype)paramWithSender:(id)sender
+                         events:(ViewEvents)events;
 @end

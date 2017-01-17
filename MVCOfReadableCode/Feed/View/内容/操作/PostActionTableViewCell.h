@@ -1,5 +1,5 @@
 //
-//  PostActionView.h
+//  PostActionTableViewCell.h
 //  MVCOfReadableCode
 //
 //  Created by linjinxing on 17/1/17.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewEventsHandler.h"
 
-@interface PostActionView : UIView<ViewEventsHandler>
+@interface PostActionTableViewCell : UITableViewCell
 
 @end

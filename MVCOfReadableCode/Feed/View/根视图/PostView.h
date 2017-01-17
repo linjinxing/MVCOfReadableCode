@@ -11,13 +11,10 @@
 #import "PostContentView.h"
 #import "PostCommonInputView.h"
 
-typedef NS_ENUM(NSInteger, PGPostTableViewTag) {
-    PGPostTableViewTagLikeButton = 1 ,
-    PGPostTableViewTagInputEmotionView,
-    PGPostTableViewTagShareButton,
-};
 
-@interface PostView : UIView<ViewEventHandler>
+
+
+@interface PostView : UIView<ViewEventsHandler>
 @property(readonly, weak)PostContentView* contentView;
 @property(readonly, weak)PostCommonInputView* commentInputView;
 @end

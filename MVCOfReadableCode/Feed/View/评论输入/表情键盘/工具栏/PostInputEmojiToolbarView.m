@@ -6,9 +6,9 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PostInputEmojiToolbarView.h"
+#import "PostSwitchEmojiView.h"
 
-@implementation PostInputEmojiToolbarView
+@implementation PostSwitchEmojiView
 
 
 - (instancetype)initWithFrame:(CGRect)frame{

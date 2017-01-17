@@ -246,6 +246,10 @@
     [self horizontalCenterTitleAndImageRight:DEFAULT_SPACING];
 }
 
+- (void)addTouchUpInsideTarget:(id)target action:(SEL)selector{
+    [self addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+}
+
 @end
 
 

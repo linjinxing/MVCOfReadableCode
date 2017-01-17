@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PostInputEmojiToolbarView : UIView
+@interface PostSwitchEmojiView : UIView
 
 @end

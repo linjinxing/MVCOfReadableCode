@@ -28,29 +28,28 @@
 
 
 - (PostContentView*) createTableView{
-    PostContentView* tv = [[PostContentView alloc] init];
-    [self addSubview:tv];
-    tv.backgroundColor = [UIColor brownColor];
-    [tv mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top);
-        make.left.equalTo(self.mas_left);
-        make.right.equalTo(self.mas_right);
-        make.height.equalTo(self.mas_height).with.offset([PostInputTextBarView height]);
-    }];
-    return tv;
+    PostContentView* view = (PostContentView*)[self createAndAddToSelfWithClass:[PostContentView class]
+                             backgroundColor:[UIColor brownColor]
+                             makeConstraints:^(MASConstraintMaker *make) {
+                                 make.top.equalTo(self.mas_top);
+                                 make.left.equalTo(self.mas_left);
+                                 make.right.equalTo(self.mas_right);
+                                 make.height.equalTo(self.mas_height).with.offset([PostInputTextBarView height]);
+                             }];
+    [view.detailView.userInfoView.btnAvatar addTouchUpInsideTarget:self
+                                                            action:@selector(buttonAction:)];
+    return view;
 }
 
 - (PostCommonInputView*) createInputView{
-    PostCommonInputView* iv = [[PostCommonInputView alloc] init];
-    [self addSubview:iv];
-    iv.backgroundColor = [UIColor orangeColor];
-    [iv mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(68);
-        make.left.equalTo(self.mas_left);
-        make.right.equalTo(self.mas_right);
-        make.bottom.equalTo(self.mas_bottom);
-    }];
-    return iv;
+    return (PostCommonInputView*)[self createAndAddToSelfWithClass:[PostCommonInputView class]
+                                               backgroundColor:[UIColor brownColor]
+                                               makeConstraints:^(MASConstraintMaker *make) {
+                                                   make.height.mas_equalTo(68);
+                                                   make.left.equalTo(self.mas_left);
+                                                   make.right.equalTo(self.mas_right);
+                                                   make.bottom.equalTo(self.mas_bottom);
+                                               }];
 }
 
 #pragma mark - 处理用户事件及传递

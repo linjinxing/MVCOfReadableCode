@@ -22,19 +22,19 @@ typedef NS_ENUM(NSInteger, ViewEvents) {
 @property(readonly) id data;
 @end
 
-typedef void (^ViewEventHandler)(id<ViewEventsParam> param);
+typedef void (^ViewEventsHandler)(id<ViewEventsParam> param);
 
 /* view的事件回调协议, 方便调用统一的事件处理出口，减少代码量，
    同时所有view都这样定义，方便其它同事查找，提高可读性 */
-@protocol ViewEventHandler <NSObject>
-@property(copy)ViewEventHandler eventHandler;
+@protocol ViewEventsHandler <NSObject>
+@property(copy)ViewEventsHandler eventHandler;
 @end
 
 
 /* UIViewController处理view的事件协议，所有要处理view事件的统一入口，
     这样，方便所有的程序员方便找到入口。*/
 @protocol ViewEventHandlerViewController <NSObject>
-- (ViewEventHandler)viewEventHandler;
+- (ViewEventsHandler)viewEventHandler;
 @end
 
 

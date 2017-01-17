@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewEventsHandler.h"
 
-@interface PostImagesView : UIView
+@interface PostImagesView : UIView<ViewEventsHandler>
 
 @end

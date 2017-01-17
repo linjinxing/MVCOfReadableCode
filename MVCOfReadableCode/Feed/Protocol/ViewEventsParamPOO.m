@@ -24,4 +24,9 @@
     param.data = data;
     return param;
 }
+
++ (instancetype)paramWithSender:(id)sender
+                         events:(ViewEvents)events{
+    return [self paramWithSender:sender events:events data:nil];
+}
 @end

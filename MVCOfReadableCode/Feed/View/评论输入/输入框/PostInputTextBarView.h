@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGPostInputTextBarView : UIView
+@interface PostInputTextBarView : UIView
 @property(readonly, weak) UIButton* btnPickImages;
 @property(readonly, weak) UIButton* btnSwitchKeyboard;
 @property(readonly, weak) UITextView* textView;

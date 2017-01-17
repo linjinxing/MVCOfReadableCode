@@ -6,17 +6,17 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostInputTextBarView.h"
+#import "PostInputTextBarView.h"
 
 static const CGFloat InputViewTextBarHeight = 36.0f;
 
-@interface PGPostInputTextBarView()
+@interface PostInputTextBarView()
 @property(weak) UIButton* btnPickImages;
 @property(weak) UIButton* btnSwitchKeyboard;
 @property(weak) UITextView* textView;
 @end
 
-@implementation PGPostInputTextBarView
+@implementation PostInputTextBarView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

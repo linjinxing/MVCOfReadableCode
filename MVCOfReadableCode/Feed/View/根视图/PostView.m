@@ -6,21 +6,21 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostView.h"
+#import "PostView.h"
 
-@interface PGPostView()
-@property(weak)PGPostTableView* tableView;
-@property(weak)PGPostInputView* inputView;
+@interface PostView()
+@property(weak)PGPostTableView* contentView;
+@property(weak)PGPostInputView* commentInputView;
 @end
 
-@implementation PGPostView
+@implementation PostView
 @synthesize eventHandler;
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (!self) return nil;
 
-    self.tableView = [self createTableView];
-    self.inputView = [self createInputView];
+    self.contentView = [self createTableView];
+    self.commentInputView = [self createInputView];
     return self;
 }
 

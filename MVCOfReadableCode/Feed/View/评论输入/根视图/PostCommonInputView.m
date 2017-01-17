@@ -6,14 +6,14 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostInputView.h"
+#import "PostCommonInputView.h"
 
-@interface PGPostInputView()
+@interface PostCommonInputView()
 @property(weak) PGPostInputTextBarView* textBarView;
 @property(weak) PGPostInputEmojiView* emojiView;
 @end
 
-@implementation PGPostInputView
+@implementation PostCommonInputView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

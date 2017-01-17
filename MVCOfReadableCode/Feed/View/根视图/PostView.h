@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PGViewEventsHandler.h"
-#import "PGPostTableView.h"
-#import "PGPostInputView.h"
+#import "ViewEventsHandler.h"
+#import "PostContentView.h"
+#import "PostCommonInputView.h"
 
 typedef NS_ENUM(NSInteger, PGPostTableViewTag) {
     PGPostTableViewTagLikeButton = 1 ,
@@ -17,9 +17,9 @@ typedef NS_ENUM(NSInteger, PGPostTableViewTag) {
     PGPostTableViewTagShareButton,
 };
 
-@interface PGPostView : UIView<PGViewEventHandler>
-@property(readonly, weak)PGPostTableView* tableView;
-@property(readonly, weak)PGPostInputView* inputView;
+@interface PostView : UIView<PGViewEventHandler>
+@property(readonly, weak)PostContentView* contentView;
+@property(readonly, weak)PostCommonInputView* commentInputView;
 @end
 
 

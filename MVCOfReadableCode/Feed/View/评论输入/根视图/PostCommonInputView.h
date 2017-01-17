@@ -7,10 +7,10 @@
 //  feed输入界面，包括工具栏和表情输入界面
 
 #import <UIKit/UIKit.h>
-#import "PGPostInputEmojiView.h"
-#import "PGPostInputTextBarView.h"
+#import "PostInputEmojiView.h"
+#import "PostInputTextBarView.h"
 
-@interface PGPostInputView : UIView
+@interface PostCommonInputView : UIView
 @property(readonly, weak) PGPostInputTextBarView* textBarView;
 @property(readonly, weak) PGPostInputEmojiView* emojiView;
 @end

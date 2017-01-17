@@ -6,14 +6,14 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PGPostTableView.h"
+#import "PostContentView.h"
 #import "PGPostPublishTableHeaderView.h"
 
-@interface PGPostTableView()
+@interface PostContentView()
 @property(readonly, weak) PGPostPublishTableHeaderView* publishTableHeaderView;
 @end
 
-@implementation PGPostTableView
+@implementation PostContentView
 
 - (PGPostPublishTableHeaderView*) publishTableHeaderView{
     if ([self.tableHeaderView isKindOfClass:[PGPostPublishTableHeaderView class]])  return (PGPostPublishTableHeaderView*)self.tableHeaderView;

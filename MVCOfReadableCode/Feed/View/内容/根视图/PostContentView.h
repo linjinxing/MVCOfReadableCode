@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGPostTableView : UITableView
+@interface PostContentView : UITableView
 
 @end

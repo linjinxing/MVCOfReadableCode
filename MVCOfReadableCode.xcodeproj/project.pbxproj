@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6883E9FD1E2CFCD0004ADB8A /* PGPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883E9FC1E2CFCD0004ADB8A /* PGPostTableViewCell.m */; };
+		6883EA281E2D7609004ADB8A /* PGPostPublishImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA051E2D7609004ADB8A /* PGPostPublishImagesView.m */; };
+		6883EA291E2D7609004ADB8A /* PGPostPublishTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA091E2D7609004ADB8A /* PGPostPublishTableHeaderView.m */; };
+		6883EA2A1E2D7609004ADB8A /* PGPostPublishUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA0C1E2D7609004ADB8A /* PGPostPublishUserInfoView.m */; };
+		6883EA2B1E2D7609004ADB8A /* PostContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA0F1E2D7609004ADB8A /* PostContentView.m */; };
+		6883EA2C1E2D7609004ADB8A /* PGPostPublishLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA121E2D7609004ADB8A /* PGPostPublishLikesView.m */; };
+		6883EA2D1E2D7609004ADB8A /* PostCommonInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA171E2D7609004ADB8A /* PostCommonInputView.m */; };
+		6883EA2E1E2D7609004ADB8A /* PGPostInputDownloadEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA1B1E2D7609004ADB8A /* PGPostInputDownloadEmojiView.m */; };
+		6883EA2F1E2D7609004ADB8A /* PGPostInputEmojiToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA1E1E2D7609004ADB8A /* PGPostInputEmojiToolbarView.m */; };
+		6883EA301E2D7609004ADB8A /* PGPostInputEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA211E2D7609004ADB8A /* PGPostInputEmojiView.m */; };
+		6883EA311E2D7609004ADB8A /* PGPostInputEmojiPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA241E2D7609004ADB8A /* PGPostInputEmojiPanelView.m */; };
+		6883EA321E2D7609004ADB8A /* PostInputTextBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA271E2D7609004ADB8A /* PostInputTextBarView.m */; };
 		68FAC8AB1E0E120100091B50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8AA1E0E120100091B50 /* main.m */; };
 		68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8AD1E0E120100091B50 /* AppDelegate.m */; };
 		68FAC8B11E0E120100091B50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8B01E0E120100091B50 /* ViewController.m */; };
@@ -20,20 +30,9 @@
 		68FAC8EB1E0E14AA00091B50 /* PGPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8EA1E0E14AA00091B50 /* PGPostModel.m */; };
 		68FAC8FF1E0E206100091B50 /* PGViewEventsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8FC1E0E206100091B50 /* PGViewEventsHandler.m */; };
 		68FAC9001E0E206100091B50 /* PGViewEventsParamPOO.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8FE1E0E206100091B50 /* PGViewEventsParamPOO.m */; };
-		68FAC9471E0E6BF900091B50 /* PGPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9321E0E6BF900091B50 /* PGPostView.m */; };
-		68FAC9481E0E6BF900091B50 /* PGPostInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9361E0E6BF900091B50 /* PGPostInputView.m */; };
-		68FAC9491E0E6BF900091B50 /* PGPostInputDownloadEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC93A1E0E6BF900091B50 /* PGPostInputDownloadEmojiView.m */; };
-		68FAC94A1E0E6BF900091B50 /* PGPostInputEmojiToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC93D1E0E6BF900091B50 /* PGPostInputEmojiToolbarView.m */; };
-		68FAC94B1E0E6BF900091B50 /* PGPostInputEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9401E0E6BF900091B50 /* PGPostInputEmojiView.m */; };
-		68FAC94C1E0E6BF900091B50 /* PGPostInputEmojiPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9431E0E6BF900091B50 /* PGPostInputEmojiPanelView.m */; };
-		68FAC94D1E0E6BF900091B50 /* PGPostInputTextBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9461E0E6BF900091B50 /* PGPostInputTextBarView.m */; };
+		68FAC9471E0E6BF900091B50 /* PostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9321E0E6BF900091B50 /* PostView.m */; };
 		68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9521E0EAE5300091B50 /* UIButtonAdditions.m */; };
 		68FAC9571E0EAE9000091B50 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9561E0EAE9000091B50 /* UIView+Layout.m */; };
-		68FAC95C1E0EB2AB00091B50 /* PGPostTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC95B1E0EB2AB00091B50 /* PGPostTableView.m */; };
-		68FAC95F1E0EB67F00091B50 /* PGPostPublishTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC95E1E0EB67F00091B50 /* PGPostPublishTableHeaderView.m */; };
-		68FAC9621E0EB6C000091B50 /* PGPostPublishUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9611E0EB6C000091B50 /* PGPostPublishUserInfoView.m */; };
-		68FAC9651E0EB6D200091B50 /* PGPostPublishLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9641E0EB6D200091B50 /* PGPostPublishLikesView.m */; };
-		68FAC9681E0EB6ED00091B50 /* PGPostPublishImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9671E0EB6ED00091B50 /* PGPostPublishImagesView.m */; };
 		9EBF533FA3F65F06A91DBCFD /* libPods-MVCOfReadableCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305657525076312D1FC3F2F /* libPods-MVCOfReadableCode.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +56,28 @@
 /* Begin PBXFileReference section */
 		5305657525076312D1FC3F2F /* libPods-MVCOfReadableCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVCOfReadableCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8163F4B337690EC14E1971 /* Pods-MVCOfReadableCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCOfReadableCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVCOfReadableCode/Pods-MVCOfReadableCode.debug.xcconfig"; sourceTree = "<group>"; };
-		6883E9FB1E2CFCD0004ADB8A /* PGPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostTableViewCell.h; sourceTree = "<group>"; };
-		6883E9FC1E2CFCD0004ADB8A /* PGPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostTableViewCell.m; sourceTree = "<group>"; };
+		6883EA041E2D7609004ADB8A /* PGPostPublishImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostPublishImagesView.h; sourceTree = "<group>"; };
+		6883EA051E2D7609004ADB8A /* PGPostPublishImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostPublishImagesView.m; sourceTree = "<group>"; };
+		6883EA081E2D7609004ADB8A /* PGPostPublishTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostPublishTableHeaderView.h; sourceTree = "<group>"; };
+		6883EA091E2D7609004ADB8A /* PGPostPublishTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostPublishTableHeaderView.m; sourceTree = "<group>"; };
+		6883EA0B1E2D7609004ADB8A /* PGPostPublishUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostPublishUserInfoView.h; sourceTree = "<group>"; };
+		6883EA0C1E2D7609004ADB8A /* PGPostPublishUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostPublishUserInfoView.m; sourceTree = "<group>"; };
+		6883EA0E1E2D7609004ADB8A /* PostContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostContentView.h; sourceTree = "<group>"; };
+		6883EA0F1E2D7609004ADB8A /* PostContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostContentView.m; sourceTree = "<group>"; };
+		6883EA111E2D7609004ADB8A /* PGPostPublishLikesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostPublishLikesView.h; sourceTree = "<group>"; };
+		6883EA121E2D7609004ADB8A /* PGPostPublishLikesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostPublishLikesView.m; sourceTree = "<group>"; };
+		6883EA161E2D7609004ADB8A /* PostCommonInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCommonInputView.h; sourceTree = "<group>"; };
+		6883EA171E2D7609004ADB8A /* PostCommonInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCommonInputView.m; sourceTree = "<group>"; };
+		6883EA1A1E2D7609004ADB8A /* PGPostInputDownloadEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputDownloadEmojiView.h; sourceTree = "<group>"; };
+		6883EA1B1E2D7609004ADB8A /* PGPostInputDownloadEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputDownloadEmojiView.m; sourceTree = "<group>"; };
+		6883EA1D1E2D7609004ADB8A /* PGPostInputEmojiToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputEmojiToolbarView.h; sourceTree = "<group>"; };
+		6883EA1E1E2D7609004ADB8A /* PGPostInputEmojiToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputEmojiToolbarView.m; sourceTree = "<group>"; };
+		6883EA201E2D7609004ADB8A /* PGPostInputEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputEmojiView.h; sourceTree = "<group>"; };
+		6883EA211E2D7609004ADB8A /* PGPostInputEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputEmojiView.m; sourceTree = "<group>"; };
+		6883EA231E2D7609004ADB8A /* PGPostInputEmojiPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputEmojiPanelView.h; sourceTree = "<group>"; };
+		6883EA241E2D7609004ADB8A /* PGPostInputEmojiPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputEmojiPanelView.m; sourceTree = "<group>"; };
+		6883EA261E2D7609004ADB8A /* PostInputTextBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInputTextBarView.h; sourceTree = "<group>"; };
+		6883EA271E2D7609004ADB8A /* PostInputTextBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostInputTextBarView.m; sourceTree = "<group>"; };
 		68FAC8A61E0E120100091B50 /* MVCOfReadableCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCOfReadableCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FAC8AA1E0E120100091B50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68FAC8AC1E0E120100091B50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,35 +102,13 @@
 		68FAC8FC1E0E206100091B50 /* PGViewEventsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewEventsHandler.m; sourceTree = "<group>"; };
 		68FAC8FD1E0E206100091B50 /* PGViewEventsParamPOO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewEventsParamPOO.h; sourceTree = "<group>"; };
 		68FAC8FE1E0E206100091B50 /* PGViewEventsParamPOO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewEventsParamPOO.m; sourceTree = "<group>"; };
-		68FAC9311E0E6BF900091B50 /* PGPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostView.h; sourceTree = "<group>"; };
-		68FAC9321E0E6BF900091B50 /* PGPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostView.m; sourceTree = "<group>"; };
-		68FAC9351E0E6BF900091B50 /* PGPostInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputView.h; sourceTree = "<group>"; };
-		68FAC9361E0E6BF900091B50 /* PGPostInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputView.m; sourceTree = "<group>"; };
-		68FAC9391E0E6BF900091B50 /* PGPostInputDownloadEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputDownloadEmojiView.h; sourceTree = "<group>"; };
-		68FAC93A1E0E6BF900091B50 /* PGPostInputDownloadEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputDownloadEmojiView.m; sourceTree = "<group>"; };
-		68FAC93C1E0E6BF900091B50 /* PGPostInputEmojiToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputEmojiToolbarView.h; sourceTree = "<group>"; };
-		68FAC93D1E0E6BF900091B50 /* PGPostInputEmojiToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputEmojiToolbarView.m; sourceTree = "<group>"; };
-		68FAC93F1E0E6BF900091B50 /* PGPostInputEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputEmojiView.h; sourceTree = "<group>"; };
-		68FAC9401E0E6BF900091B50 /* PGPostInputEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputEmojiView.m; sourceTree = "<group>"; };
-		68FAC9421E0E6BF900091B50 /* PGPostInputEmojiPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputEmojiPanelView.h; sourceTree = "<group>"; };
-		68FAC9431E0E6BF900091B50 /* PGPostInputEmojiPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputEmojiPanelView.m; sourceTree = "<group>"; };
-		68FAC9451E0E6BF900091B50 /* PGPostInputTextBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostInputTextBarView.h; sourceTree = "<group>"; };
-		68FAC9461E0E6BF900091B50 /* PGPostInputTextBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostInputTextBarView.m; sourceTree = "<group>"; };
+		68FAC9311E0E6BF900091B50 /* PostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostView.h; sourceTree = "<group>"; };
+		68FAC9321E0E6BF900091B50 /* PostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostView.m; sourceTree = "<group>"; };
 		68FAC9511E0EAE5300091B50 /* UIButtonAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonAdditions.h; sourceTree = "<group>"; };
 		68FAC9521E0EAE5300091B50 /* UIButtonAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonAdditions.m; sourceTree = "<group>"; };
 		68FAC9551E0EAE9000091B50 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		68FAC9561E0EAE9000091B50 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		68FAC9581E0EAF3A00091B50 /* MVCOfReadableCode.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCOfReadableCode.pch; sourceTree = "<group>"; };
-		68FAC95A1E0EB2AB00091B50 /* PGPostTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostTableView.h; sourceTree = "<group>"; };
-		68FAC95B1E0EB2AB00091B50 /* PGPostTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostTableView.m; sourceTree = "<group>"; };
-		68FAC95D1E0EB67F00091B50 /* PGPostPublishTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostPublishTableHeaderView.h; sourceTree = "<group>"; };
-		68FAC95E1E0EB67F00091B50 /* PGPostPublishTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostPublishTableHeaderView.m; sourceTree = "<group>"; };
-		68FAC9601E0EB6C000091B50 /* PGPostPublishUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostPublishUserInfoView.h; sourceTree = "<group>"; };
-		68FAC9611E0EB6C000091B50 /* PGPostPublishUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostPublishUserInfoView.m; sourceTree = "<group>"; };
-		68FAC9631E0EB6D200091B50 /* PGPostPublishLikesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostPublishLikesView.h; sourceTree = "<group>"; };
-		68FAC9641E0EB6D200091B50 /* PGPostPublishLikesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostPublishLikesView.m; sourceTree = "<group>"; };
-		68FAC9661E0EB6ED00091B50 /* PGPostPublishImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPostPublishImagesView.h; sourceTree = "<group>"; };
-		68FAC9671E0EB6ED00091B50 /* PGPostPublishImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPostPublishImagesView.m; sourceTree = "<group>"; };
 		68FAC96C1E0EC1AE00091B50 /* TXFoundationDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXFoundationDefines.h; sourceTree = "<group>"; };
 		7B6B05E738C60799A930CE34 /* Pods-MVCOfReadableCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCOfReadableCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVCOfReadableCode/Pods-MVCOfReadableCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,21 +148,189 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6883E9F91E2CFCD0004ADB8A /* Post */ = {
+		6883E9FE1E2D7077004ADB8A /* Comment */ = {
 			isa = PBXGroup;
 			children = (
-				6883E9FA1E2CFCD0004ADB8A /* Cell */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		6883E9FF1E2D7077004ADB8A /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Emoji;
+			sourceTree = "<group>";
+		};
+		6883EA001E2D7077004ADB8A /* Post */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Post;
 			sourceTree = "<group>";
 		};
-		6883E9FA1E2CFCD0004ADB8A /* Cell */ = {
+		6883EA011E2D7609004ADB8A /* 内容 */ = {
 			isa = PBXGroup;
 			children = (
-				6883E9FB1E2CFCD0004ADB8A /* PGPostTableViewCell.h */,
-				6883E9FC1E2CFCD0004ADB8A /* PGPostTableViewCell.m */,
+				6883EA0D1E2D7609004ADB8A /* 根视图 */,
+				6883EA331E2D76F9004ADB8A /* 操作 */,
+				6883EA021E2D7609004ADB8A /* 帖子详情 */,
+				6883EA101E2D7609004ADB8A /* 点赞 */,
+				6883EA131E2D7609004ADB8A /* 评论 */,
 			);
-			path = Cell;
+			path = "内容";
+			sourceTree = "<group>";
+		};
+		6883EA021E2D7609004ADB8A /* 帖子详情 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA031E2D7609004ADB8A /* 图片 */,
+				6883EA061E2D7609004ADB8A /* 描述 */,
+				6883EA071E2D7609004ADB8A /* 根视图 */,
+				6883EA0A1E2D7609004ADB8A /* 用户信息 */,
+			);
+			path = "帖子详情";
+			sourceTree = "<group>";
+		};
+		6883EA031E2D7609004ADB8A /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA041E2D7609004ADB8A /* PGPostPublishImagesView.h */,
+				6883EA051E2D7609004ADB8A /* PGPostPublishImagesView.m */,
+			);
+			path = "图片";
+			sourceTree = "<group>";
+		};
+		6883EA061E2D7609004ADB8A /* 描述 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "描述";
+			sourceTree = "<group>";
+		};
+		6883EA071E2D7609004ADB8A /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA081E2D7609004ADB8A /* PGPostPublishTableHeaderView.h */,
+				6883EA091E2D7609004ADB8A /* PGPostPublishTableHeaderView.m */,
+			);
+			path = "根视图";
+			sourceTree = "<group>";
+		};
+		6883EA0A1E2D7609004ADB8A /* 用户信息 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA0B1E2D7609004ADB8A /* PGPostPublishUserInfoView.h */,
+				6883EA0C1E2D7609004ADB8A /* PGPostPublishUserInfoView.m */,
+			);
+			path = "用户信息";
+			sourceTree = "<group>";
+		};
+		6883EA0D1E2D7609004ADB8A /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA0E1E2D7609004ADB8A /* PostContentView.h */,
+				6883EA0F1E2D7609004ADB8A /* PostContentView.m */,
+			);
+			path = "根视图";
+			sourceTree = "<group>";
+		};
+		6883EA101E2D7609004ADB8A /* 点赞 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA111E2D7609004ADB8A /* PGPostPublishLikesView.h */,
+				6883EA121E2D7609004ADB8A /* PGPostPublishLikesView.m */,
+			);
+			path = "点赞";
+			sourceTree = "<group>";
+		};
+		6883EA131E2D7609004ADB8A /* 评论 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "评论";
+			sourceTree = "<group>";
+		};
+		6883EA141E2D7609004ADB8A /* 评论输入 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA151E2D7609004ADB8A /* 根视图 */,
+				6883EA181E2D7609004ADB8A /* 表情键盘 */,
+				6883EA251E2D7609004ADB8A /* 输入框 */,
+			);
+			path = "评论输入";
+			sourceTree = "<group>";
+		};
+		6883EA151E2D7609004ADB8A /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA161E2D7609004ADB8A /* PostCommonInputView.h */,
+				6883EA171E2D7609004ADB8A /* PostCommonInputView.m */,
+			);
+			path = "根视图";
+			sourceTree = "<group>";
+		};
+		6883EA181E2D7609004ADB8A /* 表情键盘 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA191E2D7609004ADB8A /* 下载表情 */,
+				6883EA1C1E2D7609004ADB8A /* 工具栏 */,
+				6883EA1F1E2D7609004ADB8A /* 根视图 */,
+				6883EA221E2D7609004ADB8A /* 表情 */,
+			);
+			path = "表情键盘";
+			sourceTree = "<group>";
+		};
+		6883EA191E2D7609004ADB8A /* 下载表情 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA1A1E2D7609004ADB8A /* PGPostInputDownloadEmojiView.h */,
+				6883EA1B1E2D7609004ADB8A /* PGPostInputDownloadEmojiView.m */,
+			);
+			path = "下载表情";
+			sourceTree = "<group>";
+		};
+		6883EA1C1E2D7609004ADB8A /* 工具栏 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA1D1E2D7609004ADB8A /* PGPostInputEmojiToolbarView.h */,
+				6883EA1E1E2D7609004ADB8A /* PGPostInputEmojiToolbarView.m */,
+			);
+			path = "工具栏";
+			sourceTree = "<group>";
+		};
+		6883EA1F1E2D7609004ADB8A /* 根视图 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA201E2D7609004ADB8A /* PGPostInputEmojiView.h */,
+				6883EA211E2D7609004ADB8A /* PGPostInputEmojiView.m */,
+			);
+			path = "根视图";
+			sourceTree = "<group>";
+		};
+		6883EA221E2D7609004ADB8A /* 表情 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA231E2D7609004ADB8A /* PGPostInputEmojiPanelView.h */,
+				6883EA241E2D7609004ADB8A /* PGPostInputEmojiPanelView.m */,
+			);
+			path = "表情";
+			sourceTree = "<group>";
+		};
+		6883EA251E2D7609004ADB8A /* 输入框 */ = {
+			isa = PBXGroup;
+			children = (
+				6883EA261E2D7609004ADB8A /* PostInputTextBarView.h */,
+				6883EA271E2D7609004ADB8A /* PostInputTextBarView.m */,
+			);
+			path = "输入框";
+			sourceTree = "<group>";
+		};
+		6883EA331E2D76F9004ADB8A /* 操作 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "操作";
 			sourceTree = "<group>";
 		};
 		68FAC89D1E0E120100091B50 = {
@@ -260,6 +425,9 @@
 		68FAC8DE1E0E12A800091B50 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6883E9FE1E2D7077004ADB8A /* Comment */,
+				6883E9FF1E2D7077004ADB8A /* Emoji */,
+				6883EA001E2D7077004ADB8A /* Post */,
 				68FAC8E91E0E14AA00091B50 /* PGPostModel.h */,
 				68FAC8EA1E0E14AA00091B50 /* PGPostModel.m */,
 			);
@@ -281,151 +449,19 @@
 			isa = PBXGroup;
 			children = (
 				68FAC9301E0E6BF900091B50 /* 根视图 */,
-				68FAC9281E0E6BF900091B50 /* 内容 */,
-				68FAC9331E0E6BF900091B50 /* 输入 */,
+				6883EA011E2D7609004ADB8A /* 内容 */,
+				6883EA141E2D7609004ADB8A /* 评论输入 */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		68FAC9281E0E6BF900091B50 /* 内容 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9591E0EB28C00091B50 /* 根视图 */,
-				6883E9F91E2CFCD0004ADB8A /* Post */,
-				68FAC92B1E0E6BF900091B50 /* 发布 */,
-			);
-			path = "内容";
-			sourceTree = "<group>";
-		};
-		68FAC92B1E0E6BF900091B50 /* 发布 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC92D1E0E6BF900091B50 /* 根视图 */,
-				68FAC92C1E0E6BF900091B50 /* 图片 */,
-				68FAC92E1E0E6BF900091B50 /* 点赞 */,
-				68FAC92F1E0E6BF900091B50 /* 用户信息 */,
-			);
-			path = "发布";
-			sourceTree = "<group>";
-		};
-		68FAC92C1E0E6BF900091B50 /* 图片 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9661E0EB6ED00091B50 /* PGPostPublishImagesView.h */,
-				68FAC9671E0EB6ED00091B50 /* PGPostPublishImagesView.m */,
-			);
-			path = "图片";
-			sourceTree = "<group>";
-		};
-		68FAC92D1E0E6BF900091B50 /* 根视图 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC95D1E0EB67F00091B50 /* PGPostPublishTableHeaderView.h */,
-				68FAC95E1E0EB67F00091B50 /* PGPostPublishTableHeaderView.m */,
-			);
-			path = "根视图";
-			sourceTree = "<group>";
-		};
-		68FAC92E1E0E6BF900091B50 /* 点赞 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9631E0EB6D200091B50 /* PGPostPublishLikesView.h */,
-				68FAC9641E0EB6D200091B50 /* PGPostPublishLikesView.m */,
-			);
-			path = "点赞";
-			sourceTree = "<group>";
-		};
-		68FAC92F1E0E6BF900091B50 /* 用户信息 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9601E0EB6C000091B50 /* PGPostPublishUserInfoView.h */,
-				68FAC9611E0EB6C000091B50 /* PGPostPublishUserInfoView.m */,
-			);
-			path = "用户信息";
 			sourceTree = "<group>";
 		};
 		68FAC9301E0E6BF900091B50 /* 根视图 */ = {
 			isa = PBXGroup;
 			children = (
-				68FAC9311E0E6BF900091B50 /* PGPostView.h */,
-				68FAC9321E0E6BF900091B50 /* PGPostView.m */,
+				68FAC9311E0E6BF900091B50 /* PostView.h */,
+				68FAC9321E0E6BF900091B50 /* PostView.m */,
 			);
 			path = "根视图";
-			sourceTree = "<group>";
-		};
-		68FAC9331E0E6BF900091B50 /* 输入 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9341E0E6BF900091B50 /* 根视图 */,
-				68FAC9371E0E6BF900091B50 /* 表情键盘 */,
-				68FAC9441E0E6BF900091B50 /* 输入框 */,
-			);
-			path = "输入";
-			sourceTree = "<group>";
-		};
-		68FAC9341E0E6BF900091B50 /* 根视图 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9351E0E6BF900091B50 /* PGPostInputView.h */,
-				68FAC9361E0E6BF900091B50 /* PGPostInputView.m */,
-			);
-			path = "根视图";
-			sourceTree = "<group>";
-		};
-		68FAC9371E0E6BF900091B50 /* 表情键盘 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC93E1E0E6BF900091B50 /* 根视图 */,
-				68FAC9381E0E6BF900091B50 /* 下载表情 */,
-				68FAC93B1E0E6BF900091B50 /* 工具栏 */,
-				68FAC9411E0E6BF900091B50 /* 表情 */,
-			);
-			path = "表情键盘";
-			sourceTree = "<group>";
-		};
-		68FAC9381E0E6BF900091B50 /* 下载表情 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9391E0E6BF900091B50 /* PGPostInputDownloadEmojiView.h */,
-				68FAC93A1E0E6BF900091B50 /* PGPostInputDownloadEmojiView.m */,
-			);
-			path = "下载表情";
-			sourceTree = "<group>";
-		};
-		68FAC93B1E0E6BF900091B50 /* 工具栏 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC93C1E0E6BF900091B50 /* PGPostInputEmojiToolbarView.h */,
-				68FAC93D1E0E6BF900091B50 /* PGPostInputEmojiToolbarView.m */,
-			);
-			path = "工具栏";
-			sourceTree = "<group>";
-		};
-		68FAC93E1E0E6BF900091B50 /* 根视图 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC93F1E0E6BF900091B50 /* PGPostInputEmojiView.h */,
-				68FAC9401E0E6BF900091B50 /* PGPostInputEmojiView.m */,
-			);
-			path = "根视图";
-			sourceTree = "<group>";
-		};
-		68FAC9411E0E6BF900091B50 /* 表情 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9421E0E6BF900091B50 /* PGPostInputEmojiPanelView.h */,
-				68FAC9431E0E6BF900091B50 /* PGPostInputEmojiPanelView.m */,
-			);
-			path = "表情";
-			sourceTree = "<group>";
-		};
-		68FAC9441E0E6BF900091B50 /* 输入框 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC9451E0E6BF900091B50 /* PGPostInputTextBarView.h */,
-				68FAC9461E0E6BF900091B50 /* PGPostInputTextBarView.m */,
-			);
-			path = "输入框";
 			sourceTree = "<group>";
 		};
 		68FAC94E1E0EAE5300091B50 /* TXFoundation */ = {
@@ -463,15 +499,6 @@
 				68FAC9561E0EAE9000091B50 /* UIView+Layout.m */,
 			);
 			path = UIView;
-			sourceTree = "<group>";
-		};
-		68FAC9591E0EB28C00091B50 /* 根视图 */ = {
-			isa = PBXGroup;
-			children = (
-				68FAC95A1E0EB2AB00091B50 /* PGPostTableView.h */,
-				68FAC95B1E0EB2AB00091B50 /* PGPostTableView.m */,
-			);
-			path = "根视图";
 			sourceTree = "<group>";
 		};
 		BA4E63ABB37AC9E9ADAC4DAA /* Frameworks */ = {
@@ -668,26 +695,25 @@
 			files = (
 				68FAC8FF1E0E206100091B50 /* PGViewEventsHandler.m in Sources */,
 				68FAC9001E0E206100091B50 /* PGViewEventsParamPOO.m in Sources */,
-				68FAC9471E0E6BF900091B50 /* PGPostView.m in Sources */,
-				6883E9FD1E2CFCD0004ADB8A /* PGPostTableViewCell.m in Sources */,
+				6883EA2C1E2D7609004ADB8A /* PGPostPublishLikesView.m in Sources */,
+				68FAC9471E0E6BF900091B50 /* PostView.m in Sources */,
 				68FAC8B11E0E120100091B50 /* ViewController.m in Sources */,
-				68FAC9481E0E6BF900091B50 /* PGPostInputView.m in Sources */,
+				6883EA2B1E2D7609004ADB8A /* PostContentView.m in Sources */,
+				6883EA281E2D7609004ADB8A /* PGPostPublishImagesView.m in Sources */,
 				68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */,
-				68FAC94C1E0E6BF900091B50 /* PGPostInputEmojiPanelView.m in Sources */,
+				6883EA2E1E2D7609004ADB8A /* PGPostInputDownloadEmojiView.m in Sources */,
+				6883EA301E2D7609004ADB8A /* PGPostInputEmojiView.m in Sources */,
 				68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */,
-				68FAC9681E0EB6ED00091B50 /* PGPostPublishImagesView.m in Sources */,
 				68FAC8AB1E0E120100091B50 /* main.m in Sources */,
-				68FAC95F1E0EB67F00091B50 /* PGPostPublishTableHeaderView.m in Sources */,
-				68FAC9491E0E6BF900091B50 /* PGPostInputDownloadEmojiView.m in Sources */,
-				68FAC94D1E0E6BF900091B50 /* PGPostInputTextBarView.m in Sources */,
-				68FAC9651E0EB6D200091B50 /* PGPostPublishLikesView.m in Sources */,
-				68FAC9621E0EB6C000091B50 /* PGPostPublishUserInfoView.m in Sources */,
+				6883EA311E2D7609004ADB8A /* PGPostInputEmojiPanelView.m in Sources */,
+				6883EA2F1E2D7609004ADB8A /* PGPostInputEmojiToolbarView.m in Sources */,
 				68FAC8EB1E0E14AA00091B50 /* PGPostModel.m in Sources */,
-				68FAC95C1E0EB2AB00091B50 /* PGPostTableView.m in Sources */,
+				6883EA321E2D7609004ADB8A /* PostInputTextBarView.m in Sources */,
+				6883EA2A1E2D7609004ADB8A /* PGPostPublishUserInfoView.m in Sources */,
+				6883EA2D1E2D7609004ADB8A /* PostCommonInputView.m in Sources */,
+				6883EA291E2D7609004ADB8A /* PGPostPublishTableHeaderView.m in Sources */,
 				68FAC9571E0EAE9000091B50 /* UIView+Layout.m in Sources */,
-				68FAC94A1E0E6BF900091B50 /* PGPostInputEmojiToolbarView.m in Sources */,
 				68FAC8E21E0E12C100091B50 /* PGPostViewController.m in Sources */,
-				68FAC94B1E0E6BF900091B50 /* PGPostInputEmojiView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

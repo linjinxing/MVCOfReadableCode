@@ -16,6 +16,9 @@ typedef NS_ENUM(NSInteger, PostViewTag) {
     PostViewTagUserInfoProfile,
     PostViewTagUserInfoFollow,
     PostViewTagUserInfoNickname,
+    PostActionViewLike,
+    PostActionViewAddComment,
+    PostActionViewMore,
 };
 
 #endif /* PostViewTypes_h */

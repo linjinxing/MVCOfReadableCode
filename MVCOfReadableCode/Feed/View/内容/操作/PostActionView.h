@@ -10,5 +10,7 @@
 #import "ViewEventsHandler.h"
 
 @interface PostActionView : UIView<ViewEventsHandler>
-
+//@property(readonly, weak) UIButton* btnAvatar;
+//@property(readonly, weak) UIButton* btnMore;
+//@property(readonly, weak) UIButton* btnFollow;
 @end

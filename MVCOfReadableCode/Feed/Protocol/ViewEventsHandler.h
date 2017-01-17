@@ -28,7 +28,7 @@ typedef void (^ViewEventsHandler)(id<ViewEventsParam> param);
 /* view的事件回调协议, 方便调用统一的事件处理出口，减少代码量，
    同时所有view都这样定义，方便其它同事查找，提高可读性 */
 @protocol ViewEventsHandler <NSObject>
-@property(copy)ViewEventsHandler eventHandler;
+@property(nonatomic, copy)ViewEventsHandler eventHandler;
 @end
 
 

@@ -31,7 +31,7 @@
 }
 
 - (RACSignal*)showLoadingViewAndHideAfterCompletion{
-    return [self show]
+    return [[self showLoadingView] hideLoadingView];
 }
 
 - (RACSignal*)hideLoadingView{
@@ -44,9 +44,23 @@
 }
 
 - (RACSignal*)showErrorMessage{
-    
+    return [[self deliverOnMainThread]
+            doError:^(NSError *error) {
+                MBProgressHUD* view = [[MBProgressHUD alloc] initWithView:[UIApplication topViewControllerWithController:nil].view];
+                view.detailsLabel.text = error.localizedDescription;
+                [view showAnimated:YES];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [view removeFromSuperview];
+                });
+    }];
+}
+
+- (RACSignal*)showLoadingViewAndErrorMessage{
+    return [[[self showLoadingView] hideLoadingView] showErrorMessage];
 }
 @end
+
+
 
 
 

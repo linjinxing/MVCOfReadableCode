@@ -13,4 +13,9 @@
 - (RACSignal*)showLoadingViewAndHideAfterCompletion;
 - (RACSignal*)hideLoadingView;
 - (RACSignal*)showErrorMessage;
+
+- (RACSignal*)showLoadingViewAndErrorMessage;
 @end
+
+
+

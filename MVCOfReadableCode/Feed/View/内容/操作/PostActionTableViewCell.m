@@ -8,6 +8,10 @@
 
 #import "PostActionTableViewCell.h"
 
+@interface PostActionTableViewCell()
+@property(nonatomic, weak) PostActionView* actionView;
+@end
+
 @implementation PostActionTableViewCell
 @synthesize eventHandler;
 

@@ -51,6 +51,12 @@ DynamicProperyForView(btnMore, PostViewTagActionViewMore)
     return self;
 }
 
+#pragma makr - 修改界面元素
+- (void)setLikesState:(BOOL)likesState{
+    _likesState = likesState;
+    [self.btnLike setTitle:likesState ? @"赞":@"已赞" forState:UIControlStateNormal];
+}
+
 #pragma mark - 坐标计算及变换
 
 - (void)layoutSubviews{

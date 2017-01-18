@@ -29,10 +29,30 @@ static void removeAllLoadingView(){
     [arrayProgressHUDViews() removeAllObjects];
 }
 
-static MBProgressHUD* showLoadingView(){
-    MBProgressHUD* view = [MBProgressHUD showHUDAddedTo:[UIApplication topViewControllerWithController:nil].view
-                                animated:YES];
+static MBProgressHUD* createLoadingView(NSString* title, NSString* detail){
+    UIView* superView = [UIApplication topViewControllerWithController:[[[UIApplication sharedApplication] keyWindow] rootViewController]].view;
+    assert(superView);
+    MBProgressHUD* view = [[MBProgressHUD alloc] initWithView:superView];
+    view.label.text = title;
+    view.detailsLabel.text = detail;
+    return view;
+}
+
+static MBProgressHUD* showLoadingView(NSString* title, NSString* detail){
+    MBProgressHUD* view = createLoadingView(title, detail);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [view showAnimated:YES];
+    });
     [arrayProgressHUDViews() addObject:view];
+    return view;
+}
+
+static MBProgressHUD* showMessage(NSString* title, NSString* detail, NSTimeInterval hideAfter){
+    MBProgressHUD* view = createLoadingView(title, detail);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [view showAnimated:YES];
+        [view hideAnimated:YES afterDelay:hideAfter];
+    });
     return view;
 }
 
@@ -40,13 +60,18 @@ static MBProgressHUD* showLoadingView(){
 @implementation RACSignal (MBProgressHUD)
 
 - (RACSignal*)showLoadingView{
+    return [self showLoadingViewWithMessage:nil];
+}
+
+- (RACSignal*)showLoadingViewWithMessage:(NSString*)message{
     return [self initially:^{
-        showLoadingView();
+        showLoadingView(message, nil);
     }];
 }
 
 - (RACSignal*)showLoadingViewAndHideAfterCompletion{
-    return [[self showLoadingView] hideLoadingView];
+    return [[self showLoadingView]
+            hideLoadingView];
 }
 
 - (RACSignal*)hideLoadingView{
@@ -59,28 +84,38 @@ static MBProgressHUD* showLoadingView(){
     return [[self deliverOnMainThread]
             doError:^(NSError *error) {
                 removeAllLoadingView();
-                MBProgressHUD* view = [[MBProgressHUD alloc] initWithView:[UIApplication topViewControllerWithController:nil].view];
-                view.detailsLabel.text = error.localizedDescription;
-                [view showAnimated:YES];
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [view removeFromSuperview];
-                });
+                showMessage(nil, error.localizedDescription, 2);
     }];
 }
 
-- (RACSignal*)showLoadingViewAndErrorMessage{
-    return [[[self showLoadingView] hideLoadingView] showErrorMessage];
-}
-
-+ (RACSignal*)showLoadingViewSignal{
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-       dispatch_async(dispatch_get_main_queue(), ^{
-           [subscriber sendNext:showLoadingView()];
-           [subscriber sendCompleted];
-       });
-        return nil;
+- (RACSignal*)showSuccessWithMessage:(NSString*)message{
+    return [self doCompleted:^{
+        removeAllLoadingView();
+        showMessage(message, nil, 2);
     }];
 }
+
+- (RACSignal*)showAllWithSuccessMessage:(NSString*)message{
+    return [[[self showLoadingViewWithMessage:message]
+             showSuccessWithMessage:message]
+            showErrorMessage];
+}
+
+- (RACSignal*)showAllMessage{
+    return [[[self showLoadingView]
+             hideLoadingView]
+            showErrorMessage];
+}
+
+//+ (RACSignal*)showLoadingViewSignalWithMessage:(NSString*)message{
+//    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//       dispatch_async(dispatch_get_main_queue(), ^{
+//           [subscriber sendNext:showLoadingView(message, nil)];
+//           [subscriber sendCompleted];
+//       });
+//        return nil;
+//    }];
+//}
 
 @end
 

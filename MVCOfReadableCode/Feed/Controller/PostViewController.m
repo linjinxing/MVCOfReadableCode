@@ -14,7 +14,7 @@
 #import "Comment.h"
 
 @interface PostViewController ()<ViewEventHandlerViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
-@property (nonatomic, weak) PostView *feedView;
+@property (nonatomic, weak) PostView *postView;
 @property (nonatomic, strong) NSArray<id<Comment>>* comments;
 @property (nonatomic, strong) id<Post> post;
 @end
@@ -29,7 +29,7 @@
     PostView* view = [[PostView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     view.eventHandler = [self viewEventHandler];
     self.view = view;
-    self.feedView = view;
+    self.postView = view;
 }
 
 - (void)viewDidLoad {
@@ -78,14 +78,13 @@
 - (ViewEventsHandler)likeViewEventHandler{
     return ^(id<ViewEventsParam> param){
         NSLog(@"处理点赞事件");
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        [[PostBLLLike(self.post.id)
-         deliverOnMainThread]
-         subscribeError:^(NSError *error) {
-             [MBProgressHUD hideHUDForView:self.view animated:YES];
-        } completed:^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        }];
+        PostActionTableViewCell* cell = [self.postView.contentView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:PostViewTableViewSectionIndexLikeUsers]];
+        [[[PostBLLLike(self.post.id)
+           showAllWithSuccessMessage:cell.actionView.likesState?@"取消点赞成功":@"点赞成功"]
+          deliverOnMainThread]
+         subscribeCompleted:^{
+             cell.actionView.likesState = !cell.actionView.likesState;
+         }];
     };
 }
 
@@ -110,13 +109,13 @@
 
 #pragma mark - 数据模型（Model）和V的交互
 
-#pragma mark 点赞 collection view delegate
+#pragma mark 点赞用户 collection view delegate
 
-#pragma mark 点赞 collection view dataSource
+#pragma mark 点赞用户 collection view dataSource
 
-#pragma mark 图片 collection view delegate
+#pragma mark 图片 view delegate
 
-#pragma mark 图片 collection view dataSource
+#pragma mark 图片 view dataSource
 
 #pragma mark collection view delegate
 

@@ -10,7 +10,18 @@
 #import "ViewEventsHandler.h"
 
 @interface PostActionView : UIView<ViewEventsHandler>
+/**
+ 点赞，还是未点赞状态
+ */
+@property(nonatomic) BOOL likesState;
 //@property(readonly, weak) UIButton* btnAvatar;
 //@property(readonly, weak) UIButton* btnMore;
 //@property(readonly, weak) UIButton* btnFollow;
+/**
+ 设置是否是点赞状态
+
+ @param yes 如果是点赞状态，则设为yes，否则no
+
+ */
+//- (void)setLikeState:(BOOL)yes;
 @end

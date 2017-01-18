@@ -10,9 +10,11 @@
 #import "PostView.h"
 #import "PGPostModel.h"
 #import "PostViewTypes.h"
+#import "CommentPOD.h"
 
-@interface PostViewController ()<ViewEventHandlerViewController>
+@interface PostViewController ()<ViewEventHandlerViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, weak) PostView *feedView;
+@property (nonatomic, strong) NSArray<id<Comment>>* comments;
 @end
 
 @implementation PostViewController
@@ -51,6 +53,11 @@
     NSLog(@"显示登录界面");
 }
 
+- (void)showImagesBrowserViewController{
+    NSLog(@"显示图片大图浏览界面");
+}
+
+
 #pragma mark - 视图（View）交互
 - (ViewEventsHandler)viewEventHandler{
     NSDictionary<NSNumber *, ViewEventsHandler>* handleTable = @{
@@ -86,11 +93,58 @@
 
 #pragma mark 图片 collection view dataSource
 
-#pragma mark 评论 table view delegate
+#pragma mark collection view delegate
 
-#pragma mark 评论 table view dataSource
+#pragma mark collection view dataSource
+
+#pragma mark  table view dataSource
 
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return PostViewTableViewSectionIndexComments == section ? self.comments.count : 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [tableView dequeueReusableCellWithIdentifier:@{
+                                                          @(PostViewTableViewSectionIndexActionTag):[PostActionTableViewCell className],
+                                                          @(PostViewTableViewSectionIndexComments):[PostCommentTableViewCell className],
+                                                          @(PostViewTableViewSectionIndexLikeUsers):[PostUserLikesTableViewCell className]
+                                                          }[@(indexPath.section)]];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    void (^setEventHandler)(Class) = ^(Class cellClass){
+        NSAssert([cell isKindOfClass:[PostActionTableViewCell class]], [@"必须是" stringByAppendingString:[cellClass className]]);
+        ((PostActionTableViewCell*)cell).eventHandler = self.viewEventHandler;
+    };
+    switch (indexPath.section) {
+        case PostViewTableViewSectionIndexActionTag: setEventHandler([PostActionTableViewCell class]); break;
+        case PostViewTableViewSectionIndexLikeUsers: setEventHandler([PostUserLikesTableViewCell class]); break;
+        case PostViewTableViewSectionIndexComments:
+        {
+            NSAssert([cell isKindOfClass:[PostCommentTableViewCell class]], @"必须是PostCommentTableViewCell");
+            PostCommentTableViewCell* commentCell = (PostCommentTableViewCell*)cell;
+            commentCell.
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return PostViewTableViewSectionCount;
+}
+
+#pragma mark  table view delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44.0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 
 
 

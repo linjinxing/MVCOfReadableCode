@@ -205,7 +205,9 @@
 }
 
 
-
+- (void)setFrameWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height{
+    self.frame = CGRectMake(x, y, width, height);
+}
 
 @end
 

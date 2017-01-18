@@ -9,14 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ViewEventsHandler.h"
 #import "PostContentView.h"
-#import "PostCommonInputView.h"
-
 
 
 
 @interface PostView : UIView<ViewEventsHandler>
 @property(readonly, weak)PostContentView* contentView;
-@property(readonly, weak)PostCommonInputView* commentInputView;
+@property(readonly, weak)TXEmojiKeyboardView* commentInputView;
 @end
 
 

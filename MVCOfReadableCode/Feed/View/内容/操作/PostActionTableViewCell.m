@@ -9,6 +9,7 @@
 #import "PostActionTableViewCell.h"
 
 @implementation PostActionTableViewCell
+@synthesize eventHandler;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

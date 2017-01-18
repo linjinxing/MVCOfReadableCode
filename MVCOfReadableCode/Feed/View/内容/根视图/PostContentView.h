@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PostDetailView.h"
+#import "PostActionTableViewCell.h"
+#import "PostCommentTableViewCell.h"
+#import "PostUserLikesTableViewCell.h"
 
 @interface PostContentView : UITableView
 @property(nonatomic, weak, readonly) PostDetailView* detailView;

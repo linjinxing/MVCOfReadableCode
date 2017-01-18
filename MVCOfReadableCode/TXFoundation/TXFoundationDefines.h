@@ -10,7 +10,15 @@
 #define TXFoundationDefines_h
 
 typedef void(^TXSenderBlock)(id sender);
+typedef void (^TXVoidBlock)();
+typedef id (^TXGetDataBlock)();
+typedef void(^TXDataBlock)(id data);
+typedef TXDataBlock TXSuccessBlock;
+typedef void(^TXFailBlock)(NSError* error);
 
+typedef void(^TXSelectBlock)(id sender, NSIndexPath* indexPath);
+typedef void(^TXSenderBlock)(id sender);
+typedef TXSenderBlock TXCanelBlock;
 
 #define DynamicProperyForView(property,tag) \
 - (UIView*)property{ \

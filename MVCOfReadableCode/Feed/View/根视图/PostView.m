@@ -10,7 +10,7 @@
 
 @interface PostView()
 @property(weak)PostContentView* contentView;
-@property(weak)PostCommonInputView* commentInputView;
+@property(weak)TXEmojiKeyboardView* commentInputView;
 @end
 
 @implementation PostView
@@ -34,14 +34,14 @@
                                  make.top.equalTo(self.mas_top);
                                  make.left.equalTo(self.mas_left);
                                  make.right.equalTo(self.mas_right);
-                                 make.height.equalTo(self.mas_height).with.offset([PostInputTextBarView height]);
+                                 make.height.equalTo(self.mas_height).with.offset([TXEmojiKeyboardInputTextToolbarView height]);
                              }];
     view.detailView.userInfoView.eventHandler = self.eventHandler;
     return view;
 }
 
-- (PostCommonInputView*) createInputView{
-    return (PostCommonInputView*)[self createAndAddToSelfWithClass:[PostCommonInputView class]
+- (TXEmojiKeyboardView*) createInputView{
+    return (TXEmojiKeyboardView*)[self createAndAddToSelfWithClass:[TXEmojiKeyboardView class]
                                                backgroundColor:[UIColor brownColor]
                                                makeConstraints:^(MASConstraintMaker *make) {
                                                    make.height.mas_equalTo(68);

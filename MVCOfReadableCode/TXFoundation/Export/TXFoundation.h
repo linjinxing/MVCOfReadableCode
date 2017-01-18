@@ -10,5 +10,6 @@
 #define TXFoundation_h
 
 #import "TXFoundationDefines.h"
+#import "NSObject+Addiction.h"
 
 #endif /* TXFoundation_h */

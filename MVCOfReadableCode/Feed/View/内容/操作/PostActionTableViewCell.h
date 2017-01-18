@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PostActionTableViewCell : UITableViewCell
+@interface PostActionTableViewCell : UITableViewCell<ViewEventsHandler>
 
 @end

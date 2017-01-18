@@ -16,5 +16,9 @@
 #import "UILabel+Create.h"
 #import "TXUILayout.h"
 #import "TXUINSDictionaryKey.h"
+#import "TXEmojiKeyboardView.h"
+#import "UITableView+Addiction.h"
+#import "ViewEventsHandler.h"
+#import "ViewEventsParamPOD.h"
 
 #endif /* TXUIKit_h */

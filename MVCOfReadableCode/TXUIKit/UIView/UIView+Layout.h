@@ -114,7 +114,12 @@
 // */
 //@property (nonatomic, readonly) CGFloat orientationHeight;
 
+- (void)setFrameWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
 
 @end
+
+
+
+
 
 

@@ -16,9 +16,22 @@ typedef NS_ENUM(NSInteger, PostViewTag) {
     PostViewTagUserInfoProfile,
     PostViewTagUserInfoFollow,
     PostViewTagUserInfoNickname,
-    PostActionViewLike,
-    PostActionViewAddComment,
-    PostActionViewMore,
+    PostViewTagActionViewLike,
+    PostViewTagActionViewAddComment,
+    PostViewTagActionViewMore,
+};
+
+typedef NS_ENUM(NSInteger, PostViewCollectionViewTag) {
+    PostViewCollectionViewTagLikeUsers = 1,
+    PostViewCollectionViewTagDescription,
+    
+};
+
+typedef NS_ENUM(NSInteger, PostViewTableViewSectionIndex) {
+    PostViewTableViewSectionIndexActionTag = 1,
+    PostViewTableViewSectionIndexLikeUsers,
+    PostViewTableViewSectionIndexComments,
+    PostViewTableViewSectionCount = PostViewTableViewSectionIndexComments
 };
 
 #endif /* PostViewTypes_h */

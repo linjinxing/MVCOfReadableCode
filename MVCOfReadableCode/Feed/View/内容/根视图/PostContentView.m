@@ -7,6 +7,7 @@
 //
 
 #import "PostContentView.h"
+//#import "TXCollectionViewImageCell.h"
 
 
 @interface PostContentView()
@@ -26,6 +27,9 @@
         PostDetailView* dv = [[PostDetailView alloc] init];
         self.tableHeaderView = dv;
         self.detailView = dv;
+        [self registerClass:[PostActionTableViewCell class]];
+        [self registerClass:[PostCommentTableViewCell class]];
+        [self registerClass:[PostUserLikesTableViewCell class]];
     }
     return self;
 }

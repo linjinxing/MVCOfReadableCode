@@ -9,12 +9,10 @@
 #import "RACSignal+MBProgressHUD.h"
 
 @interface RACSignal()
-@property(readonly) NSMutableArray<MBProgressHUD*>* progressHUDViews;
+
 @end
 
-@implementation RACSignal (MBProgressHUD)
-
-- (NSMutableArray*)progressHUDViews{
+static NSMutableArray* arrayProgressHUDViews(){
     static dispatch_once_t onceToken;
     static NSMutableArray* array = nil;
     dispatch_once(&onceToken, ^{
@@ -23,10 +21,27 @@
     return array;
 }
 
+static void removeAllLoadingView(){
+    [arrayProgressHUDViews() bk_each:^(MBProgressHUD * _Nonnull obj) {
+        [obj hideAnimated:NO];
+        [obj removeFromSuperview];
+    }];
+    [arrayProgressHUDViews() removeAllObjects];
+}
+
+static MBProgressHUD* showLoadingView(){
+    MBProgressHUD* view = [MBProgressHUD showHUDAddedTo:[UIApplication topViewControllerWithController:nil].view
+                                animated:YES];
+    [arrayProgressHUDViews() addObject:view];
+    return view;
+}
+
+
+@implementation RACSignal (MBProgressHUD)
+
 - (RACSignal*)showLoadingView{
     return [self initially:^{
-        [self.progressHUDViews addObject:[MBProgressHUD showHUDAddedTo:[UIApplication topViewControllerWithController:nil].view
-                                                              animated:YES]];
+        showLoadingView();
     }];
 }
 
@@ -36,16 +51,14 @@
 
 - (RACSignal*)hideLoadingView{
     return [self finally:^{
-        [self.progressHUDViews bk_each:^(MBProgressHUD * _Nonnull obj) {
-            [obj removeFromSuperview];
-        }];
-        [self.progressHUDViews removeAllObjects];
+        removeAllLoadingView();
     }];
 }
 
 - (RACSignal*)showErrorMessage{
     return [[self deliverOnMainThread]
             doError:^(NSError *error) {
+                removeAllLoadingView();
                 MBProgressHUD* view = [[MBProgressHUD alloc] initWithView:[UIApplication topViewControllerWithController:nil].view];
                 view.detailsLabel.text = error.localizedDescription;
                 [view showAnimated:YES];
@@ -58,6 +71,17 @@
 - (RACSignal*)showLoadingViewAndErrorMessage{
     return [[[self showLoadingView] hideLoadingView] showErrorMessage];
 }
+
++ (RACSignal*)showLoadingViewSignal{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           [subscriber sendNext:showLoadingView()];
+           [subscriber sendCompleted];
+       });
+        return nil;
+    }];
+}
+
 @end
 
 

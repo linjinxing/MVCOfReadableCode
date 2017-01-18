@@ -15,6 +15,7 @@
 - (RACSignal*)showErrorMessage;
 
 - (RACSignal*)showLoadingViewAndErrorMessage;
++ (RACSignal*)showLoadingViewSignal;
 @end
 
 

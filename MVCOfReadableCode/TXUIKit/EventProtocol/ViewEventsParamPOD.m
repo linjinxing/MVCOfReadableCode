@@ -13,6 +13,7 @@
 @property(weak) id sender;
 @property(strong) id data;
 @property(assign) NSUInteger tag;
+@property(strong) NSIndexPath* indexPath;
 @end
 
 @implementation ViewEventsParamPOD

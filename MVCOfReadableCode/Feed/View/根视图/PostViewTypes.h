@@ -10,15 +10,21 @@
 #define PostViewTypes_h
 
 typedef NS_ENUM(NSInteger, PostViewTag) {
-    PostViewTagLikeButton = 1 ,
-    PostViewTagInputEmotionView,
-    PostViewTagShareButton,
-    PostViewTagUserInfoProfile,
+    /* 用户信息界面 */
+    PostViewTagUserInfoProfile = 1,
     PostViewTagUserInfoFollow,
     PostViewTagUserInfoNickname,
+    
+    /* 内容操作界面 */
     PostViewTagActionViewLike,
     PostViewTagActionViewAddComment,
     PostViewTagActionViewMore,
+    
+    /* 评论cell */
+    PostViewTagCommentTableViewCellMore,
+    
+    /* 键盘输入 */
+    PostViewTagEmojiInputView,/* */
 };
 
 typedef NS_ENUM(NSInteger, PostViewCollectionViewTag) {

@@ -7,7 +7,7 @@
 //
 
 #import "PostUserInfoView.h"
-#import "ViewEventsParamPOO.h"
+#import "ViewEventsParamPOD.h"
 #import "PostViewTypes.h"
 
 @interface PostUserInfoView()

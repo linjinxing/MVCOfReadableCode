@@ -8,13 +8,15 @@
 
 #import "PostViewController.h"
 #import "PostView.h"
-#import "PGPostModel.h"
+#import "Post.h"
+#import "PostBLL.h"
 #import "PostViewTypes.h"
-#import "CommentPOD.h"
+#import "Comment.h"
 
 @interface PostViewController ()<ViewEventHandlerViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, weak) PostView *feedView;
 @property (nonatomic, strong) NSArray<id<Comment>>* comments;
+@property (nonatomic, strong) id<Post> post;
 @end
 
 @implementation PostViewController
@@ -45,7 +47,7 @@
     NSLog(@"显示分享资料界面");
 }
 
-- (void)showUserProfileViewController{
+- (void)showUserProfileViewControllerWithUser:(id<User>)user{
     NSLog(@"显示用户资料界面");
 }
 
@@ -58,11 +60,13 @@
 }
 
 
-#pragma mark - 视图（View）交互
+#pragma mark - 视图（View）用户事件响应
 - (ViewEventsHandler)viewEventHandler{
     NSDictionary<NSNumber *, ViewEventsHandler>* handleTable = @{
-                                                   @(PostViewTagLikeButton):[self likeViewEventHandler],
-                                                   @(PostViewTagInputEmotionView):[self inputEmotionViewEventHandler]
+                                                   @(PostViewTagActionViewLike):[self likeViewEventHandler],
+                                                   @(PostViewTagEmojiInputView):[self inputEmotionViewEventHandler],
+                                                   @(PostViewTagUserInfoProfile):[self showUserProfileEventHandler],
+                                                   @(PostViewTagCommentTableViewCellMore):[self commentMoreEventHandler],
                                                    };
     return ^(id<ViewEventsParam> param){
         ViewEventsHandler handler = handleTable[@([param.sender tag])];
@@ -74,12 +78,33 @@
 - (ViewEventsHandler)likeViewEventHandler{
     return ^(id<ViewEventsParam> param){
         NSLog(@"处理点赞事件");
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [[PostBLLLike(self.post.id)
+         deliverOnMainThread]
+         subscribeError:^(NSError *error) {
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
+        } completed:^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }];
     };
 }
 
 - (ViewEventsHandler)inputEmotionViewEventHandler{
     return ^(id<ViewEventsParam> param){
         NSLog(@"处理表情输入");
+    };
+}
+
+- (ViewEventsHandler)showUserProfileEventHandler{
+    return ^(id<ViewEventsParam> param){
+        [self showUserProfileViewControllerWithUser:[self.post user]];
+        NSLog(@"处理显示用户简介");
+    };
+}
+
+- (ViewEventsHandler)commentMoreEventHandler{
+    return ^(id<ViewEventsParam> param){
+        NSLog(@"处理评论点赞");
     };
 }
 
@@ -97,8 +122,9 @@
 
 #pragma mark collection view dataSource
 
-#pragma mark  table view dataSource
 
+
+#pragma mark  table view dataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return PostViewTableViewSectionIndexComments == section ? self.comments.count : 1;
@@ -124,7 +150,9 @@
         {
             NSAssert([cell isKindOfClass:[PostCommentTableViewCell class]], @"必须是PostCommentTableViewCell");
             PostCommentTableViewCell* commentCell = (PostCommentTableViewCell*)cell;
-            commentCell.
+            commentCell.eventHandler = self.viewEventHandler;
+            [commentCell.imageView sd_setHighlightedImageWithURL:[[self.comments[indexPath.row] user] imageURL]];
+            commentCell.textLabel.text = [self.comments[indexPath.row] content];
             break;
         }
         default:

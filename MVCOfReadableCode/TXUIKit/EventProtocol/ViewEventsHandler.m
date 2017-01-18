@@ -7,7 +7,7 @@
 //
 
 #import "ViewEventsHandler.h"
-#import "ViewEventsParamPOO.h"
+#import "ViewEventsParamPOD.h"
 
 
 @implementation UIButton(ViewEventsHandler)
@@ -15,7 +15,7 @@
                        eventHandler:(ViewEventsHandler)eventHandler{
     if (eventHandler){
         [self addTouchUpInsideActionWithBlock:^(id sender) {
-             eventHandler([ViewEventsParamPOO paramWithSender:sender
+             eventHandler([ViewEventsParamPOD paramWithSender:sender
                                                           tag:tag]);
         }];
     }

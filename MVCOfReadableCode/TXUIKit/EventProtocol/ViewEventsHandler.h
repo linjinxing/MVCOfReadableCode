@@ -21,7 +21,7 @@
 @property(readonly, strong) id data;
 @property(readonly, assign) UIControlEvents events;
 @property(readonly, assign) NSUInteger tag;
-@property(readonly, assign) NSIndexPath* indexPath; /* UITableView和UICollectionView要使用，或者其它 */
+@property(readonly, strong) NSIndexPath* indexPath; /* UITableView和UICollectionView要使用，或者其它 */
 @end
 
 typedef void (^ViewEventsHandler)(id<ViewEventsParam> param);

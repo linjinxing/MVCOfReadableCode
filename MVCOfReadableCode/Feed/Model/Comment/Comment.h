@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
 
 @protocol Comment <NSObject>
 @property(nonatomic, readonly, strong) NSString* content;
+@property(nonatomic, readonly, strong) id<User> user;
 @end
 
-@interface CommentPOD : NSObject
+@interface CommentPOD : NSObject<Comment>
 
 @end

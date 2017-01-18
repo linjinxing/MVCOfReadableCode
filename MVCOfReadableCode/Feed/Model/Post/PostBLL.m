@@ -8,6 +8,10 @@
 
 #import "PostBLL.h"
 
-@implementation PostBLL
+RACSignal* PostBLLLike(NSString* id){
+    return [RACSignal return:[RACTupleNil tupleNil]];
+}
 
-@end
+//@implementation PostBLL
+//
+//@end

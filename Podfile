@@ -7,5 +7,6 @@ target 'MVCOfReadableCode' do
    pod 'MBProgressHUD'
    pod 'MJRefresh'
    pod 'ReactiveCocoa'
+   pod 'SDWebImage'
 end
 

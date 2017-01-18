@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PostBLL : NSObject
 
-@end
+RACSignal* PostBLLLike(NSString* id);
+//
+//@interface PostBLL : NSObject
+//
+//@end

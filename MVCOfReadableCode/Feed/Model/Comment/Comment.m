@@ -6,8 +6,17 @@
 //  Copyright © 2017年 linjinxing. All rights reserved.
 //
 
-#import "CommentPOD.h"
+#import "Comment.h"
 
 @implementation CommentPOD
+
+- (NSString*)content{
+    return @"嘻嘻";
+}
+
+- (id<User>)user{
+    return [UserPOD new];
+}
+
 
 @end

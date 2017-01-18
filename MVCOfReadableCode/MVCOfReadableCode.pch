@@ -15,7 +15,7 @@
 
 #import "TXFoundation.h"
 #import "TXUIKit.h"
-
+#import "UIImageView+HighlightedWebCache.h"
 
 //#import <ReactiveCocoa/ReactiveCocoa.h>
 // Include any system framework and library headers here that should be included in all compilation units.

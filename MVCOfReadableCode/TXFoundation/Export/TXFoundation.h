@@ -11,5 +11,7 @@
 
 #import "TXFoundationDefines.h"
 #import "NSObject+Addiction.h"
+#import "NSArray+BlocksKit.h"
+#import "NSDictionary+BlocksKit.h"
 
 #endif /* TXFoundation_h */

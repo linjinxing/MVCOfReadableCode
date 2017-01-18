@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostUserLikesView.h"
 
 @interface PostUserLikesTableViewCell : UITableViewCell
-
+@property(nonatomic, readonly, weak) PostUserLikesView* likesView;
 @end

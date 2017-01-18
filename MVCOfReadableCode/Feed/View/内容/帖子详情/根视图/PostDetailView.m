@@ -12,6 +12,7 @@
 @property(weak)PostUserInfoView* userInfoView;
 @property(weak)PostImagesView* imagesView;
 @property(weak)PostUserLikesView* likesView;
+@property(weak)PostDetailDescView* descView;
 @end
 
 @implementation PostDetailView

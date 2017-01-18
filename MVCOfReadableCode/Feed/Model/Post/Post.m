@@ -10,6 +10,10 @@
 
 @implementation PostPOD
 
+- (NSString*) id{
+    return @"111222";
+}
+
 #ifdef DEBUG
 - (NSArray<NSURL*>*) imageURLs{
     return [@[
@@ -26,6 +30,10 @@
     return @[@"标签1", @"标签2", @"标签3"];
 }
 
+- (NSArray<id<User>>*) likeUsers{
+    return @[[UserPOD new], [UserPOD new], [UserPOD new], [UserPOD new], [UserPOD new]];
+}
+
 
 - (NSString*) desc{
     return @"描述嘿，哈，哦，嘻";
@@ -37,3 +45,8 @@
 #endif
 
 @end
+
+
+
+
+

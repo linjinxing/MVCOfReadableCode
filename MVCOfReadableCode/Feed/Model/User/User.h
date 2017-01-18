@@ -10,7 +10,7 @@
 
 @protocol User <NSObject>
 @property(nonatomic, readonly, strong) NSString* nickName;
-@property(nonatomic, readonly, strong) NSURL* imageURL;
+@property(nonatomic, readonly, strong) NSURL* avatarURL;
 @end
 
 @interface UserPOD : NSObject<User>

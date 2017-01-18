@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PostDetailDescrView : UIView
-
+@interface PostDetailDescView : UIView
+@property(readonly, weak)UICollectionView* cvTags;
+@property(readonly, weak)UILabel* lbDesc;
 @end

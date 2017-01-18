@@ -8,6 +8,10 @@
 
 #import "PostUserLikesTableViewCell.h"
 
+@interface PostUserLikesTableViewCell()
+@property(nonatomic, weak) PostUserLikesView* likesView;
+@end
+
 @implementation PostUserLikesTableViewCell
 
 - (void)awakeFromNib {

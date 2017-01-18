@@ -38,13 +38,14 @@
 @end
 
 @protocol TXImageViewDelegate <NSObject>
+@optional
 /**
  点击某个图片的回调
 
  @param imageView <#imageView description#>
  @param indexPath <#indexPath description#>
  */
-- (void)imageView:(UIView*)imageView IndexPath:(NSIndexPath*)indexPath;
+- (void)imageView:(UIView*)imageView didSelectItemAtIndexPath:(NSIndexPath*)indexPath;
 @end
 
 

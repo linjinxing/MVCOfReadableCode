@@ -21,6 +21,8 @@
 #import "ViewEventsHandler.h"
 #import "ViewEventsParamPOD.h"
 #import "RACSignal+MBProgressHUD.h"
+#import "TXCollectionViewImageCell.h"
+#import "TXCollectionViewTitleLabelCell.h"
 #import "MVCOfReadableCode-Swift.h"
 
 #endif /* TXUIKit_h */

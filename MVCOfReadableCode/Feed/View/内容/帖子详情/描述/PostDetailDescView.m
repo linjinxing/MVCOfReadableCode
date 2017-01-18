@@ -6,13 +6,18 @@
 //  Copyright © 2017年 linjinxing. All rights reserved.
 //
 
-#import "PostDetailDescrView.h"
+#import "PostDetailDescView.h"
 
-@interface PostDetailDescrView()
+@interface PostDetailDescView()
+@property(weak)UICollectionView* cvTags;
+@property(weak)UILabel* lbDesc;
+@end
+
+@interface PostDetailDescView()
 //@property(nonatomic, weak) ;
 @end
 
-@implementation PostDetailDescrView
+@implementation PostDetailDescView
 
 #pragma mark - 创建子视图并初始化自己
 

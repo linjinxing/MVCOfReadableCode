@@ -17,7 +17,7 @@
 		6883EA2B1E2D7609004ADB8A /* PostContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA0F1E2D7609004ADB8A /* PostContentView.m */; };
 		6883EA2C1E2D7609004ADB8A /* PostUserLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA121E2D7609004ADB8A /* PostUserLikesView.m */; };
 		6883EA361E2DB01B004ADB8A /* PostActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA351E2DB01B004ADB8A /* PostActionView.m */; };
-		6883EA391E2DC960004ADB8A /* PostDetailDescrView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA381E2DC960004ADB8A /* PostDetailDescrView.m */; };
+		6883EA391E2DC960004ADB8A /* PostDetailDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA381E2DC960004ADB8A /* PostDetailDescView.m */; };
 		6883EA3C1E2DE5C6004ADB8A /* PostActionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA3B1E2DE5C6004ADB8A /* PostActionTableViewCell.m */; };
 		6883EA3F1E2DE5FD004ADB8A /* PostUserLikesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA3E1E2DE5FD004ADB8A /* PostUserLikesTableViewCell.m */; };
 		6883EA421E2DE617004ADB8A /* PostCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA411E2DE617004ADB8A /* PostCommentTableViewCell.m */; };
@@ -102,8 +102,8 @@
 		6883EA121E2D7609004ADB8A /* PostUserLikesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostUserLikesView.m; sourceTree = "<group>"; };
 		6883EA341E2DB01B004ADB8A /* PostActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostActionView.h; sourceTree = "<group>"; };
 		6883EA351E2DB01B004ADB8A /* PostActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostActionView.m; sourceTree = "<group>"; };
-		6883EA371E2DC960004ADB8A /* PostDetailDescrView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailDescrView.h; sourceTree = "<group>"; };
-		6883EA381E2DC960004ADB8A /* PostDetailDescrView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailDescrView.m; sourceTree = "<group>"; };
+		6883EA371E2DC960004ADB8A /* PostDetailDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailDescView.h; sourceTree = "<group>"; };
+		6883EA381E2DC960004ADB8A /* PostDetailDescView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailDescView.m; sourceTree = "<group>"; };
 		6883EA3A1E2DE5C6004ADB8A /* PostActionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostActionTableViewCell.h; sourceTree = "<group>"; };
 		6883EA3B1E2DE5C6004ADB8A /* PostActionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostActionTableViewCell.m; sourceTree = "<group>"; };
 		6883EA3D1E2DE5FD004ADB8A /* PostUserLikesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostUserLikesTableViewCell.h; sourceTree = "<group>"; };
@@ -333,8 +333,8 @@
 		6883EA061E2D7609004ADB8A /* 描述 */ = {
 			isa = PBXGroup;
 			children = (
-				6883EA371E2DC960004ADB8A /* PostDetailDescrView.h */,
-				6883EA381E2DC960004ADB8A /* PostDetailDescrView.m */,
+				6883EA371E2DC960004ADB8A /* PostDetailDescView.h */,
+				6883EA381E2DC960004ADB8A /* PostDetailDescView.m */,
 			);
 			path = "描述";
 			sourceTree = "<group>";
@@ -998,7 +998,7 @@
 				68BAC1DD1E2F0A0F00F4B980 /* PostBLL.m in Sources */,
 				68BAC2011E2F3E4A00F4B980 /* Post.m in Sources */,
 				68BAC1F21E2F157800F4B980 /* UITableView+Addiction.m in Sources */,
-				6883EA391E2DC960004ADB8A /* PostDetailDescrView.m in Sources */,
+				6883EA391E2DC960004ADB8A /* PostDetailDescView.m in Sources */,
 				6883EA281E2D7609004ADB8A /* PostImagesView.m in Sources */,
 				6883EA3F1E2DE5FD004ADB8A /* PostUserLikesTableViewCell.m in Sources */,
 				68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */,

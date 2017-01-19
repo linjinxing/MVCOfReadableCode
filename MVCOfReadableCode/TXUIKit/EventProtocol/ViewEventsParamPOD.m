@@ -18,10 +18,12 @@
 
 @implementation ViewEventsParamPOD
 + (instancetype)paramWithSender:(id)sender
+                      indexPath:(NSIndexPath*)indexPath
                          events:(NSUInteger)events
                            data:(id)data
                             tag:(NSUInteger)tag{
     ViewEventsParamPOD* param = [[self alloc] init];
+    param.indexPath = indexPath;
     param.events = events;
     param.sender = sender;
     param.data = data;
@@ -32,11 +34,23 @@
 + (instancetype)paramWithSender:(id)sender
                          events:(NSUInteger)events
                             tag:(NSUInteger)tag{
-    return [self paramWithSender:sender events:events data:nil tag:tag];
+    return [self paramWithSender:sender indexPath:nil events:events data:nil tag:tag];
 }
 
 + (instancetype)paramWithSender:(id)sender
                             tag:(NSUInteger)tag{
-    return [self paramWithSender:sender events:UIControlEventSystemReserved data:nil tag:tag];
+    return [self paramWithSender:sender indexPath:nil events:UIControlEventSystemReserved data:nil tag:tag];
+}
+
++ (instancetype)paramWithSender:(id)sender{
+    return [self paramWithSender:sender indexPath:nil events:UIControlEventSystemReserved data:nil tag:[sender tag]];
+}
+
++ (instancetype)paramWithSender:(id)sender indexPath:(NSIndexPath*)indexPath tag:(NSUInteger)tag{
+    return [self paramWithSender:sender indexPath:indexPath events:UIControlEventSystemReserved data:nil tag:tag];
 }
 @end
+
+
+
+

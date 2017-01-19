@@ -21,9 +21,9 @@
 
 #pragma mark - 动态属性
 
-DynamicProperyForView(btnAvatar, PostViewTagUserInfoProfile)
-DynamicProperyForView(btnFollow, PostViewTagUserInfoFollow)
-DynamicProperyForView(lbNickname, PostViewTagUserInfoNickname)
+DynamicProperyForView(btnAvatar, PostViewEventHandlerTagUserInfoProfile)
+DynamicProperyForView(btnFollow, PostViewEventHandlerTagUserInfoFollow)
+DynamicProperyForView(lbNickname, PostViewEventHandlerTagUserInfoNickname)
 
 
 #pragma mark - 创建子视图并初始化自己
@@ -37,14 +37,14 @@ DynamicProperyForView(lbNickname, PostViewTagUserInfoNickname)
 }
 
 - (void)creatSubviews{
-    UIButton* btnAvatar = [UIButton systemTypeButtonWithTag:PostViewTagUserInfoProfile];
+    UIButton* btnAvatar = [UIButton systemTypeButtonWithTag:PostViewEventHandlerTagUserInfoProfile];
     [btnAvatar addViewEventsHandler:self.eventHandler];
     
     UIButton* btnFollow = [UIButton buttonWithTitle:@"关注"
-                                                tag:PostViewTagUserInfoFollow];
+                                                tag:PostViewEventHandlerTagUserInfoFollow];
     [btnFollow addViewEventsHandler:self.eventHandler];
     
-    UILabel* lbNickname = [UILabel labelWithTag:PostViewTagUserInfoNickname];
+    UILabel* lbNickname = [UILabel labelWithTag:PostViewEventHandlerTagUserInfoNickname];
     
     [self addSubviews:btnAvatar, btnFollow, lbNickname, nil];
 }

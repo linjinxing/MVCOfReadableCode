@@ -9,7 +9,6 @@
 #import "User.h"
 
 @implementation UserPOD
-#ifdef DEBUG
 - (NSString*)nickName{
     return @"嘻嘻";
 }
@@ -17,5 +16,5 @@
 - (NSURL*)imageURL{
     return [NSURL URLWithString:@"http://img17.3lian.com/d/file/201701/14/2106887296f7dd4d5b583f0af822967e.jpg"];
 }
-#endif
+
 @end

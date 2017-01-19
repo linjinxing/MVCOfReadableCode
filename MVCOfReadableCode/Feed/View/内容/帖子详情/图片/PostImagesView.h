@@ -13,4 +13,5 @@
 @interface PostImagesView : UIView<ViewEventsHandler>
 @property(nonatomic, weak) id<TXImageViewDelegate> delegate;
 @property(nonatomic, weak) id<TXImageViewDataSource> dataSource;
+- (void)reloadData;
 @end

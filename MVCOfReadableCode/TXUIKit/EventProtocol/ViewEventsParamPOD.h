@@ -11,6 +11,7 @@
 
 @interface ViewEventsParamPOD : NSObject<ViewEventsParam>
 + (instancetype)paramWithSender:(id)sender
+                      indexPath:(NSIndexPath*)indexPath
                          events:(NSUInteger)events
                            data:(id)data
                             tag:(NSUInteger)tag;
@@ -20,5 +21,10 @@
                             tag:(NSUInteger)tag;
 
 + (instancetype)paramWithSender:(id)sender
-                         tag:(NSUInteger)tag;
+                            tag:(NSUInteger)tag;
+
++ (instancetype)paramWithSender:(id)sender indexPath:(NSIndexPath*)indexPath tag:(NSUInteger)tag;
+
++ (instancetype)paramWithSender:(id)sender;
+
 @end

@@ -66,8 +66,8 @@ _Pragma("clang diagnostic pop")
 #endif
 #endif
 
-#define WS @weakify(self)
-#define SS @strongify(self)
+#define WeakSelf @weakify(self)
+#define StrongSelf @strongify(self)
 
 
 #endif /* TXFoundationDefines_h */

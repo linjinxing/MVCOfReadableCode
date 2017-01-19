@@ -29,18 +29,18 @@
      }];
 }
 
-DynamicProperyForView(btnLike, PostViewTagActionViewLike)
-DynamicProperyForView(btnAddComment, PostViewTagActionViewAddComment)
-DynamicProperyForView(btnMore, PostViewTagActionViewMore)
+DynamicProperyForView(btnLike, PostViewEventHandlerTagActionViewLike)
+DynamicProperyForView(btnAddComment, PostViewEventHandlerTagActionViewAddComment)
+DynamicProperyForView(btnMore, PostViewEventHandlerTagActionViewMore)
 
 #pragma mark - 创建子视图并初始化自己
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [@[@{TXUIDictionaryKeyTag:@(PostViewTagActionViewLike),TXUIDictionaryKeyTitle:@"赞"},
-           @{TXUIDictionaryKeyTag:@(PostViewTagActionViewAddComment),TXUIDictionaryKeyTitle:@"评论"},
-           @{TXUIDictionaryKeyTag:@(PostViewTagActionViewMore),TXUIDictionaryKeyTitle:@"..."},]
+        [@[@{TXUIDictionaryKeyTag:@(PostViewEventHandlerTagActionViewLike),TXUIDictionaryKeyTitle:@"赞"},
+           @{TXUIDictionaryKeyTag:@(PostViewEventHandlerTagActionViewAddComment),TXUIDictionaryKeyTitle:@"评论"},
+           @{TXUIDictionaryKeyTag:@(PostViewEventHandlerTagActionViewMore),TXUIDictionaryKeyTitle:@"..."},]
          enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
              UIButton* btn = [UIButton buttonWithTitle:obj[TXUIDictionaryKeyTitle]
                                                    tag:[obj integerValue]];

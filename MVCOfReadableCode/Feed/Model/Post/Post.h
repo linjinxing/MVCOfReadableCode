@@ -11,10 +11,25 @@
 
 @protocol Post <NSObject>
 @property(readonly, strong)NSString* id;
+/**
+ 作品描述
+ */
 @property(readonly, strong)NSString* desc;
-@property(readonly, strong)id<User> user;
+/**
+ 作者
+ */
+@property(readonly, strong)id<User> author;
+/**
+ 图片地址
+ */
 @property(readonly, strong)NSArray<NSURL*>* imageURLs;
+/**
+ 描述内容的标签
+ */
 @property(readonly, strong)NSArray<NSString*>* tags;
+/**
+ 点赞用户
+ */
 @property(readonly, strong)NSArray<id<User>>* likeUsers;
 @end
 

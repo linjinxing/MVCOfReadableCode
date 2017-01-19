@@ -18,5 +18,7 @@
     }
     return self;
 }
-
+- (void)reloadData{
+    
+}
 @end

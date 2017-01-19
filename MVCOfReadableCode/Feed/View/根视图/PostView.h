@@ -15,6 +15,8 @@
 @interface PostView : UIView<ViewEventsHandler>
 @property(readonly, weak)PostContentView* contentView;
 @property(readonly, weak)TXEmojiKeyboardView* commentInputView;
+
+- (void)reloadAllData;
 @end
 
 

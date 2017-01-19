@@ -13,3 +13,6 @@
 @property(nonatomic) UIEdgeInsets imageViewInsets;
 //@property(nonatomic, weak) UILabel* titleLabel;
 @end
+
+
+

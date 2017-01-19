@@ -52,6 +52,17 @@
       showAllMessage]
      subscribeNext:^(id x) {
          self.post = x;
+         [self refreshAllData];
+     }];
+    
+    WeakSelf
+    [[PostBLLObserveChange()
+     takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(id x) {
+         NSLog(@"帖子数据发生变化");
+         StrongSelf
+         self.post = x;
+         [self refreshAllData];
      }];
 }
 
@@ -76,10 +87,16 @@
 #pragma mark - 视图（View）用户事件响应
 - (ViewEventsHandler)viewEventHandler{
     NSDictionary<NSNumber *, ViewEventsHandler>* handleTable = @{
-                                                   @(PostViewTagActionViewLike):[self likeViewEventHandler],
-                                                   @(PostViewTagEmojiInputView):[self inputEmotionViewEventHandler],
-                                                   @(PostViewTagUserInfoProfile):[self showUserProfileEventHandler],
-                                                   @(PostViewTagCommentTableViewCellMore):[self commentMoreEventHandler],
+                                                   @(PostViewEventHandlerTagActionViewLike):[self likeViewEventHandler],
+                                                   @(PostViewEventHandlerTagEmojiInputView):[self inputEmotionViewEventHandler],
+                                                   @(PostViewEventHandlerTagUserInfoProfile):[self showUserProfileEventHandler],
+                                                   @(PostViewEventHandlerTagCommentTableViewCellMore):[self commentMoreEventHandler],
+                                                   @(PostViewEventHandlerTagImagesView):^(id<ViewEventsParam> param){
+                                                       [self showImagesBrowserViewControllerWithStartIndex:param.indexPath.item];
+                                                   },
+                                                   @(PostViewTableViewCellLikeUsers):^(id<ViewEventsParam> param){
+                                                       [self showUserProfileViewControllerWithUser:self.post.likeUsers[param.indexPath.item]];
+                                                   },
                                                    };
     return ^(id<ViewEventsParam> param){
         ViewEventsHandler handler = handleTable[@([param.sender tag])];
@@ -90,7 +107,7 @@
 
 - (ViewEventsHandler)likeViewEventHandler{
     return ^(id<ViewEventsParam> param){
-        NSLog(@"处理点赞事件");
+        NSLog(@"处理帖子点赞事件");
         PostActionTableViewCell* cell = [self.postView.contentView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:PostViewTableViewSectionIndexLikeUsers]];
         [[[PostBLLLike(self.post.id)
            showAllWithSuccessMessage:cell.actionView.likesState?@"取消点赞成功":@"点赞成功"]
@@ -109,7 +126,7 @@
 
 - (ViewEventsHandler)showUserProfileEventHandler{
     return ^(id<ViewEventsParam> param){
-        [self showUserProfileViewControllerWithUser:[self.post user]];
+        [self showUserProfileViewControllerWithUser:self.post.author];
         NSLog(@"处理显示用户简介");
     };
 }
@@ -121,7 +138,12 @@
 }
 
 #pragma mark - 数据模型（Model）和V的交互
-
+- (void)refreshAllData{
+    [self.postView reloadAllData];
+    [self.postView.contentView.detailView.userInfoView.btnAvatar sd_setBackgroundImageWithURL:self.post.author.avatarURL
+                                                                                     forState:UIControlStateNormal];
+    self.postView.contentView.detailView.userInfoView.lbNickname.text = self.post.author.nickName;
+}
 //#pragma mark 点赞用户 collection view delegate
 //
 //#pragma mark 点赞用户 collection view dataSource
@@ -133,7 +155,7 @@
 
 #pragma mark 图片 view dataSource
 - (UIImage*)iamgeView:(UIView*)imageView imageForIndexPath:(NSIndexPath*)indexPath{
-#warning 需要修改哦
+#warning 这里只是示例，这样可能有bug
     return [UIImage imageWithData:[NSData dataWithContentsOfURL:[self.post imageURLs][indexPath.item]]];
 }
 
@@ -143,7 +165,9 @@
 
 #pragma mark collection view delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    #warning add event handler
+    [self viewEventHandler]([ViewEventsParamPOD paramWithSender:[collectionView cellForItemAtIndexPath:indexPath]
+                                                      indexPath:indexPath
+                                                            tag:(PostViewCollectionViewTagLikeUsers == collectionView.tag ? PostViewTableViewCellLikeUsers : PostViewEventHandlerTagImagesView)]);
 }
 
 #pragma mark collection view dataSource

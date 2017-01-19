@@ -51,6 +51,11 @@
                                                }];
 }
 
+- (void)reloadAllData{
+    [self.contentView reloadData];
+    [self.contentView.detailView.imagesView reloadData];
+}
+
 #pragma mark - 处理用户事件及传递
 /*
  - (void)buttonAction:(id)sender{

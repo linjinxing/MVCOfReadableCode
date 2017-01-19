@@ -9,22 +9,27 @@
 #ifndef PostViewTypes_h
 #define PostViewTypes_h
 
-typedef NS_ENUM(NSInteger, PostViewTag) {
+typedef NS_ENUM(NSInteger, PostViewEventHandlerTag) {
+    /* 图片显示 */
+    PostViewEventHandlerTagImagesView = 1,
+    
     /* 用户信息界面 */
-    PostViewTagUserInfoProfile = 1,
-    PostViewTagUserInfoFollow,
-    PostViewTagUserInfoNickname,
+    PostViewEventHandlerTagUserInfoProfile ,
+    PostViewEventHandlerTagUserInfoFollow,
+    PostViewEventHandlerTagUserInfoNickname,
     
     /* 内容操作界面 */
-    PostViewTagActionViewLike,
-    PostViewTagActionViewAddComment,
-    PostViewTagActionViewMore,
+    PostViewEventHandlerTagActionViewLike,
+    PostViewEventHandlerTagActionViewAddComment,
+    PostViewEventHandlerTagActionViewMore,
     
     /* 评论cell */
-    PostViewTagCommentTableViewCellMore,
+    PostViewEventHandlerTagCommentTableViewCellMore,
+    
+    PostViewTableViewCellLikeUsers,
     
     /* 键盘输入 */
-    PostViewTagEmojiInputView,/* */
+    PostViewEventHandlerTagEmojiInputView,/* */
 };
 
 typedef NS_ENUM(NSInteger, PostViewCollectionViewTag) {

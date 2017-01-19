@@ -12,10 +12,20 @@
 #import "PostBLL.h"
 #import "PostViewTypes.h"
 #import "Comment.h"
+#import "CommentBLL.h"
 
 @interface PostViewController ()<ViewEventHandlerViewController, TXImageViewDelegate, TXImageViewDataSource, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
+/**
+ 替换controller.view
+ */
 @property (nonatomic, weak) PostView *postView;
+/**
+ 包含评论信息
+ */
 @property (nonatomic, strong) NSArray<id<Comment>>* comments;
+/**
+ 包含帖子信息
+ */
 @property (nonatomic, strong) id<Post> post;
 @end
 
@@ -23,7 +33,7 @@
 
 #pragma mark - 动态属性及重写属性
 
-#pragma mark - 生命周期管理
+#pragma mark - V生命周期管理
 
 - (void)loadView{
     PostView* view = [[PostView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -32,8 +42,7 @@
     view.contentView.detailView.descView.cvTags.delegate = self;
     view.contentView.detailView.imagesView.dataSource = self;
     view.contentView.detailView.imagesView.delegate = self;
-    self.view = view;
-    self.postView = view;
+    self.view = self.postView = view;
 }
 
 - (void)viewDidLoad {
@@ -51,13 +60,13 @@
     [self loadData];
 }
 
-#pragma mark - 加载数据
-- (void)loadData{
+#pragma mark - M生命周期管理
+- (void)loadPostData{
     [[PostBLLRequest()
       showAllMessage]
      subscribeNext:^(id x) {
          self.post = x;
-         [self refreshAllData];
+         [self reloadAllWithPost:x];
      }];
     
     WeakSelf
@@ -67,7 +76,40 @@
          NSLog(@"帖子数据发生变化");
          StrongSelf
          self.post = x;
-         [self refreshAllData];
+         [self reloadAllWithPost:x];
+     }];
+}
+
+- (void)loadCommentsData{
+    [[CommentBLLLoad()
+      showAllMessage]
+     subscribeNext:^(id x) {
+        
+     }];
+}
+
+- (void)loadData{
+//    [[[RACSignal combineLatest:@[PostBLLRequest(),CommentBLLLoad()]
+//                      reduce:^id{
+//                          
+//                      }]
+//     showAllMessage]
+//     subscribeCompleted:^{
+//        
+//    }];
+    [[[RACSignal merge:@[[PostBLLRequest()
+                          doNext:^(id x) {
+                              self.post = x;
+                              [self.postView reloadPostCotentWithPost:x];
+                          }],
+                         [CommentBLLLoad()
+                          doNext:^(id x) {
+                              self.comments = x;
+                              [self.postView reloadComments];
+                          }]]]
+      showAllMessage]
+     subscribeCompleted:^{
+         [self.postView reloadAllWithPost:x];
      }];
 }
 
@@ -145,18 +187,7 @@
 }
 
 #pragma mark - 数据模型（Model）和V的交互
-- (void)refreshPostAuthorView{
-    [self.postView.contentView.detailView.userInfoView.btnAvatar sd_setBackgroundImageWithURL:self.post.author.avatarURL
-                                                                                     forState:UIControlStateNormal];
-    self.postView.contentView.detailView.userInfoView.lbNickname.text = self.post.author.nickName;
-}
 
-- (void)refreshAllData{
-    [self.postView reloadAllData];
-    [self.postView.contentView.detailView.userInfoView.btnAvatar sd_setBackgroundImageWithURL:self.post.author.avatarURL
-                                                                                     forState:UIControlStateNormal];
-    self.postView.contentView.detailView.userInfoView.lbNickname.text = self.post.author.nickName;
-}
 
 //#pragma mark 点赞用户 collection view delegate
 //

@@ -45,7 +45,7 @@
 		68BAC2121E2F454000F4B980 /* ViewEventsParamPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2101E2F454000F4B980 /* ViewEventsParamPOD.m */; };
 		68BAC21F1E2F4DFC00F4B980 /* RACSignal+UIActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC21E1E2F4DFC00F4B980 /* RACSignal+UIActionSheet.m */; };
 		68BAC2221E2F4E0C00F4B980 /* RACSignal+MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2211E2F4E0C00F4B980 /* RACSignal+MBProgressHUD.m */; };
-		68BAC2311E2F516600F4B980 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2301E2F516600F4B980 /* UIViewControllerExtension.swift */; };
+		68BAC27A1E30BC2300F4B980 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2791E30BC2300F4B980 /* UIViewControllerExtension.swift */; };
 		68FAC8AB1E0E120100091B50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8AA1E0E120100091B50 /* main.m */; };
 		68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8AD1E0E120100091B50 /* AppDelegate.m */; };
 		68FAC8B11E0E120100091B50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8B01E0E120100091B50 /* ViewController.m */; };
@@ -162,8 +162,8 @@
 		68BAC21E1E2F4DFC00F4B980 /* RACSignal+UIActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+UIActionSheet.m"; sourceTree = "<group>"; };
 		68BAC2201E2F4E0C00F4B980 /* RACSignal+MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+MBProgressHUD.h"; sourceTree = "<group>"; };
 		68BAC2211E2F4E0C00F4B980 /* RACSignal+MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+MBProgressHUD.m"; sourceTree = "<group>"; };
-		68BAC22F1E2F516600F4B980 /* MVCOfReadableCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVCOfReadableCode-Bridging-Header.h"; sourceTree = "<group>"; };
-		68BAC2301E2F516600F4B980 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		68BAC2781E30BC2300F4B980 /* MVCOfReadableCode-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVCOfReadableCode-Bridging-Header.h"; sourceTree = "<group>"; };
+		68BAC2791E30BC2300F4B980 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		68FAC8A61E0E120100091B50 /* MVCOfReadableCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCOfReadableCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FAC8AA1E0E120100091B50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68FAC8AC1E0E120100091B50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -603,11 +603,11 @@
 			path = UIActionSheet;
 			sourceTree = "<group>";
 		};
-		68BAC22B1E2F512500F4B980 /* UIViewController */ = {
+		68BAC2771E30BC2300F4B980 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68BAC2301E2F516600F4B980 /* UIViewControllerExtension.swift */,
-				68BAC22F1E2F516600F4B980 /* MVCOfReadableCode-Bridging-Header.h */,
+				68BAC2781E30BC2300F4B980 /* MVCOfReadableCode-Bridging-Header.h */,
+				68BAC2791E30BC2300F4B980 /* UIViewControllerExtension.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -757,7 +757,7 @@
 				6802D5AE1E2EB19700407EE1 /* ImageView */,
 				68FAC9541E0EAE9000091B50 /* UIView */,
 				68FAC9501E0EAE5300091B50 /* UIButton */,
-				68BAC22B1E2F512500F4B980 /* UIViewController */,
+				68BAC2771E30BC2300F4B980 /* UIViewController */,
 				68BAC2141E2F463D00F4B980 /* ReactiveCocoa */,
 				68BAC1EF1E2F155E00F4B980 /* UITableView */,
 			);
@@ -1010,7 +1010,7 @@
 				68BAC20B1E2F3F2800F4B980 /* NSDictionary+BlocksKit.m in Sources */,
 				68FAC8AB1E0E120100091B50 /* main.m in Sources */,
 				6802D5B11E2EB1AB00407EE1 /* TXImageView.m in Sources */,
-				68BAC2311E2F516600F4B980 /* UIViewControllerExtension.swift in Sources */,
+				68BAC27A1E30BC2300F4B980 /* UIViewControllerExtension.swift in Sources */,
 				68BAC1EE1E2F14CC00F4B980 /* NSObject+Addiction.m in Sources */,
 				6883EA421E2DE617004ADB8A /* PostCommentTableViewCell.m in Sources */,
 				68BAC1CB1E2EF99300F4B980 /* TXEmojiKeyboardView.m in Sources */,

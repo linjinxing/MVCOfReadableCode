@@ -7,6 +7,7 @@
 //
 
 #import "PostView.h"
+#import "PostViewTypes.h"
 
 @interface PostView()
 @property(weak)PostContentView* contentView;
@@ -51,9 +52,26 @@
                                                }];
 }
 
-- (void)reloadAllData{
-    [self.contentView reloadData];
-    [self.contentView.detailView.imagesView reloadData];
+- (void)reloadAllWithPost:(id<Post>) post{
+    [self reloadComments];
+    [self reloadPostCotentWithPost:post];
+}
+/**
+ 只更新评论
+ */
+- (void)reloadComments{
+    [self.contentView reloadSections:[NSIndexSet indexSetWithIndex:PostViewTableViewSectionIndexComments]
+                             withRowAnimation:UITableViewRowAnimationFade];
+}
+/**
+ 更新帖子相关界面
+ */
+- (void)reloadPostCotentWithPost:(id<Post>) post{
+    [self.contentView.detailView.userInfoView.btnAvatar sd_setBackgroundImageWithURL:post.author.avatarURL
+                                                                                     forState:UIControlStateNormal];
+    self.contentView.detailView.userInfoView.lbNickname.text = post.author.nickName;
+    [self.contentView reloadSections:[NSIndexSet indexSetWithIndex:PostViewTableViewSectionIndexLikeUsers]
+                             withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - 处理用户事件及传递

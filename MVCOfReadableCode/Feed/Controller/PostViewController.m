@@ -48,6 +48,11 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self loadData];
+}
+
+#pragma mark - 加载数据
+- (void)loadData{
     [[PostBLLRequest()
       showAllMessage]
      subscribeNext:^(id x) {
@@ -57,7 +62,7 @@
     
     WeakSelf
     [[PostBLLObserveChange()
-     takeUntil:self.rac_willDeallocSignal]
+      takeUntil:self.rac_willDeallocSignal]
      subscribeNext:^(id x) {
          NSLog(@"帖子数据发生变化");
          StrongSelf
@@ -65,6 +70,8 @@
          [self refreshAllData];
      }];
 }
+
+
 
 #pragma mark - 界面跳转
 - (void)showShareViewController{
@@ -133,17 +140,24 @@
 
 - (ViewEventsHandler)commentMoreEventHandler{
     return ^(id<ViewEventsParam> param){
-        NSLog(@"处理评论点赞");
+        NSLog(@"处理点击评论的更多");
     };
 }
 
 #pragma mark - 数据模型（Model）和V的交互
+- (void)refreshPostAuthorView{
+    [self.postView.contentView.detailView.userInfoView.btnAvatar sd_setBackgroundImageWithURL:self.post.author.avatarURL
+                                                                                     forState:UIControlStateNormal];
+    self.postView.contentView.detailView.userInfoView.lbNickname.text = self.post.author.nickName;
+}
+
 - (void)refreshAllData{
     [self.postView reloadAllData];
     [self.postView.contentView.detailView.userInfoView.btnAvatar sd_setBackgroundImageWithURL:self.post.author.avatarURL
                                                                                      forState:UIControlStateNormal];
     self.postView.contentView.detailView.userInfoView.lbNickname.text = self.post.author.nickName;
 }
+
 //#pragma mark 点赞用户 collection view delegate
 //
 //#pragma mark 点赞用户 collection view dataSource
@@ -219,7 +233,6 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     void (^asserCell)(Class) = ^(Class cellClass){
         NSAssert([cell isKindOfClass:[cellClass class]], [@"必须是" stringByAppendingString:[cellClass className]]);
-        
     };
     switch (indexPath.section) {
         case PostViewTableViewSectionIndexActionTag: {
@@ -238,7 +251,7 @@
             asserCell([PostCommentTableViewCell class]);
             PostCommentTableViewCell* commentCell = (PostCommentTableViewCell*)cell;
             commentCell.eventHandler = self.viewEventHandler;
-            [commentCell.imageView sd_setHighlightedImageWithURL:[[self.comments[indexPath.row] user] avatarURL]];
+            [commentCell.imageView sd_setHighlightedImageWithURL:[[self.comments[indexPath.row] author] avatarURL]];
             commentCell.textLabel.text = [self.comments[indexPath.row] content];
             break;
         }

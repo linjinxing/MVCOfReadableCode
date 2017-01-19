@@ -11,7 +11,7 @@
 
 @protocol Comment <NSObject>
 @property(nonatomic, readonly, strong) NSString* content;
-@property(nonatomic, readonly, strong) id<User> user;
+@property(nonatomic, readonly, strong) id<User> author;
 @end
 
 @interface CommentPOD : NSObject<Comment>

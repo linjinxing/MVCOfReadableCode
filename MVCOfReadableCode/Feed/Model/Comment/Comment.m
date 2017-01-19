@@ -14,7 +14,7 @@
     return @"嘻嘻";
 }
 
-- (id<User>)user{
+- (id<User>)author{
     return [UserPOD new];
 }
 

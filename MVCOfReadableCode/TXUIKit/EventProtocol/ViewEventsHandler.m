@@ -12,7 +12,7 @@
 
 @implementation UIButton(ViewEventsHandler)
 - (void)addViewEventsHandlerWithTag:(NSUInteger)tag
-                       eventHandler:(ViewEventsHandler)eventHandler{
+                       eventHandler:(ViewEventsBlock)eventHandler{
     if (eventHandler){
         [self addTouchUpInsideActionWithBlock:^(id sender) {
              eventHandler([ViewEventsParamPOD paramWithSender:sender
@@ -21,7 +21,7 @@
     }
 }
 
-- (void)addViewEventsHandler:(ViewEventsHandler)eventHandler{
+- (void)addViewEventsHandler:(ViewEventsBlock)eventHandler{
     if (eventHandler) {
         [self addViewEventsHandlerWithTag:self.tag eventHandler:eventHandler];
     }

@@ -9,7 +9,7 @@
 #import "PostImagesView.h"
 
 @implementation PostImagesView
-@synthesize eventHandler;
+@synthesize eventsBlock;
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

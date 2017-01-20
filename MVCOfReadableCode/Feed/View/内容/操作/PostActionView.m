@@ -16,16 +16,16 @@
 @end
 
 @implementation PostActionView
-@synthesize eventHandler;
+@synthesize eventsBlock;
 
 
 #pragma mark - 动态属性及重写属性
 
-- (void)setEventHandler:(ViewEventsHandler)aEventHandler{
-    eventHandler = [aEventHandler copy];
+- (void)setEventHandler:(ViewEventsBlock)aEventHandler{
+    aEventHandler = [aEventHandler copy];
     [@[self.btnLike, self.btnAddComment, self.btnMore]
      enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-         [obj addViewEventsHandler:self.eventHandler];
+         [obj addViewEventsHandler:self.eventsBlock];
      }];
 }
 
@@ -44,7 +44,7 @@ DynamicProperyForView(btnMore, PostViewEventHandlerTagActionViewMore)
          enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
              UIButton* btn = [UIButton buttonWithTitle:obj[TXUIDictionaryKeyTitle]
                                                    tag:[obj integerValue]];
-            [btn addViewEventsHandler:self.eventHandler];
+            [btn addViewEventsHandler:self.eventsBlock];
             [self addSubview:btn];
         }];
     }

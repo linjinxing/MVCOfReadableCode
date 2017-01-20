@@ -13,7 +13,7 @@
 @end
 
 @implementation PostActionTableViewCell
-@synthesize eventHandler;
+@synthesize eventsBlock;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

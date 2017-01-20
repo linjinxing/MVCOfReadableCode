@@ -17,7 +17,7 @@
 @end
 
 @implementation PostUserInfoView
-@synthesize eventHandler;
+@synthesize eventsBlock;
 
 #pragma mark - 动态属性
 
@@ -38,11 +38,11 @@ DynamicProperyForView(lbNickname, PostViewEventHandlerTagUserInfoNickname)
 
 - (void)creatSubviews{
     UIButton* btnAvatar = [UIButton systemTypeButtonWithTag:PostViewEventHandlerTagUserInfoProfile];
-    [btnAvatar addViewEventsHandler:self.eventHandler];
+    [btnAvatar addViewEventsHandler:self.eventsBlock];
     
     UIButton* btnFollow = [UIButton buttonWithTitle:@"关注"
                                                 tag:PostViewEventHandlerTagUserInfoFollow];
-    [btnFollow addViewEventsHandler:self.eventHandler];
+    [btnFollow addViewEventsHandler:self.eventsBlock];
     
     UILabel* lbNickname = [UILabel labelWithTag:PostViewEventHandlerTagUserInfoNickname];
     

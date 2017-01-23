@@ -107,15 +107,15 @@ static MBProgressHUD* showMessage(NSString* title, NSString* detail, NSTimeInter
             showErrorMessage];
 }
 
-//+ (RACSignal*)showLoadingViewSignalWithMessage:(NSString*)message{
-//    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-//       dispatch_async(dispatch_get_main_queue(), ^{
-//           [subscriber sendNext:showLoadingView(message, nil)];
-//           [subscriber sendCompleted];
-//       });
-//        return nil;
-//    }];
-//}
++ (RACSignal*)showLoadingViewSignalWithMessage:(NSString*)message{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           [subscriber sendNext:showLoadingView(message, nil)];
+           [subscriber sendCompleted];
+       });
+        return nil;
+    }];
+}
 
 @end
 

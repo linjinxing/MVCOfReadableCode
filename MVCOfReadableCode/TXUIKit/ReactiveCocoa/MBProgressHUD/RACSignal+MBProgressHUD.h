@@ -72,7 +72,7 @@
  */
 - (RACSignal*)showAllWithSuccessMessage:(NSString*)message;
 
-//+ (RACSignal*)showLoadingViewSignal;
++ (RACSignal*)showLoadingViewSignal;
 @end
 
 

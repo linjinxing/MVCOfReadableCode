@@ -29,7 +29,9 @@ typedef NS_ENUM(NSInteger, PostViewEventHandlerTag) {
     PostViewTableViewCellLikeUsers,
     
     /* 键盘输入 */
-    PostViewEventHandlerTagEmojiInputView,/* */
+    PostViewEventHandlerTagEmojiInputView,
+    /* 添加评论 */
+    PostViewEventHandlerTagAddComment,
 };
 
 typedef NS_ENUM(NSInteger, PostViewCollectionViewTag) {

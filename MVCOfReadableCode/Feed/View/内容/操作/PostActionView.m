@@ -29,6 +29,12 @@
      }];
 }
 
+- (void)setLikesState:(BOOL)likesState{
+    _likesState = likesState;
+    [self.btnLike setTitle:likesState ? @"赞":@"已赞" forState:UIControlStateNormal];
+}
+
+
 DynamicProperyForView(btnLike, PostViewEventHandlerTagActionViewLike)
 DynamicProperyForView(btnAddComment, PostViewEventHandlerTagActionViewAddComment)
 DynamicProperyForView(btnMore, PostViewEventHandlerTagActionViewMore)
@@ -52,10 +58,6 @@ DynamicProperyForView(btnMore, PostViewEventHandlerTagActionViewMore)
 }
 
 #pragma makr - 数据展现
-- (void)setLikesState:(BOOL)likesState{
-    _likesState = likesState;
-    [self.btnLike setTitle:likesState ? @"赞":@"已赞" forState:UIControlStateNormal];
-}
 
 #pragma mark - 坐标计算及变换
 

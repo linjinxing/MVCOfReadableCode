@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "PostImagesView.h"
 #import "PostUserLikesView.h"
-#import "PostUserInfoView.h"
+#import "PostAuthorInfoView.h"
 #import "PostDetailDescView.h"
 
 @interface PostDetailView : UIView
-@property(readonly, weak)PostUserInfoView* userInfoView;
+@property(readonly, weak)PostAuthorInfoView* authorInfoView;
 @property(readonly, weak)PostImagesView* imagesView;
 @property(readonly, weak)PostDetailDescView* descView;
 

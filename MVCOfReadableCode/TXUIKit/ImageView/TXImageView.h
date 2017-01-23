@@ -50,6 +50,14 @@
 
 
 
-@interface TXImageView : NSObject
-
+@protocol TXImageView<NSObject>
+@property(nonatomic, weak) id<TXImageViewDelegate> delegate;
+@property(nonatomic, weak) id<TXImageViewDataSource> dataSource;
 @end
+
+
+
+
+
+
+

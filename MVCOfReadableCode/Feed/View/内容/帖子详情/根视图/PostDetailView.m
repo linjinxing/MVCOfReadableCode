@@ -9,7 +9,7 @@
 #import "PostDetailView.h"
 
 @interface PostDetailView()
-@property(weak)PostUserInfoView* userInfoView;
+@property(weak)PostAuthorInfoView* authorInfoView;
 @property(weak)PostImagesView* imagesView;
 @property(weak)PostUserLikesView* likesView;
 @property(weak)PostDetailDescView* descView;

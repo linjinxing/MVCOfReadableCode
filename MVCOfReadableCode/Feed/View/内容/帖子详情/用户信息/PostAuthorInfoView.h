@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ViewEventsHandler.h"
 
-@interface PostUserInfoView : UIView<ViewEventsHandler>
+@interface PostAuthorInfoView : UIView<ViewEventsHandler>
 @property(readonly, weak) UIButton* btnAvatar;
 @property(readonly, weak) UILabel* lbNickname;
 @property(readonly, weak) UIButton* btnFollow;

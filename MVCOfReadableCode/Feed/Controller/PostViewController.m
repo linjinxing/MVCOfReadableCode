@@ -33,7 +33,7 @@
 
 #pragma mark - 动态属性及重写属性
 
-#pragma mark - V生命周期管理
+#pragma mark - M和V生命周期管理
 
 - (void)loadView{
     PostView* view = [[PostView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -59,7 +59,7 @@
 }
 
 #pragma mark - M生命周期管理
-- (void)loadPostData{
+- (void)addPostObserver{
     WeakSelf
     [[PostBLLObserveChange()
       takeUntil:self.rac_willDeallocSignal]
@@ -79,14 +79,15 @@
 //     subscribeCompleted:^{
 //        
 //    }];
+
     [[[RACSignal merge:@[[PostBLLRequest()
-                          doNext:^(id x) {
-                              self.post = x;
-                              [self.postView reloadPostCotentWithPost:x];
+                          doNext:^(id<Post> post) {
+                              self.post = post;
+                              [self.postView reloadPostCotentWithPost:post];
                           }],
                          [CommentBLLLoad()
-                          doNext:^(id x) {
-                              self.comments = x;
+                          doNext:^(NSArray<id<Comment>>* comments) {
+                              self.comments = comments;
                               [self.postView reloadComments];
                           }]]]
       showAllMessage]
@@ -94,8 +95,6 @@
          [self.postView reloadAllWithPost:self.post];
      }];
 }
-
-
 
 #pragma mark - 界面跳转
 - (void)showShareViewController{
@@ -114,23 +113,24 @@
     NSLog(@"显示图片大图浏览界面");
 }
 
-
-#pragma mark - 视图（View）用户事件响应
+#pragma mark - 视图（View）事件响应
+- (NSDictionary<NSNumber*, ViewEventsBlock>*) viewEventHandlerTable{
+    return @{
+             @(PostViewEventHandlerTagActionViewLike):[self likeViewEventHandler],
+             @(PostViewEventHandlerTagEmojiInputView):[self inputEmotionViewEventHandler],
+             @(PostViewEventHandlerTagUserInfoProfile):[self showUserProfileEventHandler],
+             @(PostViewEventHandlerTagCommentTableViewCellMore):[self commentMoreEventHandler],
+             @(PostViewEventHandlerTagImagesView):^(id<ViewEventsParam> param){
+                 [self showImagesBrowserViewControllerWithStartIndex:param.indexPath.item];
+             },
+             @(PostViewTableViewCellLikeUsers):^(id<ViewEventsParam> param){
+                 [self showUserProfileViewControllerWithUser:self.post.likeUsers[param.indexPath.item]];
+             },
+             };
+}
 - (ViewEventsBlock)viewEventHandler{
-    NSDictionary<NSNumber*, ViewEventsBlock>* handleTable = @{
-                                                                @(PostViewEventHandlerTagActionViewLike):[self likeViewEventHandler],
-                                                                @(PostViewEventHandlerTagEmojiInputView):[self inputEmotionViewEventHandler],
-                                                                @(PostViewEventHandlerTagUserInfoProfile):[self showUserProfileEventHandler],
-                                                                @(PostViewEventHandlerTagCommentTableViewCellMore):[self commentMoreEventHandler],
-                                                                @(PostViewEventHandlerTagImagesView):^(id<ViewEventsParam> param){
-                                                                    [self showImagesBrowserViewControllerWithStartIndex:param.indexPath.item];
-                                                                },
-                                                                @(PostViewTableViewCellLikeUsers):^(id<ViewEventsParam> param){
-                                                                    [self showUserProfileViewControllerWithUser:self.post.likeUsers[param.indexPath.item]];
-                                                                },
-                                                                };
     return ^(id<ViewEventsParam> param){
-        ViewEventsBlock handler = handleTable[@([param.sender tag])];
+        ViewEventsBlock handler = [self viewEventHandlerTable][@([param.sender tag])];
         if (handler) handler(param);
         else PGDebugWarn(@"not matched handler for %@", @([param.sender tag]));
     };
@@ -177,7 +177,9 @@
 
 #pragma mark 图片 view delegate
 - (void)imageView:(UIView*)imageView didSelectItemAtIndexPath:(NSIndexPath*)indexPath{
-    [self showImagesBrowserViewControllerWithStartIndex:indexPath.item];
+    [self viewEventHandler]([ViewEventsParamPOD paramWithSender:imageView
+                                                      indexPath:indexPath
+                                                            tag:PostViewEventHandlerTagImagesView]);
 }
 
 #pragma mark 图片 view dataSource
@@ -257,6 +259,7 @@
             asserCell([PostUserLikesTableViewCell class]);
             ((PostUserLikesTableViewCell*)cell).likesView.cvlikeAvatars.delegate = self;
             ((PostUserLikesTableViewCell*)cell).likesView.cvlikeAvatars.dataSource = self;
+            [((PostUserLikesTableViewCell*)cell).likesView.cvlikeAvatars reloadData];
             break;
         }
         case PostViewTableViewSectionIndexComments:
@@ -286,10 +289,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
-
-
-
-
 
 
 

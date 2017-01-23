@@ -8,6 +8,6 @@
 
 #import "TXImageView.h"
 
-@implementation TXImageView
-
-@end
+//@implementation TXImageView
+//
+//@end

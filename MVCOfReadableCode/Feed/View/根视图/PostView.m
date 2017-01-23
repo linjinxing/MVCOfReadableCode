@@ -17,6 +17,12 @@
 @implementation PostView
 @synthesize eventsBlock;
 
+#pragma mark - 动态属性及重写属性
+- (void)setEventsBlock:(ViewEventsBlock)aEventsBlock{
+    eventsBlock = aEventsBlock;
+    self.contentView.detailView.authorInfoView.eventsBlock = aEventsBlock;
+}
+
 #pragma mark - 创建子视图并初始化自己
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -37,7 +43,7 @@
                                  make.right.equalTo(self.mas_right);
                                  make.height.equalTo(self.mas_height).with.offset([TXEmojiKeyboardInputTextToolbarView height]);
                              }];
-    view.detailView.userInfoView.eventsBlock = self.eventsBlock;
+    view.detailView.authorInfoView.eventsBlock = self.eventsBlock;
     return view;
 }
 
@@ -68,9 +74,9 @@
  更新帖子相关界面
  */
 - (void)reloadPostCotentWithPost:(id<Post>) post{
-    [self.contentView.detailView.userInfoView.btnAvatar sd_setBackgroundImageWithURL:post.author.avatarURL
+    [self.contentView.detailView.authorInfoView.btnAvatar sd_setBackgroundImageWithURL:post.author.avatarURL
                                                                                      forState:UIControlStateNormal];
-    self.contentView.detailView.userInfoView.lbNickname.text = post.author.nickName;
+    self.contentView.detailView.authorInfoView.lbNickname.text = post.author.nickName;
     [self.contentView reloadSections:[NSIndexSet indexSetWithIndex:PostViewTableViewSectionIndexLikeUsers]
                              withRowAnimation:UITableViewRowAnimationFade];
 }

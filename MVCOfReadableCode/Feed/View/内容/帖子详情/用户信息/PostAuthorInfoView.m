@@ -6,17 +6,17 @@
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "PostUserInfoView.h"
+#import "PostAuthorInfoView.h"
 #import "ViewEventsParamPOD.h"
 #import "PostViewTypes.h"
 
-@interface PostUserInfoView()
+@interface PostAuthorInfoView()
 //@property(weak) UIButton* btnAvatar;
 //@property(weak) UILabel* lbNickname;
 //@property(weak) UIButton* btnFollow;
 @end
 
-@implementation PostUserInfoView
+@implementation PostAuthorInfoView
 @synthesize eventsBlock;
 
 #pragma mark - 动态属性
@@ -38,7 +38,7 @@ DynamicProperyForView(lbNickname, PostViewEventHandlerTagUserInfoNickname)
 
 - (void)creatSubviews{
     UIButton* btnAvatar = [UIButton systemTypeButtonWithTag:PostViewEventHandlerTagUserInfoProfile];
-    [btnAvatar addViewEventsHandler:self.eventsBlock];
+//    [btnAvatar addViewEventsHandler:self.eventsBlock];
     
     UIButton* btnFollow = [UIButton buttonWithTitle:@"关注"
                                                 tag:PostViewEventHandlerTagUserInfoFollow];
@@ -47,6 +47,16 @@ DynamicProperyForView(lbNickname, PostViewEventHandlerTagUserInfoNickname)
     UILabel* lbNickname = [UILabel labelWithTag:PostViewEventHandlerTagUserInfoNickname];
     
     [self addSubviews:btnAvatar, btnFollow, lbNickname, nil];
+    
+    ///// 这段代码和上面的重复，这里只是更好的演示所以这样实现
+    WeakSelf
+    [btnAvatar addTouchUpInsideActionWithBlock:^(id sender) {
+       StrongSelf
+        if (self.eventsBlock){
+            self.eventsBlock([ViewEventsParamPOD paramWithSender:sender
+                                                             tag:PostViewEventHandlerTagUserInfoProfile]);
+        }
+    }];
 }
 
 #pragma mark - 处理用户事件及传递

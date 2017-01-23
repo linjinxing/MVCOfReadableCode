@@ -13,7 +13,7 @@
 		6802D5BA1E2EB6C400407EE1 /* TXCollectionViewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6802D5B91E2EB6C400407EE1 /* TXCollectionViewImageCell.m */; };
 		6883EA281E2D7609004ADB8A /* PostImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA051E2D7609004ADB8A /* PostImagesView.m */; };
 		6883EA291E2D7609004ADB8A /* PostDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA091E2D7609004ADB8A /* PostDetailView.m */; };
-		6883EA2A1E2D7609004ADB8A /* PostUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA0C1E2D7609004ADB8A /* PostUserInfoView.m */; };
+		6883EA2A1E2D7609004ADB8A /* PostAuthorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA0C1E2D7609004ADB8A /* PostAuthorInfoView.m */; };
 		6883EA2B1E2D7609004ADB8A /* PostContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA0F1E2D7609004ADB8A /* PostContentView.m */; };
 		6883EA2C1E2D7609004ADB8A /* PostUserLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA121E2D7609004ADB8A /* PostUserLikesView.m */; };
 		6883EA361E2DB01B004ADB8A /* PostActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6883EA351E2DB01B004ADB8A /* PostActionView.m */; };
@@ -94,8 +94,8 @@
 		6883EA051E2D7609004ADB8A /* PostImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostImagesView.m; sourceTree = "<group>"; };
 		6883EA081E2D7609004ADB8A /* PostDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailView.h; sourceTree = "<group>"; };
 		6883EA091E2D7609004ADB8A /* PostDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailView.m; sourceTree = "<group>"; };
-		6883EA0B1E2D7609004ADB8A /* PostUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostUserInfoView.h; sourceTree = "<group>"; };
-		6883EA0C1E2D7609004ADB8A /* PostUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostUserInfoView.m; sourceTree = "<group>"; };
+		6883EA0B1E2D7609004ADB8A /* PostAuthorInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostAuthorInfoView.h; sourceTree = "<group>"; };
+		6883EA0C1E2D7609004ADB8A /* PostAuthorInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostAuthorInfoView.m; sourceTree = "<group>"; };
 		6883EA0E1E2D7609004ADB8A /* PostContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostContentView.h; sourceTree = "<group>"; };
 		6883EA0F1E2D7609004ADB8A /* PostContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostContentView.m; sourceTree = "<group>"; };
 		6883EA111E2D7609004ADB8A /* PostUserLikesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostUserLikesView.h; sourceTree = "<group>"; };
@@ -351,8 +351,8 @@
 		6883EA0A1E2D7609004ADB8A /* 用户信息 */ = {
 			isa = PBXGroup;
 			children = (
-				6883EA0B1E2D7609004ADB8A /* PostUserInfoView.h */,
-				6883EA0C1E2D7609004ADB8A /* PostUserInfoView.m */,
+				6883EA0B1E2D7609004ADB8A /* PostAuthorInfoView.h */,
+				6883EA0C1E2D7609004ADB8A /* PostAuthorInfoView.m */,
 			);
 			path = "用户信息";
 			sourceTree = "<group>";
@@ -1015,7 +1015,7 @@
 				6883EA421E2DE617004ADB8A /* PostCommentTableViewCell.m in Sources */,
 				68BAC1CB1E2EF99300F4B980 /* TXEmojiKeyboardView.m in Sources */,
 				68BAC1D71E2F07F800F4B980 /* TXCollectionViewTitleLabelCell.m in Sources */,
-				6883EA2A1E2D7609004ADB8A /* PostUserInfoView.m in Sources */,
+				6883EA2A1E2D7609004ADB8A /* PostAuthorInfoView.m in Sources */,
 				6883EA3C1E2DE5C6004ADB8A /* PostActionTableViewCell.m in Sources */,
 				68BAC1D41E2EFD2F00F4B980 /* TXEmojiKeyboardSwitchEmojiView.m in Sources */,
 				6883EA291E2D7609004ADB8A /* PostDetailView.m in Sources */,

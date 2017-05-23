@@ -48,7 +48,6 @@
 		68BAC27A1E30BC2300F4B980 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2791E30BC2300F4B980 /* UIViewControllerExtension.swift */; };
 		68FAC8AB1E0E120100091B50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8AA1E0E120100091B50 /* main.m */; };
 		68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8AD1E0E120100091B50 /* AppDelegate.m */; };
-		68FAC8B11E0E120100091B50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC8B01E0E120100091B50 /* ViewController.m */; };
 		68FAC8B41E0E120100091B50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FAC8B21E0E120100091B50 /* Main.storyboard */; };
 		68FAC8B61E0E120100091B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FAC8B51E0E120100091B50 /* Assets.xcassets */; };
 		68FAC8B91E0E120100091B50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FAC8B71E0E120100091B50 /* LaunchScreen.storyboard */; };
@@ -168,8 +167,6 @@
 		68FAC8AA1E0E120100091B50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68FAC8AC1E0E120100091B50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68FAC8AD1E0E120100091B50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68FAC8AF1E0E120100091B50 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		68FAC8B01E0E120100091B50 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		68FAC8B31E0E120100091B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68FAC8B51E0E120100091B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68FAC8B81E0E120100091B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -642,8 +639,6 @@
 			children = (
 				68FAC8AC1E0E120100091B50 /* AppDelegate.h */,
 				68FAC8AD1E0E120100091B50 /* AppDelegate.m */,
-				68FAC8AF1E0E120100091B50 /* ViewController.h */,
-				68FAC8B01E0E120100091B50 /* ViewController.m */,
 				68FAC9581E0EAF3A00091B50 /* MVCOfReadableCode.pch */,
 				68FAC8B21E0E120100091B50 /* Main.storyboard */,
 				68FAC8B51E0E120100091B50 /* Assets.xcassets */,
@@ -989,7 +984,6 @@
 				68BAC1E61E2F0C5000F4B980 /* Comment.m in Sources */,
 				68BAC1DA1E2F0A0400F4B980 /* CommentBLL.m in Sources */,
 				68BAC1FC1E2F333E00F4B980 /* User.m in Sources */,
-				68FAC8B11E0E120100091B50 /* ViewController.m in Sources */,
 				68BAC20A1E2F3F2800F4B980 /* NSArray+BlocksKit.m in Sources */,
 				6883EA2B1E2D7609004ADB8A /* PostContentView.m in Sources */,
 				68BAC1E31E2F0AB600F4B980 /* EmojiPOD.m in Sources */,

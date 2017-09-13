@@ -13,7 +13,7 @@
 #import "PostUserLikesTableViewCell.h"
 
 @interface PostContentView : UITableView
-@property(nonatomic, weak, readonly) PostDetailView* detailView;
+@property(nonatomic, weak, readonly) IBOutlet PostDetailView* detailView;
 @end
 
 

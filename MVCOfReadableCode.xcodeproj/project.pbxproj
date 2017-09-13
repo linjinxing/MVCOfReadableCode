@@ -41,8 +41,8 @@
 		68BAC2011E2F3E4A00F4B980 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2001E2F3E4A00F4B980 /* Post.m */; };
 		68BAC20A1E2F3F2800F4B980 /* NSArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2061E2F3F2800F4B980 /* NSArray+BlocksKit.m */; };
 		68BAC20B1E2F3F2800F4B980 /* NSDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2091E2F3F2800F4B980 /* NSDictionary+BlocksKit.m */; };
-		68BAC2111E2F454000F4B980 /* ViewEventsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC20E1E2F454000F4B980 /* ViewEventsHandler.m */; };
-		68BAC2121E2F454000F4B980 /* ViewEventsParamPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2101E2F454000F4B980 /* ViewEventsParamPOD.m */; };
+		68BAC2111E2F454000F4B980 /* ViewActionsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC20E1E2F454000F4B980 /* ViewActionsHandler.m */; };
+		68BAC2121E2F454000F4B980 /* ViewActionParamPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2101E2F454000F4B980 /* ViewActionParamPOD.m */; };
 		68BAC21F1E2F4DFC00F4B980 /* RACSignal+UIActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC21E1E2F4DFC00F4B980 /* RACSignal+UIActionSheet.m */; };
 		68BAC2221E2F4E0C00F4B980 /* RACSignal+MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2211E2F4E0C00F4B980 /* RACSignal+MBProgressHUD.m */; };
 		68BAC27A1E30BC2300F4B980 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BAC2791E30BC2300F4B980 /* UIViewControllerExtension.swift */; };
@@ -58,6 +58,7 @@
 		68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9521E0EAE5300091B50 /* UIButtonAdditions.m */; };
 		68FAC9571E0EAE9000091B50 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAC9561E0EAE9000091B50 /* UIView+Layout.m */; };
 		9EBF533FA3F65F06A91DBCFD /* libPods-MVCOfReadableCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305657525076312D1FC3F2F /* libPods-MVCOfReadableCode.a */; };
+		CE49D6521EDA451C0012F093 /* PostViewControllerIB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE49D6511EDA451C0012F093 /* PostViewControllerIB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,10 +154,10 @@
 		68BAC2061E2F3F2800F4B980 /* NSArray+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BlocksKit.m"; sourceTree = "<group>"; };
 		68BAC2081E2F3F2800F4B980 /* NSDictionary+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BlocksKit.h"; sourceTree = "<group>"; };
 		68BAC2091E2F3F2800F4B980 /* NSDictionary+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BlocksKit.m"; sourceTree = "<group>"; };
-		68BAC20D1E2F454000F4B980 /* ViewEventsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewEventsHandler.h; sourceTree = "<group>"; };
-		68BAC20E1E2F454000F4B980 /* ViewEventsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewEventsHandler.m; sourceTree = "<group>"; };
-		68BAC20F1E2F454000F4B980 /* ViewEventsParamPOD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewEventsParamPOD.h; sourceTree = "<group>"; };
-		68BAC2101E2F454000F4B980 /* ViewEventsParamPOD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewEventsParamPOD.m; sourceTree = "<group>"; };
+		68BAC20D1E2F454000F4B980 /* ViewActionsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewActionsHandler.h; sourceTree = "<group>"; };
+		68BAC20E1E2F454000F4B980 /* ViewActionsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewActionsHandler.m; sourceTree = "<group>"; };
+		68BAC20F1E2F454000F4B980 /* ViewActionParamPOD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewActionParamPOD.h; sourceTree = "<group>"; };
+		68BAC2101E2F454000F4B980 /* ViewActionParamPOD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewActionParamPOD.m; sourceTree = "<group>"; };
 		68BAC21D1E2F4DFC00F4B980 /* RACSignal+UIActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+UIActionSheet.h"; sourceTree = "<group>"; };
 		68BAC21E1E2F4DFC00F4B980 /* RACSignal+UIActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+UIActionSheet.m"; sourceTree = "<group>"; };
 		68BAC2201E2F4E0C00F4B980 /* RACSignal+MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+MBProgressHUD.h"; sourceTree = "<group>"; };
@@ -187,6 +188,8 @@
 		68FAC9561E0EAE9000091B50 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		68FAC9581E0EAF3A00091B50 /* MVCOfReadableCode.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCOfReadableCode.pch; sourceTree = "<group>"; };
 		7B6B05E738C60799A930CE34 /* Pods-MVCOfReadableCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCOfReadableCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVCOfReadableCode/Pods-MVCOfReadableCode.release.xcconfig"; sourceTree = "<group>"; };
+		CE49D6501EDA451C0012F093 /* PostViewControllerIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewControllerIB.h; sourceTree = "<group>"; };
+		CE49D6511EDA451C0012F093 /* PostViewControllerIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewControllerIB.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,10 +560,10 @@
 		68BAC20C1E2F454000F4B980 /* EventProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				68BAC20D1E2F454000F4B980 /* ViewEventsHandler.h */,
-				68BAC20E1E2F454000F4B980 /* ViewEventsHandler.m */,
-				68BAC20F1E2F454000F4B980 /* ViewEventsParamPOD.h */,
-				68BAC2101E2F454000F4B980 /* ViewEventsParamPOD.m */,
+				68BAC20D1E2F454000F4B980 /* ViewActionsHandler.h */,
+				68BAC20E1E2F454000F4B980 /* ViewActionsHandler.m */,
+				68BAC20F1E2F454000F4B980 /* ViewActionParamPOD.h */,
+				68BAC2101E2F454000F4B980 /* ViewActionParamPOD.m */,
 			);
 			path = EventProtocol;
 			sourceTree = "<group>";
@@ -691,6 +694,8 @@
 			children = (
 				68FAC8E01E0E12C100091B50 /* PostViewController.h */,
 				68FAC8E11E0E12C100091B50 /* PostViewController.m */,
+				CE49D6501EDA451C0012F093 /* PostViewControllerIB.h */,
+				CE49D6511EDA451C0012F093 /* PostViewControllerIB.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -975,7 +980,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68BAC2111E2F454000F4B980 /* ViewEventsHandler.m in Sources */,
+				68BAC2111E2F454000F4B980 /* ViewActionsHandler.m in Sources */,
 				6883EA451E2DE9E8004ADB8A /* UIView+Subviews.m in Sources */,
 				68BAC1C71E2EF99300F4B980 /* TXEmojiKeyboardDownloadEmojiView.m in Sources */,
 				6883EA2C1E2D7609004ADB8A /* PostUserLikesView.m in Sources */,
@@ -987,7 +992,7 @@
 				68BAC20A1E2F3F2800F4B980 /* NSArray+BlocksKit.m in Sources */,
 				6883EA2B1E2D7609004ADB8A /* PostContentView.m in Sources */,
 				68BAC1E31E2F0AB600F4B980 /* EmojiPOD.m in Sources */,
-				68BAC2121E2F454000F4B980 /* ViewEventsParamPOD.m in Sources */,
+				68BAC2121E2F454000F4B980 /* ViewActionParamPOD.m in Sources */,
 				68BAC1CA1E2EF99300F4B980 /* TXEmojiKeyboardInputEmojiPanelView.m in Sources */,
 				68BAC1DD1E2F0A0F00F4B980 /* PostBLL.m in Sources */,
 				68BAC2011E2F3E4A00F4B980 /* Post.m in Sources */,
@@ -998,6 +1003,7 @@
 				68FAC9531E0EAE5300091B50 /* UIButtonAdditions.m in Sources */,
 				68BAC1AE1E2EC55100F4B980 /* TXUINSDictionaryKey.m in Sources */,
 				6883EA361E2DB01B004ADB8A /* PostActionView.m in Sources */,
+				CE49D6521EDA451C0012F093 /* PostViewControllerIB.m in Sources */,
 				68FAC8AE1E0E120100091B50 /* AppDelegate.m in Sources */,
 				68BAC21F1E2F4DFC00F4B980 /* RACSignal+UIActionSheet.m in Sources */,
 				68BAC1E01E2F0A1D00F4B980 /* EmojiLoader.m in Sources */,

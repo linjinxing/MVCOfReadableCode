@@ -264,10 +264,10 @@ static char overviewKey;
 
 - (void)handleControlEvent:(UIControlEvents)event withBlock:(TXSenderBlock)block {
     objc_setAssociatedObject(self, &overviewKey, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    [self addTarget:self action:@selector(callActionBlock:) forControlEvents:event];
+    [self addTarget:self action:@selector(__callActionBlock:) forControlEvents:event];
 }
 
-- (void)callActionBlock:(id)sender {
+- (void)__callActionBlock:(id)sender {
     TXSenderBlock block = (TXSenderBlock)objc_getAssociatedObject(self, &overviewKey);
     if (block) {
         block(self);

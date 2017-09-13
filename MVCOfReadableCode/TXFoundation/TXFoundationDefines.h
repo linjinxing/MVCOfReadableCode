@@ -25,6 +25,8 @@ typedef TXSenderBlock TXCanelBlock;
     return [self viewWithTag:tag]; \
 }
 
+#define PASelectorToString(sel) NSStringFromSelector(@selector(sel))
+
 
 #ifndef    weakify
 #if __has_feature(objc_arc)

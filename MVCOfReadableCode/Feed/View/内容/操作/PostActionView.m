@@ -16,24 +16,9 @@
 @end
 
 @implementation PostActionView
-@synthesize eventsBlock;
 
 
 #pragma mark - 动态属性及重写属性
-
-- (void)setEventHandler:(ViewEventsBlock)aEventHandler{
-    aEventHandler = [aEventHandler copy];
-    [@[self.btnLike, self.btnAddComment, self.btnMore]
-     enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-         [obj addViewEventsHandler:self.eventsBlock];
-     }];
-}
-
-- (void)setLikesState:(BOOL)likesState{
-    _likesState = likesState;
-    [self.btnLike setTitle:likesState ? @"赞":@"已赞" forState:UIControlStateNormal];
-}
-
 
 DynamicProperyForView(btnLike, PostViewEventHandlerTagActionViewLike)
 DynamicProperyForView(btnAddComment, PostViewEventHandlerTagActionViewAddComment)
@@ -49,8 +34,8 @@ DynamicProperyForView(btnMore, PostViewEventHandlerTagActionViewMore)
            @{TXUIDictionaryKeyTag:@(PostViewEventHandlerTagActionViewMore),TXUIDictionaryKeyTitle:@"..."},]
          enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
              UIButton* btn = [UIButton buttonWithTitle:obj[TXUIDictionaryKeyTitle]
-                                                   tag:[obj integerValue]];
-            [btn addViewEventsHandler:self.eventsBlock];
+                                                   tag:[obj[TXUIDictionaryKeyTag] integerValue]];
+            [btn addTouchUpInsideAction];
             [self addSubview:btn];
         }];
     }

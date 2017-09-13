@@ -13,7 +13,12 @@
 @end
 
 @implementation PostActionTableViewCell
-@synthesize eventsBlock;
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    [self.contentView addSubview:[PostActionView new]];
+    return self;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -24,6 +29,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.actionView.frame = self.contentView.bounds;
 }
 
 @end

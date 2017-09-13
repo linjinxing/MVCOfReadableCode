@@ -15,13 +15,8 @@
 @end
 
 @implementation PostView
-@synthesize eventsBlock;
 
 #pragma mark - 动态属性及重写属性
-- (void)setEventsBlock:(ViewEventsBlock)aEventsBlock{
-    eventsBlock = aEventsBlock;
-    self.contentView.detailView.authorInfoView.eventsBlock = aEventsBlock;
-}
 
 #pragma mark - 创建子视图并初始化自己
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -29,6 +24,7 @@
     if (!self) return nil;
 
     self.contentView = [self createTableView];
+    self.contentView.frame = self.bounds;
     self.commentInputView = [self createInputView];
     return self;
 }
@@ -43,7 +39,6 @@
                                  make.right.equalTo(self.mas_right);
                                  make.height.equalTo(self.mas_height).with.offset([TXEmojiKeyboardInputTextToolbarView height]);
                              }];
-    view.detailView.authorInfoView.eventsBlock = self.eventsBlock;
     return view;
 }
 
@@ -59,7 +54,8 @@
 }
 
 - (void)reloadAllWithPost:(id<Post>) post{
-    [self reloadComments];
+    [self.contentView reloadData];
+//    [self reloadComments];
     [self reloadPostCotentWithPost:post];
 }
 
@@ -84,12 +80,14 @@
 #pragma mark - 数据源和代理处理
 - (void)setDelegate:(id<UITableViewDelegate,UICollectionViewDelegate,TXImageViewDelegate>)delegate{
     _delegate = delegate;
+    self.contentView.delegate = delegate;
     self.contentView.detailView.descView.cvTags.delegate = delegate;
     self.contentView.detailView.imagesView.delegate = delegate;
 }
 
 - (void)setDataSource:(id<UITableViewDataSource,UICollectionViewDataSource,TXImageViewDataSource>)dataSource{
     _dataSource = dataSource;
+    self.contentView.dataSource = dataSource;
     self.contentView.detailView.imagesView.dataSource = dataSource;
     self.contentView.detailView.descView.cvTags.dataSource = dataSource;
 }

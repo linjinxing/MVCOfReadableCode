@@ -7,11 +7,12 @@
 //
 
 #import "PostUserLikesView.h"
+#import "PostViewTypes.h"
 
 @interface PostUserLikesView()
-@property(weak) UIButton* btnLike;
+@property(weak) IBOutlet UIButton* btnLike;
 @property(weak) UICollectionView* cvlikeAvatars;
-@property(weak) UIButton* btnShare;
+@property(weak) IBOutlet UIButton* btnShare;
 @end
 
 @implementation PostUserLikesView
@@ -22,6 +23,12 @@
         
     }
     return self;
+}
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self.btnLike addTouchUpInsideActionWithTag:PostViewEventHandlerTagActionViewLike];
+    [self.btnShare addTouchUpInsideActionWithTag:PostViewEventHandlerTagActionViewShare];
 }
 
 @end

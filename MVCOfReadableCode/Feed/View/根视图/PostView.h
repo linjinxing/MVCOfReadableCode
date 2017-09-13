@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewEventsHandler.h"
+#import "ViewActionsHandler.h"
 #import "PostContentView.h"
 #import "Post.h"
 
 
-@interface PostView : UIView<ViewEventsHandler>
-@property(readonly, weak)PostContentView* contentView;
+@interface PostView : UIView
+@property(readonly, weak) IBOutlet PostContentView* contentView;
 @property(readonly, weak)TXEmojiKeyboardView* commentInputView;
 @property(weak)id<UITableViewDataSource,UICollectionViewDataSource,TXImageViewDataSource> dataSource;
 @property(weak)id<UITableViewDelegate,UICollectionViewDelegate,TXImageViewDelegate> delegate;

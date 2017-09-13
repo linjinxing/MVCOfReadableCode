@@ -24,7 +24,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        PostDetailView* dv = [[PostDetailView alloc] init];
+        PostDetailView* dv = [[PostDetailView alloc] initWithFrame:self.bounds];
         self.tableHeaderView = dv;
         self.detailView = dv;
         [self registerClass:[PostActionTableViewCell class]];

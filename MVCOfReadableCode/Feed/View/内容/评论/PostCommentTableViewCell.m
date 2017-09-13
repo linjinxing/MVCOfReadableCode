@@ -9,7 +9,6 @@
 #import "PostCommentTableViewCell.h"
 
 @implementation PostCommentTableViewCell
-@synthesize eventsBlock;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

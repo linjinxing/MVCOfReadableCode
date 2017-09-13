@@ -1,14 +1,14 @@
 //
-//  PGViewEventParam.m
+//  PGViewActionParam.m
 //  MVCOfReadableCode
 //
 //  Created by linjinxing on 16/12/24.
 //  Copyright © 2016年 linjinxing. All rights reserved.
 //
 
-#import "ViewEventsParamPOD.h"
+#import "ViewActionParamPOD.h"
 
-@interface ViewEventsParamPOD()
+@interface ViewActionParamPOD()
 @property(assign) UIControlEvents events;
 @property(weak) id sender;
 @property(strong) id data;
@@ -16,13 +16,13 @@
 @property(strong) NSIndexPath* indexPath;
 @end
 
-@implementation ViewEventsParamPOD
+@implementation ViewActionParamPOD
 + (instancetype)paramWithSender:(id)sender
                       indexPath:(NSIndexPath*)indexPath
-                         events:(NSUInteger)events
+                         Actions:(NSUInteger)events
                            data:(id)data
                             tag:(NSUInteger)tag{
-    ViewEventsParamPOD* param = [[self alloc] init];
+    ViewActionParamPOD* param = [[self alloc] init];
     param.indexPath = indexPath;
     param.events = events;
     param.sender = sender;
@@ -32,22 +32,22 @@
 }
 
 + (instancetype)paramWithSender:(id)sender
-                         events:(NSUInteger)events
+                         Actions:(NSUInteger)Actions
                             tag:(NSUInteger)tag{
-    return [self paramWithSender:sender indexPath:nil events:events data:nil tag:tag];
+    return [self paramWithSender:sender indexPath:nil Actions:Actions data:nil tag:tag];
 }
 
 + (instancetype)paramWithSender:(id)sender
                             tag:(NSUInteger)tag{
-    return [self paramWithSender:sender indexPath:nil events:UIControlEventSystemReserved data:nil tag:tag];
+    return [self paramWithSender:sender indexPath:nil Actions:UIControlEventSystemReserved data:nil tag:tag];
 }
 
 + (instancetype)paramWithSender:(id)sender{
-    return [self paramWithSender:sender indexPath:nil events:UIControlEventSystemReserved data:nil tag:[sender tag]];
+    return [self paramWithSender:sender indexPath:nil Actions:UIControlEventSystemReserved data:nil tag:[sender tag]];
 }
 
 + (instancetype)paramWithSender:(id)sender indexPath:(NSIndexPath*)indexPath tag:(NSUInteger)tag{
-    return [self paramWithSender:sender indexPath:indexPath events:UIControlEventSystemReserved data:nil tag:tag];
+    return [self paramWithSender:sender indexPath:indexPath Actions:UIControlEventSystemReserved data:nil tag:tag];
 }
 @end
 

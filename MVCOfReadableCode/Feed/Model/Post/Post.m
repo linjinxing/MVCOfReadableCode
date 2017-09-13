@@ -39,7 +39,7 @@
     return @"描述嘿，哈，哦，嘻";
 }
 
-- (id<User>) user{
+- (id<User>) author{
     return [UserPOD new];
 }
 #endif

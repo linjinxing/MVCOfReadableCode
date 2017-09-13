@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewEventsHandler.h"
+#import "ViewActionsHandler.h"
 
-@interface PostCommentTableViewCell : UITableViewCell<ViewEventsHandler>
+@interface PostCommentTableViewCell : UITableViewCell
 
 @end

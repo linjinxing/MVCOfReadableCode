@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewEventsHandler.h"
+#import "ViewActionsHandler.h"
 #import "TXImageView.h"
 
-@interface PostImagesView : UIView<ViewEventsHandler, TXImageView>
+@interface PostImagesView : UIView<TXImageView>
 - (void)reloadData;
 @end

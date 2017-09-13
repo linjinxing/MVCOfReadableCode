@@ -13,8 +13,8 @@
 #import "PostDetailDescView.h"
 
 @interface PostDetailView : UIView
-@property(readonly, weak)PostAuthorInfoView* authorInfoView;
 @property(readonly, weak)PostImagesView* imagesView;
+@property(readonly, weak) IBOutlet PostAuthorInfoView* authorInfoView;
 @property(readonly, weak)PostDetailDescView* descView;
 
 //@property(readonly, weak)PostUserLikesView* likesView;

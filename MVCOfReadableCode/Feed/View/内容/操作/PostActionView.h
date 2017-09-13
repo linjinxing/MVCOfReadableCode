@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewEventsHandler.h"
+#import "ViewActionsHandler.h"
 
-@interface PostActionView : UIView<ViewEventsHandler>
-/**
- 点赞，还是未点赞状态
- */
-@property(nonatomic) BOOL likesState;
+@interface PostActionView : UIView
+
+@property(readonly, nonatomic, weak) UIButton* btnLike;
 //@property(readonly, weak) UIButton* btnAvatar;
 //@property(readonly, weak) UIButton* btnMore;
 //@property(readonly, weak) UIButton* btnFollow;

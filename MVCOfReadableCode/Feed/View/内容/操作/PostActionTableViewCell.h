@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "PostActionView.h"
 
-@interface PostActionTableViewCell : UITableViewCell<ViewEventsHandler>
+@interface PostActionTableViewCell : UITableViewCell
 @property(nonatomic, readonly, weak) PostActionView* actionView;
 @end

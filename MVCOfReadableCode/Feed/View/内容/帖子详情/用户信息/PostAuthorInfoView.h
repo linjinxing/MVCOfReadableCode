@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewEventsHandler.h"
+#import "ViewActionsHandler.h"
 
-@interface PostAuthorInfoView : UIView<ViewEventsHandler>
-@property(readonly, weak) UIButton* btnAvatar;
-@property(readonly, weak) UILabel* lbNickname;
-@property(readonly, weak) UIButton* btnFollow;
+@interface PostAuthorInfoView : UIView
+@property(readonly, weak) IBOutlet UIButton* btnAvatar;
+@property(readonly, weak) IBOutlet UILabel* lbNickname;
+@property(readonly, weak) IBOutlet UIButton* btnFollow;
 @end
 
 

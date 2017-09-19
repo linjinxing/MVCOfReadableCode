@@ -29,7 +29,7 @@
 
 
 @interface ViewActionParamPOD<__covariant ObjectType> : NSObject<ViewActionParam>
-
+@property(readonly, strong) ObjectType data;
 + (instancetype)paramWithSender:(id)sender;
 
 + (instancetype)paramWithSender:(id)sender
@@ -40,12 +40,14 @@
 
 @interface ControlActionParamPOD<__covariant ObjectType> : ViewActionParamPOD<ControlActionParam>
 @property(readonly, strong) ObjectType data;
-
 + (instancetype)paramWithSender:(id)sender
-                         Actions:(NSUInteger)Actions
+                         actions:(NSUInteger)events
                             tag:(NSUInteger)tag;
 + (instancetype)paramWithSender:(id)sender
-                         Actions:(NSUInteger)Actions
+                           data:(ObjectType)data
+                            tag:(NSUInteger)tag;
++ (instancetype)paramWithSender:(id)sender
+                         events:(NSUInteger)events
                            data:(ObjectType)data
                             tag:(NSUInteger)tag;
 

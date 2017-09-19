@@ -60,7 +60,6 @@ typedef void (^ViewActionBlock)(id<ViewActionParam> param);
 - (void)addTouchUpInsideAction;
 - (void)addTouchUpInsideActionWithTag:(NSUInteger)tag;
 - (void)addTouchUpInsideActionWithActionsParam:(id<ViewActionParam>)params;
-//- (void)addViewActionsHandler:(ViewActionBlock)ActionHandler;
 @end
 
 @interface UITextField(SendActionsToController)

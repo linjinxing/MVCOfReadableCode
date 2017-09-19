@@ -143,6 +143,144 @@
 }
 @end
 
+@implementation UIView(SendActionsToController)
+- (void)sendActionToController{
+    [self sendActionToControllerWithActionsParam:[ViewActionParamPOD paramWithSender:self
+                                                                                 tag:self.parsActionTag]];
+}
+- (void)sendActionToControllerWithTag:(NSUInteger)tag{
+    [self sendActionToControllerWithActionsParam:[ViewActionParamPOD paramWithSender:self
+                                                                            tag:tag]];
+}
+- (void)sendActionToControllerWithActionsParam:(id<ViewActionParam>)params{
+    ViewActionBlock block = [self.parsViewController viewActionsHandler];
+    if (block) {
+        block(params);
+    }
+}
+@end
 
+
+@implementation UITextField(SendActionsToController)
+- (void)addTextDidChangeAction{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSString *>
+                                                  paramWithSender:self
+                                                  data:self.text
+                                                  tag:self.parsActionTag]];
+}
+- (void)addTextDidChangeActionWithTag:(NSUInteger)tag{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSString *>
+                                                  paramWithSender:self
+                                                  data:self.text
+                                                  tag:tag]];
+}
+- (void)addTextDidChangeActionWithActionsParam:(id<ViewActionParam>)params
+{
+    [self sendActionToControllerWithActionsParam:params];
+}
+@end
+
+
+@implementation UITextView(SendActionsToController)
+- (void)addTextDidChangeAction{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSString *>
+                                                  paramWithSender:self
+                                                  data:self.text
+                                                  tag:self.parsActionTag]];
+}
+- (void)addTextDidChangeActionWithTag:(NSUInteger)tag{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSString *>
+                                                  paramWithSender:self
+                                                  data:self.text
+                                                  tag:tag]];
+}
+
+- (void)addTextDidChangeActionWithActionsParam:(id<ViewActionParam>)params{
+    [self sendActionToControllerWithActionsParam:params];
+}
+@end
+
+
+@implementation UISwitch(SendActionsToController)
+- (void)addValueDidChangeAction{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSNumber *>
+                                                  paramWithSender:self
+                                                  data:@(self.isOn)
+                                                  tag:self.parsActionTag]];
+}
+- (void)addValueDidChangeActionWithTag:(NSUInteger)tag{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSNumber *>
+                                                  paramWithSender:self
+                                                  data:@(self.isOn)
+                                                  tag:tag]];
+}
+- (void)addValueDidChangeActionWithActionsParam:(id<ViewActionParam>)params{
+    [self sendActionToControllerWithActionsParam:params];
+}
+@end
+
+
+@implementation UIPickerView(SendActionsToController)
+- (void)addValueDidChangeAction{
+    
+}
+- (void)addValueDidChangeActionWithTag:(NSUInteger)tag{
+    
+}
+- (void)addValueDidChangeActionWithActionsParam:(id<ViewActionParam>)params{
+    [self sendActionToControllerWithActionsParam:params];
+}
+@end
+
+
+@implementation UIDatePicker(SendActionsToController)
+- (void)addValueDidChangeAction{
+    [self sendActionToControllerWithActionsParam:[ViewActionParamPOD paramWithSender:self
+                                                                                 tag:self.parsActionTag]];
+}
+- (void)addValueDidChangeActionWithTag:(NSUInteger)tag{
+    [self sendActionToControllerWithActionsParam:[ViewActionParamPOD paramWithSender:self
+                                                                                 tag:tag]];
+}
+- (void)addValueDidChangeActionWithActionsParam:(id<ViewActionParam>)params{
+    [self sendActionToControllerWithActionsParam:params];
+}
+@end
+
+@implementation UIProgressView(SendActionsToController)
+- (void)addValueDidChangeAction{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSNumber *>
+                                                  paramWithSender:self
+                                                  data:@(self.progress)
+                                                  tag:self.parsActionTag]];
+}
+- (void)addValueDidChangeActionWithTag:(NSUInteger)tag{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSNumber *>
+                                                  paramWithSender:self
+                                                  data:@(self.progress)
+                                                  tag:tag]];
+}
+- (void)addValueDidChangeActionWithActionsParam:(id<ViewActionParam>)params{
+    [self sendActionToControllerWithActionsParam:params];
+}
+@end
+
+@implementation UISegmentedControl(SendActionsToController)
+- (void)addValueDidChangeAction{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSNumber *>
+                                                  paramWithSender:self
+                                                  data:@(self.selectedSegmentIndex)
+                                                  tag:self.parsActionTag]];
+}
+- (void)addValueDidChangeActionWithTag:(NSUInteger)tag{
+    [self sendActionToControllerWithActionsParam:[ControlActionParamPOD<NSNumber *>
+                                                  paramWithSender:self
+                                                  data:@(self.selectedSegmentIndex)
+                                                  tag:tag]];
+}
+- (void)addValueDidChangeActionWithActionsParam:(id<ViewActionParam>)params{
+    [self sendActionToControllerWithActionsParam:params];
+}
+@end
 
 
